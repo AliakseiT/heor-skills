@@ -103,11 +103,11 @@
 
 ---
 
-### 11. Alternativen
+### 11. Alternativen zur neuen Analyse
 
-- **Ersetzt:** [Bitte hier eintragen]
-- **Add-on zu:** [Bitte hier eintragen]
-- **Keine Alternative:** [ ]
+- [ ] Analyse ersetzt folgende Analyse, Diagnostik oder Verlaufskontrolle: [Bitte hier eintragen]
+- [ ] Analyse erfolgt zusätzlich (Add-on) zu folgender Analyse, Diagnostik oder Verlaufskontrolle: [Bitte hier eintragen]
+- [ ] Neue Analyse ohne Alternative
 
 ---
 
@@ -133,16 +133,25 @@
 
 ---
 
-### 15. Aktuelle Finanzierung
+### 15. Aktuelle Finanzierung der Analysekosten
 
-**In der Schweiz:**
+**Wird die Analyse in der Schweiz routinemässig durchgeführt?**
 - [ ] nein
-- [ ] ja (stationär/ambulant): [Bitte hier eintragen]
+- [ ] ja:
+  - [ ] im stationären Bereich
+  - [ ] im ambulanten Bereich
 
-**Im Ausland:**
+**Finanzierung:**
 - [ ] nein
-- [ ] ja, Länder: [Bitte hier eintragen]
-Finanzierung: [Bitte hier eintragen]
+- [ ] ja, welche (Spitalpauschale, Zusatzversicherung, Patientin/Patient, …): [Bitte hier eintragen]
+
+**Wird die Analyse im Ausland routinemässig durchgeführt?**
+- [ ] nein
+- [ ] ja, in folgenden Ländern: [Bitte hier eintragen]
+
+**Finanzierung im Ausland:**
+- [ ] nein
+- [ ] ja, welche (Krankenkasse, Spitalpauschale, Zusatzversicherung, Patientin/Patient, …): [Bitte hier eintragen]
 
 ---
 
@@ -164,9 +173,15 @@ Finanzierung: [Bitte hier eintragen]
 
 ### 18. Marktzulassung
 
-- [ ] Schweiz
-- [ ] Schweiz + Ausland (EU/USA): [Bitte hier eintragen]
-- [ ] Nur Ausland: [Bitte hier eintragen]
+- [ ] Marktzulassung nur in der Schweiz
+- [ ] Marktzulassung im In- und Ausland:
+  - [ ] EU (EMA)
+  - [ ] USA (FDA)
+  - [ ] Anderes: [Bitte hier eintragen]
+- [ ] Marktzulassung nur im Ausland:
+  - [ ] EU (EMA)
+  - [ ] USA (FDA)
+  - [ ] Anderes: [Bitte hier eintragen]
 
 ---
 
@@ -211,13 +226,12 @@ Finanzierung: [Bitte hier eintragen]
 
 ### 23. Wissenschaftliche Untermauerung
 
-**Studien (HTA, RCT, …):** [Bitte hier eintragen]
+**Art der Studien (HTA, systematic review, RCT, …):** [Bitte hier eintragen]
+> *1–2 der relevantesten Studien beilegen*
 
-**Relevante Studien:** [Bitte hier eintragen]
-
-**Durchgeführt von:**
-- [ ] Hersteller
-- [ ] Unabhängig
+**Durchgeführte Studien:**
+- [ ] durch den Hersteller
+- [ ] durch eine unabhängige Stelle
 
 **Nationale Leitlinien:** [Bitte hier eintragen]
 
@@ -227,7 +241,8 @@ Finanzierung: [Bitte hier eintragen]
 
 ### 24. Referenzen
 
-[Bitte hier eintragen]
+**Wissenschaftliche Gesellschaften, Experten/Expertinnen:** [Bitte hier eintragen]
+> *Hier können Expertinnen/Experten angegeben werden, die weitere Auskünfte über die Analyse geben können — vorzugsweise klinische Expertinnen/Experten oder Vertreterinnen/Vertreter von Fachgesellschaften in der Schweiz.*
 
 ---
 

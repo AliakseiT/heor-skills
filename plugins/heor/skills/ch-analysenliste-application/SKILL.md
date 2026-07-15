@@ -14,7 +14,7 @@ description: >-
   structure supports French/Italian variants.
 metadata:
   jurisdiction: ch
-  languages: [de]
+  languages: [de, fr]
   last-verified: 2026-07-15
 ---
 
@@ -28,7 +28,7 @@ Regulatory context (reflected in the template header): the signed form plus encl
 
 The output language is a parameter. Default is German (`de`); French or Italian output is legitimate — ask if the user has not said.
 
-Use the form template at `references/templates/<lang>.md`. Currently only `de.md` exists; when drafting in `fr` or `it`, translate the German template's structure and question wording faithfully, keep the 26-section numbering identical, and flag in the final disclaimer that the translated structure must be checked against the official BAG form in that language.
+Use the form template at `references/templates/<lang>.md`. Official templates exist for `de` and `fr` (extracted from the official BAG Meldeformular, version März/mars 2025 — see `references/templates/_sources.md`). BAG publishes no Italian version of this form (the Italian BAG page links the French file); for `it` output, translate the French template's structure and question wording faithfully, keep the 26-section numbering identical, and flag in the final disclaimer that no official Italian form exists and the draft must be verified with BAG before submission.
 
 ## Step 1 — Gather inputs from the dossier
 

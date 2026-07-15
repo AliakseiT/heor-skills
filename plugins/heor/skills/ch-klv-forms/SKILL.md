@@ -15,7 +15,7 @@ description: >-
   structure supports French/Italian variants.
 metadata:
   jurisdiction: ch
-  languages: [de]
+  languages: [de, fr, it]
   last-verified: 2026-07-15
 ---
 
@@ -35,7 +35,13 @@ Determine which form the user needs. If ambiguous, ask — the three serve diffe
 
 ## Step 1 — Output language
 
-The output language is a parameter. Default is German (`de`); French or Italian is legitimate — ask if unstated. Templates live at `references/templates/<form>/<lang>.md`; currently only `de.md` exists per form. For `fr`/`it`, translate the German template's structure faithfully, keep numbering identical, and flag in the disclaimer that the structure must be checked against the official BAG form in that language.
+The output language is a parameter. Default is German (`de`); French or Italian is legitimate — ask if unstated. Templates live at `references/templates/<form>/<lang>.md`, extracted from the official BAG forms (Version 22.07.2025 — see `references/templates/_sources.md`):
+
+- `meldung-neue-leistung`: `de`, `fr` (BAG publishes no Italian form; the Italian BAG page links the French file)
+- `antrag-neue-leistung`: `de`, `fr` (same Italian gap)
+- `umstrittenheit`: `de`, `fr`, `it` (all three official)
+
+For Italian output where no official template exists, translate the French template's structure faithfully, keep numbering and slot names identical, and flag in the disclaimer that no official Italian form exists and the draft must be verified with BAG before submission.
 
 The templates use `{{placeholder}}` slots. Replace every slot with drafted content, or with `[Bitte hier eintragen]` (or the language-appropriate equivalent) when no information is available. No `{{...}}` may remain in the output.
 

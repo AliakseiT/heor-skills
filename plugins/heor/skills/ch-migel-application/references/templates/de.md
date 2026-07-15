@@ -259,9 +259,9 @@ zu Handen der Eidgenössischen Kommission für Analysen, Mittel und Gegenstände
 **4.1.1. Wird das Produkt bereits auf dem Schweizer Markt vertrieben? Falls ja, seit wann und über welche Vertriebskanäle?**
 [Bitte hier eintragen]
 
-**4.1.2. Falls das Produkt bereits in der Schweiz vertrieben wird: Wie hoch waren die Verkaufsvolumina in den vergangenen 5 Jahren ...?**
+**4.1.2. Falls das Produkt bereits in der Schweiz vertrieben wird: Wie hoch waren die Verkaufsvolumina in den vergangenen 5 Jahren (falls mehrere Produkte beantragt werden, bitte die einzelnen Produkte separat auflisten)?**
 
-| Produkt | Jahr 1 | Jahr 2 | Jahr 3 | Jahr 4 | Jahr 5 |
+| Produkt | 20XX | 20XX | 20XX | 20XX | 20XX |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
 
@@ -328,20 +328,28 @@ zu Handen der Eidgenössischen Kommission für Analysen, Mittel und Gegenstände
 
 ### 5.4. Anzahl Anwendungen
 
+> *Alle folgenden Angaben betreffen die Schweiz, jeweils zum aktuellen Zeitpunkt und prognostiziert; jeweils im 1., 3. und 5. Jahr nach allfälligem Kostenübernahme-Entscheid. Angaben entweder absolut (CH-Bevölkerung) oder Anzahl / 1 Mio. Zur Nachvollziehbarkeit bitten wir Sie, die Rechenschritte zur Herleitung der Angaben zu erläutern resp. das entsprechende Excel mit den Rechnungen beizulegen.*
+
 **5.4.1. Gibt es weitere Faktoren ... die die Menge ... beeinflussen können ...?**
 [Bitte hier eintragen]
 
-**5.4.2. Wie wird sich das Volumen des Produkts nach ... Entscheidung entwickeln?**
+**5.4.2. Wie wird sich das Volumen des Produkts nach einem allfälligen Kostenübernahme-Entscheid entwickeln?**
 
 | Zeitraum | Geschätzte Anzahl Anwendungen des Produktes pro Jahr | Anzahl mit dem Produkt behandelte Patienten/innen pro Jahr |
 | :--- | :--- | :--- |
-| [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Aktuell | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Jahr 1 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Jahr 3 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Ab Jahr 5 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] |
 
-**5.4.3. Wie wird sich das Volumen des Komparators ... entwickeln?**
+**5.4.3. Wie wird sich das Volumen des Komparators nach einem allfälligen Kostenübernahme-Entscheid entwickeln?**
 
 | Zeitraum | Geschätzte Anzahl Anwendungen des Komparators pro Jahr | Anzahl mit Komparator behandelte Patienten/innen pro Jahr |
 | :--- | :--- | :--- |
-| [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Aktuell | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Jahr 1 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Jahr 3 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Ab Jahr 5 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] |
 
 ### 5.5. Kostenauswirkung
 
@@ -349,17 +357,23 @@ zu Handen der Eidgenössischen Kommission für Analysen, Mittel und Gegenstände
 
 | Zeitraum | Anzahl Produkte | Kosten einzelnes Produkt | Kosten total |
 | :--- | :--- | :--- | :--- |
-| [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Aktuell (Jahr 0) | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Jahr 1 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Jahr 3 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Ab Jahr 5 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
 
 **5.5.2. Wie ist die Menge x Kosten-Aufstellung bezüglich des Komparators?**
 
 | Zeitraum | Anzahl Produkte | Kosten einzelnes Produkt | Kosten total |
 | :--- | :--- | :--- | :--- |
-| [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Aktuell (Jahr 0) | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Jahr 1 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Jahr 3 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
+| Ab Jahr 5 nach Kostenübernahme | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
 
 **5.5.3. Einsparungen bei der Versorgung**
 
-| Art der eingesparten Produkte / Leistungen | Menge der eingesparten Produkte / Leistungen, Jahre | Kosten der eingesparten Produkte / Leistungen, Jahre | Bemerkungen |
+| Art der eingesparten Produkte / Leistungen (gestützt auf Modul 2) | Menge der eingesparten Produkte / Leistungen (Jahre 0, 1, 3 und 5 nach Kostenübernahme-Entscheid) | Kosten der eingesparten Produkte / Leistungen (Jahre 0, 1, 3 und 5 nach Kostenübernahme-Entscheid) | Bemerkungen |
 | :--- | :--- | :--- | :--- |
 | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] | [Bitte hier eintragen] |
 
@@ -398,6 +412,8 @@ zu Handen der Eidgenössischen Kommission für Analysen, Mittel und Gegenstände
 [Bitte hier eintragen]
 
 ### 5.6.5. Quellen der Modellparameter (CEA/BIA)
+
+> *Hinweis: Abschnitt 5.6.5 ist eine Ergänzung dieses Skills (Nachvollziehbarkeit der Modellparameter) und nicht Teil des offiziellen BAG-Formulars. Er unterstützt die im Formularkopf geforderte Belegpflicht jeder Feststellung.*
 
 Tragen Sie hier die exakten Quellen der für die ökonomische Modellierung verwendeten Parameter ein (z. B. DOI/PMID, Zitat oder Dokumentenname):
 

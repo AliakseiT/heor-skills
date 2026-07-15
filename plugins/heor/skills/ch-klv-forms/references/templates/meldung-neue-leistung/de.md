@@ -67,8 +67,9 @@
 **Kurze Beschreibung:**
 - **Wirkungsmechanismus:** {{mechanism}}
 - **Anwender:** {{user_groups}}
-- **Ablauf / Behandlungspfad:** {{procedure_steps}}
-- **Anwendungshäufigkeit:** {{application_frequency}}
+- **Ablauf der Behandlung / Massnahme:** {{procedure_steps}}
+- **Stellung in der diagnostischen oder therapeutischen Kette:** {{position_in_care_chain}}
+- **Anwendungshäufigkeit pro Behandlungsfall:** {{application_frequency}}
 
 **Wichtige patientenrelevante Outcomes:**
 {{outcomes}}
@@ -105,9 +106,11 @@
 
 **Kosten pro Behandlungsfall (neue Leistung):**
 {{cost_new}}
+> *Zusätzlich, falls eine handelbare Ware (z. B. Arzneimittel, Transplantatprodukt, Medizinprodukt) beinhaltet ist: Wie ist deren Preis?*
 
-**Kosten pro Behandlungsfall (Standard):**
+**Kosten pro Behandlungsfall (bisherige Standardmassnahme):**
 {{cost_standard}}
+> *Zusätzlich, falls eine handelbare Ware (z. B. Arzneimittel, Transplantatprodukt, Medizinprodukt) beinhaltet ist: Wie ist deren Preis?*
 
 **Anzahl Versicherte pro Jahr / Indikation:**
 {{insured_volume}}

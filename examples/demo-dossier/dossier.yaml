@@ -1,0 +1,19 @@
+version: 1
+intervention:
+  name: SereniCBT
+  description: >-
+    Prescription digital therapeutic (software as a medical device) delivering
+    guided cognitive behavioural therapy for adults with mild-to-moderate
+    depressive episodes. 12-week programme with weekly modules, mood tracking,
+    and therapist dashboard. CE-marked Class IIa under MDR. Intended as an
+    adjunct to standard outpatient care.
+  deviceClass: IIa
+  categories: [digital-health]
+jurisdictions: [ch]
+languages: [en, de]
+comparator: >-
+  Standard outpatient care (GP follow-up with optional referral to
+  psychotherapy waiting list), without a digital therapeutic.
+notes: >-
+  Demo dossier for testing the heor plugin skills end-to-end. Target pathway:
+  Swiss dGA fast-track (from July 2026). Keep all outputs in this directory.
