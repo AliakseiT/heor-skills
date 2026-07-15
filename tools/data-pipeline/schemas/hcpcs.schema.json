@@ -1,0 +1,48 @@
+{
+  "$id": "heor-skills/data/us/hcpcs",
+  "description": "Planned shape for US HCPCS Level II codes (normalizer not yet implemented — see normalizers/us-hcpcs.ts). Fee schedules are separate CMS datasets, so no prices here.",
+  "$defs": {
+    "index": {
+      "type": "object",
+      "required": ["list", "jurisdiction", "version", "languages", "source", "entries"],
+      "properties": {
+        "list": { "const": "hcpcs" },
+        "jurisdiction": { "const": "us" },
+        "version": { "type": "string", "pattern": "^\\d{4}-\\d{2}$" },
+        "languages": { "type": "array", "items": { "const": "en" } },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["code", "category"],
+            "properties": {
+              "code": { "type": "string", "pattern": "^[A-Z]\\d{4}$" },
+              "category": { "type": "string", "pattern": "^[A-Z]$" }
+            }
+          }
+        }
+      }
+    },
+    "labels": {
+      "type": "object",
+      "required": ["list", "jurisdiction", "version", "language", "entries"],
+      "properties": {
+        "list": { "const": "hcpcs" },
+        "language": { "const": "en" },
+        "entries": {
+          "type": "object",
+          "patternProperties": {
+            "^[A-Z]\\d{4}$": {
+              "type": "object",
+              "required": ["name"],
+              "properties": {
+                "name": { "type": "string" },
+                "shortName": { "type": ["string", "null"] }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

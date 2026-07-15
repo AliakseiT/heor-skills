@@ -1,0 +1,30 @@
+{
+  "model": "markov-chain",
+  "inputs": {
+    "Prob Healthy to Healthy": 0.85,
+    "Prob Healthy to Disease": 0.1,
+    "Prob Healthy to Dead": 0.05,
+    "Prob Disease to Healthy": 0.2,
+    "Prob Disease to Disease": 0.7,
+    "Prob Disease to Dead": 0.1,
+    "Cost Healthy State": 500,
+    "Cost Disease State": 3000,
+    "Cost Dead State": 0,
+    "Utility Healthy State": 1.0,
+    "Utility Disease State": 0.7,
+    "Utility Dead State": 0.0,
+    "Number of Cycles": 20,
+    "Annual Discount Rate": 0.03,
+    "Initial Cohort % Healthy": 70,
+    "Initial Cohort % Disease": 30
+  },
+  "psa": {
+    "numIterations": 500,
+    "seed": 42,
+    "parameterRanges": {
+      "Cost Healthy State": { "min": 400, "max": 800, "distribution": "lognormal", "mean": 500, "stdDev": 200 },
+      "Cost Disease State": { "min": 2000, "max": 4500, "distribution": "lognormal", "mean": 3000, "stdDev": 1000 },
+      "Utility Disease State": { "min": 0.6, "max": 0.8, "distribution": "triangular", "mode": 0.7 }
+    }
+  }
+}

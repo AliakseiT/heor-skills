@@ -1,0 +1,10 @@
+{
+  "model": "discrete-event-simulation",
+  "inputs": {
+    "eventRateAlpha": 5,
+    "resourceCostBeta": 250,
+    "patientArrivalRate": 2,
+    "queueCapacity": 10,
+    "simulationDuration": 30
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "heor-skills",
+  "owner": {
+    "name": "Aliaksei Tsitovich",
+    "email": "aliaksei.tsitovich@adalyon.com"
+  },
+  "plugins": [
+    {
+      "name": "heor",
+      "source": "./plugins/heor",
+      "description": "HEOR & market access toolkit: PRISMA literature reviews, EUnetHTA dossier drafting, deterministic CEA/BIA/PSA economic modeling, regulation pathway navigation, reimbursement tariff search, and Swiss application forms (MiGeL, Analysenliste, KLV)."
+    }
+  ]
+}

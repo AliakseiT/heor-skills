@@ -1,0 +1,16 @@
+{
+  "model": "budget-impact",
+  "inputs": {
+    "targetMarket": "Switzerland",
+    "targetPopulationSize": 100000,
+    "marketShareInterventionY1": 5,
+    "marketShareInterventionY2": 15,
+    "marketShareInterventionY3": 25,
+    "marketShareComparatorY1": 95,
+    "marketShareComparatorY2": 85,
+    "marketShareComparatorY3": 75,
+    "annualCostInterventionPerPatient": 120,
+    "annualCostComparatorPerPatient": 80,
+    "numberOfYearsAssessment": 3
+  }
+}

@@ -1,0 +1,9134 @@
+{
+  "list": "migel",
+  "jurisdiction": "ch",
+  "version": "2025-07",
+  "currency": "CHF",
+  "languages": [
+    "de",
+    "fr",
+    "it"
+  ],
+  "source": {
+    "file": "Mittel- und Gegenständeliste per 01.07.2025  in Excel-Format, korrigierte Version vom 3. September 2025.xlsx",
+    "landingUrl": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/Mittel-und-Gegenstaendeliste.html"
+  },
+  "hierarchy": [
+    {
+      "id": "01",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "01.01",
+      "level": 2,
+      "parent": "01"
+    },
+    {
+      "id": "01.02",
+      "level": 2,
+      "parent": "01"
+    },
+    {
+      "id": "01.03",
+      "level": 2,
+      "parent": "01"
+    },
+    {
+      "id": "03",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "03.01",
+      "level": 2,
+      "parent": "03"
+    },
+    {
+      "id": "03.02",
+      "level": 2,
+      "parent": "03"
+    },
+    {
+      "id": "03.05",
+      "level": 2,
+      "parent": "03"
+    },
+    {
+      "id": "03.06",
+      "level": 2,
+      "parent": "03"
+    },
+    {
+      "id": "03.07",
+      "level": 2,
+      "parent": "03"
+    },
+    {
+      "id": "03.07.01",
+      "level": 3,
+      "parent": "03.07"
+    },
+    {
+      "id": "03.07.02",
+      "level": 3,
+      "parent": "03.07"
+    },
+    {
+      "id": "03.07.03",
+      "level": 3,
+      "parent": "03.07"
+    },
+    {
+      "id": "03.07.04",
+      "level": 3,
+      "parent": "03.07"
+    },
+    {
+      "id": "03.07.08",
+      "level": 3,
+      "parent": "03.07"
+    },
+    {
+      "id": "03.07.09",
+      "level": 3,
+      "parent": "03.07"
+    },
+    {
+      "id": "03.07.10",
+      "level": 3,
+      "parent": "03.07"
+    },
+    {
+      "id": "03.07.15",
+      "level": 3,
+      "parent": "03.07"
+    },
+    {
+      "id": "05",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "05.01",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.02",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.04",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.06",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.07",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.08",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.09",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.10",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.11",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.13",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.14",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "05.20",
+      "level": 2,
+      "parent": "05"
+    },
+    {
+      "id": "06",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "06.01",
+      "level": 2,
+      "parent": "06"
+    },
+    {
+      "id": "09",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "09.01",
+      "level": 2,
+      "parent": "09"
+    },
+    {
+      "id": "09.02",
+      "level": 2,
+      "parent": "09"
+    },
+    {
+      "id": "09.03",
+      "level": 2,
+      "parent": "09"
+    },
+    {
+      "id": "09.04",
+      "level": 2,
+      "parent": "09"
+    },
+    {
+      "id": "10",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "10.01",
+      "level": 2,
+      "parent": "10"
+    },
+    {
+      "id": "10.02",
+      "level": 2,
+      "parent": "10"
+    },
+    {
+      "id": "13",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "13.01",
+      "level": 2,
+      "parent": "13"
+    },
+    {
+      "id": "14",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "14.01",
+      "level": 2,
+      "parent": "14"
+    },
+    {
+      "id": "14.02",
+      "level": 2,
+      "parent": "14"
+    },
+    {
+      "id": "14.03",
+      "level": 2,
+      "parent": "14"
+    },
+    {
+      "id": "14.10",
+      "level": 2,
+      "parent": "14"
+    },
+    {
+      "id": "14.10a",
+      "level": 4,
+      "parent": "14.10"
+    },
+    {
+      "id": "14.10b",
+      "level": 4,
+      "parent": "14.10"
+    },
+    {
+      "id": "14.10c",
+      "level": 4,
+      "parent": "14.10"
+    },
+    {
+      "id": "14.10d",
+      "level": 4,
+      "parent": "14.10"
+    },
+    {
+      "id": "14.10e",
+      "level": 4,
+      "parent": "14.10"
+    },
+    {
+      "id": "14.11",
+      "level": 2,
+      "parent": "14"
+    },
+    {
+      "id": "14.12",
+      "level": 2,
+      "parent": "14"
+    },
+    {
+      "id": "15",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "15.01",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "15.01.04",
+      "level": 3,
+      "parent": "15.01"
+    },
+    {
+      "id": "15.10",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "15.11",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "15.13",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "15.14",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "15.15",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "15.16",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "15.17",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "15.20",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "15.30",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "15.40",
+      "level": 2,
+      "parent": "15"
+    },
+    {
+      "id": "16",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "16.01",
+      "level": 2,
+      "parent": "16"
+    },
+    {
+      "id": "17",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "17.02",
+      "level": 2,
+      "parent": "17"
+    },
+    {
+      "id": "17.03",
+      "level": 2,
+      "parent": "17"
+    },
+    {
+      "id": "17.05",
+      "level": 2,
+      "parent": "17"
+    },
+    {
+      "id": "17.06",
+      "level": 2,
+      "parent": "17"
+    },
+    {
+      "id": "17.12",
+      "level": 2,
+      "parent": "17"
+    },
+    {
+      "id": "17.12.01",
+      "level": 3,
+      "parent": "17.12"
+    },
+    {
+      "id": "17.15",
+      "level": 2,
+      "parent": "17"
+    },
+    {
+      "id": "17.20",
+      "level": 2,
+      "parent": "17"
+    },
+    {
+      "id": "17.20.01",
+      "level": 3,
+      "parent": "17.20"
+    },
+    {
+      "id": "17.30",
+      "level": 2,
+      "parent": "17"
+    },
+    {
+      "id": "17.30.01",
+      "level": 3,
+      "parent": "17.30"
+    },
+    {
+      "id": "17.30.01a",
+      "level": 4,
+      "parent": "17.30.01"
+    },
+    {
+      "id": "17.30.01b",
+      "level": 4,
+      "parent": "17.30.01"
+    },
+    {
+      "id": "17.30.01c",
+      "level": 4,
+      "parent": "17.30.01"
+    },
+    {
+      "id": "17.30.01d",
+      "level": 4,
+      "parent": "17.30.01"
+    },
+    {
+      "id": "17.30.05",
+      "level": 3,
+      "parent": "17.30"
+    },
+    {
+      "id": "17.30.05a",
+      "level": 4,
+      "parent": "17.30.05"
+    },
+    {
+      "id": "17.30.05b",
+      "level": 4,
+      "parent": "17.30.05"
+    },
+    {
+      "id": "17.30.15",
+      "level": 3,
+      "parent": "17.30"
+    },
+    {
+      "id": "17.30.15a",
+      "level": 4,
+      "parent": "17.30.15"
+    },
+    {
+      "id": "21",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "21.01",
+      "level": 2,
+      "parent": "21"
+    },
+    {
+      "id": "21.02",
+      "level": 2,
+      "parent": "21"
+    },
+    {
+      "id": "21.03",
+      "level": 2,
+      "parent": "21"
+    },
+    {
+      "id": "21.04",
+      "level": 2,
+      "parent": "21"
+    },
+    {
+      "id": "21.05",
+      "level": 2,
+      "parent": "21"
+    },
+    {
+      "id": "21.06",
+      "level": 2,
+      "parent": "21"
+    },
+    {
+      "id": "22",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "22.01",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.02",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.03",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.04",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.05",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.06",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.07",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.08",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.09",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.11",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.12",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.13",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.14",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "22.15",
+      "level": 2,
+      "parent": "22"
+    },
+    {
+      "id": "23",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "23.02",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.03",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.04",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.05",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.06",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.10",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.11",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.12",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.20",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.21",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.22",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.23",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.24",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "23.25",
+      "level": 2,
+      "parent": "23"
+    },
+    {
+      "id": "24",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "24.01",
+      "level": 2,
+      "parent": "24"
+    },
+    {
+      "id": "24.02",
+      "level": 2,
+      "parent": "24"
+    },
+    {
+      "id": "24.03",
+      "level": 2,
+      "parent": "24"
+    },
+    {
+      "id": "25",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "25.01",
+      "level": 2,
+      "parent": "25"
+    },
+    {
+      "id": "25.02",
+      "level": 2,
+      "parent": "25"
+    },
+    {
+      "id": "25.03",
+      "level": 2,
+      "parent": "25"
+    },
+    {
+      "id": "26",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "29",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "29.01",
+      "level": 2,
+      "parent": "29"
+    },
+    {
+      "id": "30",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "30.01",
+      "level": 2,
+      "parent": "30"
+    },
+    {
+      "id": "30.02",
+      "level": 2,
+      "parent": "30"
+    },
+    {
+      "id": "30.03",
+      "level": 2,
+      "parent": "30"
+    },
+    {
+      "id": "31",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "31.10",
+      "level": 2,
+      "parent": "31"
+    },
+    {
+      "id": "31.20",
+      "level": 2,
+      "parent": "31"
+    },
+    {
+      "id": "31.30",
+      "level": 2,
+      "parent": "31"
+    },
+    {
+      "id": "35",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "35.01",
+      "level": 2,
+      "parent": "35"
+    },
+    {
+      "id": "35.01.01",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.01.01a",
+      "level": 4,
+      "parent": "35.01.01"
+    },
+    {
+      "id": "35.01.01b",
+      "level": 4,
+      "parent": "35.01.01"
+    },
+    {
+      "id": "35.01.02",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.01.04",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.01.05",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.01.06",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.01.06a",
+      "level": 4,
+      "parent": "35.01.06"
+    },
+    {
+      "id": "35.01.06b",
+      "level": 4,
+      "parent": "35.01.06"
+    },
+    {
+      "id": "35.01.07",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.01.07a",
+      "level": 4,
+      "parent": "35.01.07"
+    },
+    {
+      "id": "35.01.07b",
+      "level": 4,
+      "parent": "35.01.07"
+    },
+    {
+      "id": "35.01.08",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.01.08a",
+      "level": 4,
+      "parent": "35.01.08"
+    },
+    {
+      "id": "35.01.08c",
+      "level": 4,
+      "parent": "35.01.08"
+    },
+    {
+      "id": "35.01.08d",
+      "level": 4,
+      "parent": "35.01.08"
+    },
+    {
+      "id": "35.01.08e",
+      "level": 4,
+      "parent": "35.01.08"
+    },
+    {
+      "id": "35.01.09",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.01.09a",
+      "level": 4,
+      "parent": "35.01.09"
+    },
+    {
+      "id": "35.01.09b",
+      "level": 4,
+      "parent": "35.01.09"
+    },
+    {
+      "id": "35.01.09c",
+      "level": 4,
+      "parent": "35.01.09"
+    },
+    {
+      "id": "35.01.09d",
+      "level": 4,
+      "parent": "35.01.09"
+    },
+    {
+      "id": "35.01.10",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.01.10b",
+      "level": 4,
+      "parent": "35.01.10"
+    },
+    {
+      "id": "35.01.10c",
+      "level": 4,
+      "parent": "35.01.10"
+    },
+    {
+      "id": "35.01.12",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.01.14",
+      "level": 3,
+      "parent": "35.01"
+    },
+    {
+      "id": "35.03",
+      "level": 2,
+      "parent": "35"
+    },
+    {
+      "id": "35.05",
+      "level": 2,
+      "parent": "35"
+    },
+    {
+      "id": "35.05.01",
+      "level": 3,
+      "parent": "35.05"
+    },
+    {
+      "id": "35.05.02",
+      "level": 3,
+      "parent": "35.05"
+    },
+    {
+      "id": "35.05.03",
+      "level": 3,
+      "parent": "35.05"
+    },
+    {
+      "id": "35.05.04",
+      "level": 3,
+      "parent": "35.05"
+    },
+    {
+      "id": "35.05.05",
+      "level": 3,
+      "parent": "35.05"
+    },
+    {
+      "id": "35.05.05a",
+      "level": 4,
+      "parent": "35.05.05"
+    },
+    {
+      "id": "35.05.06",
+      "level": 3,
+      "parent": "35.05"
+    },
+    {
+      "id": "35.05.07",
+      "level": 3,
+      "parent": "35.05"
+    },
+    {
+      "id": "35.05.08",
+      "level": 3,
+      "parent": "35.05"
+    },
+    {
+      "id": "35.05.09",
+      "level": 3,
+      "parent": "35.05"
+    },
+    {
+      "id": "35.05.09a",
+      "level": 4,
+      "parent": "35.05.09"
+    },
+    {
+      "id": "35.05.09b",
+      "level": 4,
+      "parent": "35.05.09"
+    },
+    {
+      "id": "35.05.09c",
+      "level": 4,
+      "parent": "35.05.09"
+    },
+    {
+      "id": "35.05.10",
+      "level": 3,
+      "parent": "35.05"
+    },
+    {
+      "id": "35.05.10a",
+      "level": 4,
+      "parent": "35.05.10"
+    },
+    {
+      "id": "35.05.10b",
+      "level": 4,
+      "parent": "35.05.10"
+    },
+    {
+      "id": "35.05.10c",
+      "level": 4,
+      "parent": "35.05.10"
+    },
+    {
+      "id": "35.05.10d",
+      "level": 4,
+      "parent": "35.05.10"
+    },
+    {
+      "id": "35.06",
+      "level": 2,
+      "parent": "35"
+    },
+    {
+      "id": "35.06.04",
+      "level": 3,
+      "parent": "35.06"
+    },
+    {
+      "id": "35.06.04a",
+      "level": 4,
+      "parent": "35.06.04"
+    },
+    {
+      "id": "35.06.06",
+      "level": 3,
+      "parent": "35.06"
+    },
+    {
+      "id": "35.06.06a",
+      "level": 4,
+      "parent": "35.06.06"
+    },
+    {
+      "id": "35.06.07",
+      "level": 3,
+      "parent": "35.06"
+    },
+    {
+      "id": "35.06.07a",
+      "level": 4,
+      "parent": "35.06.07"
+    },
+    {
+      "id": "35.06.08",
+      "level": 3,
+      "parent": "35.06"
+    },
+    {
+      "id": "35.06.08a",
+      "level": 4,
+      "parent": "35.06.08"
+    },
+    {
+      "id": "35.07",
+      "level": 3,
+      "parent": "35.06"
+    },
+    {
+      "id": "35.07.01",
+      "level": 3,
+      "parent": "35.06"
+    },
+    {
+      "id": "35.07.01a",
+      "level": 4,
+      "parent": "35.07.01"
+    },
+    {
+      "id": "35.07.09",
+      "level": 3,
+      "parent": "35.06"
+    },
+    {
+      "id": "35.07.09c",
+      "level": 4,
+      "parent": "35.07.09"
+    },
+    {
+      "id": "35.07.11",
+      "level": 3,
+      "parent": "35.06"
+    },
+    {
+      "id": "35.07.11a",
+      "level": 4,
+      "parent": "35.07.11"
+    },
+    {
+      "id": "35.10",
+      "level": 2,
+      "parent": "35"
+    },
+    {
+      "id": "35.10.03",
+      "level": 3,
+      "parent": "35.10"
+    },
+    {
+      "id": "35.10.03a",
+      "level": 4,
+      "parent": "35.10.03"
+    },
+    {
+      "id": "35.10.05",
+      "level": 3,
+      "parent": "35.10"
+    },
+    {
+      "id": "35.10.05a",
+      "level": 4,
+      "parent": "35.10.05"
+    },
+    {
+      "id": "35.10.06",
+      "level": 3,
+      "parent": "35.10"
+    },
+    {
+      "id": "35.10.08",
+      "level": 3,
+      "parent": "35.10"
+    },
+    {
+      "id": "35.10.08a",
+      "level": 4,
+      "parent": "35.10.08"
+    },
+    {
+      "id": "35.11",
+      "level": 2,
+      "parent": "35"
+    },
+    {
+      "id": "35.11.01",
+      "level": 3,
+      "parent": "35.11"
+    },
+    {
+      "id": "35.15",
+      "level": 2,
+      "parent": "35"
+    },
+    {
+      "id": "35.15.02",
+      "level": 3,
+      "parent": "35.15"
+    },
+    {
+      "id": "35.15.02a",
+      "level": 4,
+      "parent": "35.15.02"
+    },
+    {
+      "id": "35.20",
+      "level": 2,
+      "parent": "35"
+    },
+    {
+      "id": "35.25",
+      "level": 2,
+      "parent": "35"
+    },
+    {
+      "id": "35.25.01",
+      "level": 3,
+      "parent": "35.25"
+    },
+    {
+      "id": "35.25.02",
+      "level": 3,
+      "parent": "35.25"
+    },
+    {
+      "id": "35.30",
+      "level": 2,
+      "parent": "35"
+    },
+    {
+      "id": "36",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "36.02",
+      "level": 2,
+      "parent": "36"
+    },
+    {
+      "id": "99",
+      "level": 1,
+      "parent": null
+    },
+    {
+      "id": "99.01",
+      "level": 2,
+      "parent": "99"
+    },
+    {
+      "id": "99.02",
+      "level": 2,
+      "parent": "99"
+    },
+    {
+      "id": "99.02.01",
+      "level": 3,
+      "parent": "99.02"
+    },
+    {
+      "id": "99.03.00",
+      "level": 3,
+      "parent": "99.02"
+    },
+    {
+      "id": "99.10",
+      "level": 2,
+      "parent": "99"
+    },
+    {
+      "id": "99.11",
+      "level": 2,
+      "parent": "99"
+    },
+    {
+      "id": "99.12",
+      "level": 2,
+      "parent": "99"
+    },
+    {
+      "id": "99.20",
+      "level": 2,
+      "parent": "99"
+    },
+    {
+      "id": "99.20.01",
+      "level": 3,
+      "parent": "99.20"
+    },
+    {
+      "id": "99.30",
+      "level": 2,
+      "parent": "99"
+    },
+    {
+      "id": "99.30.02",
+      "level": 3,
+      "parent": "99.30"
+    },
+    {
+      "id": "99.30.03",
+      "level": 3,
+      "parent": "99.30"
+    },
+    {
+      "id": "99.30.04",
+      "level": 3,
+      "parent": "99.30"
+    },
+    {
+      "id": "99.30.06",
+      "level": 3,
+      "parent": "99.30"
+    },
+    {
+      "id": "99.31",
+      "level": 2,
+      "parent": "99"
+    },
+    {
+      "id": "99.50",
+      "level": 2,
+      "parent": "99"
+    }
+  ],
+  "entries": [
+    {
+      "code": "01.01.01.00.1",
+      "parent": "01.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 47.17,
+        "care": 44.82
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "01.01.02.00.1",
+      "parent": "01.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 175.65,
+        "care": 166.87
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "01.01.03.00.1",
+      "parent": "01.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 341.26,
+        "care": 324.2
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "01.01.03.00.2",
+      "parent": "01.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.31,
+        "care": 2.2
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "01.01.04.00.1",
+      "parent": "01.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 27.85,
+        "care": 23.68
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "01.02.02.00.1",
+      "parent": "01.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1053.9,
+        "care": 1001.2
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "01.02.02.00.2",
+      "parent": "01.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.92,
+        "care": 0.87
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "01.02.05.00.1",
+      "parent": "01.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 106.39,
+        "care": 101.07
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "01.02.06.00.1",
+      "parent": "01.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 72.29,
+        "care": 65.06
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "01.02.10.00.1",
+      "parent": "01.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.63,
+        "care": 0.57
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "01.03.01.01.1",
+      "parent": "01.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 85.52,
+        "care": 76.96
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "01.03.02.01.1",
+      "parent": "01.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 27.15,
+        "care": 25.8
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "01.03.02.02.1",
+      "parent": "01.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 12.25,
+        "care": 11.63
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.01.01.00.1",
+      "parent": "03.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 17.64,
+        "care": 15.88
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.01.02.00.1",
+      "parent": "03.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 8.63,
+        "care": 8.2
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.02.01.00.2",
+      "parent": "03.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 10.11,
+        "care": 9.61
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "03.05.03.00.1",
+      "parent": "03.05",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 71.67,
+        "care": 60.92
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.05.20.00.1",
+      "parent": "03.05",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 95.1,
+        "care": 85.6
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.01.00.1",
+      "parent": "03.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 4968.38,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.01.00.2",
+      "parent": "03.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.18,
+        "care": 3.96
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.01.01.1",
+      "parent": "03.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 266.79,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.01.02.1",
+      "parent": "03.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2649.81,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.01.02.2",
+      "parent": "03.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.8,
+        "care": 2.66
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.01.03.1",
+      "parent": "03.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 324.6,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.01.06.1",
+      "parent": "03.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 303.57,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.01.07.1",
+      "parent": "03.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 534.48,
+        "care": 507.76
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.02.01.1",
+      "parent": "03.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 78.49,
+        "care": 74.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.02.02.1",
+      "parent": "03.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 110.91,
+        "care": 105.37
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.02.04.1",
+      "parent": "03.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 162.41,
+        "care": 154.29
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.10.03.1",
+      "parent": "03.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 37.94,
+        "care": 34.15
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.10.04.1",
+      "parent": "03.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 49.68,
+        "care": 44.72
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.06.10.05.1",
+      "parent": "03.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 69.74,
+        "care": 62.76
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.00.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.97,
+        "care": 3.57
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.01.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.27,
+        "care": 4.06
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.02.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.93,
+        "care": 4.44
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.03.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 24.75,
+        "care": 23.52
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.05.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.44,
+        "care": 1.29
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.06.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.86,
+        "care": 1.68
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.07.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.54,
+        "care": 3.19
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.08.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.29,
+        "care": 4.76
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.09.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 8.59,
+        "care": 7.73
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.10.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 10.99
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.11.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 4.38
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.14.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.4,
+        "care": 6.65
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.15.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.87,
+        "care": 7.09
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.01.20.1",
+      "parent": "03.07.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 10.51,
+        "care": 9.45
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.02.01.1",
+      "parent": "03.07.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.06,
+        "care": 0.95
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.02.02.1",
+      "parent": "03.07.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.26,
+        "care": 2.04
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.02.03.1",
+      "parent": "03.07.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.75,
+        "care": 6.08
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.02.04.1",
+      "parent": "03.07.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.26,
+        "care": 1.13
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.02.05.1",
+      "parent": "03.07.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.27,
+        "care": 3.84
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.02.06.1",
+      "parent": "03.07.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.22,
+        "care": 0.2
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.02.07.1",
+      "parent": "03.07.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.65,
+        "care": 0.59
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.03.01.1",
+      "parent": "03.07.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": 10.22
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.03.03.1",
+      "parent": "03.07.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1.42,
+        "care": 1.27
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.04.02.1",
+      "parent": "03.07.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 10.35
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.04.05.1",
+      "parent": "03.07.04",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 17.42,
+        "care": 15.68
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.08.02.1",
+      "parent": "03.07.08",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 204.42,
+        "care": 183.98
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.08.03.1",
+      "parent": "03.07.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 15.06,
+        "care": 13.55
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.08.05.1",
+      "parent": "03.07.08",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 189.92,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.08.05.2",
+      "parent": "03.07.08",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.27,
+        "care": 0.24
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.08.06.1",
+      "parent": "03.07.08",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 40.15,
+        "care": 38.14
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.09.01.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.08,
+        "care": 0.06
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.09.05.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 2.15
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.09.06.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.29,
+        "care": 6.55
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.09.07.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 16.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.09.09.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.11,
+        "care": 0.1
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.09.10.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.25,
+        "care": 0.23
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.09.11.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 0.08
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.09.12.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 16.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.09.13.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 1.7
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.09.14.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.34,
+        "care": 1.21
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.09.15.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.45,
+        "care": null
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.09.16.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.3,
+        "care": null
+      },
+      "validFrom": "2023-07-01"
+    },
+    {
+      "code": "03.07.09.17.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.24,
+        "care": 0.22
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.09.18.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.39,
+        "care": 2.15
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.09.20.1",
+      "parent": "03.07.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.81,
+        "care": 0.73
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.09.21.1",
+      "parent": "03.07.09",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 4.81,
+        "care": 4.33
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.10.01.1",
+      "parent": "03.07.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.35,
+        "care": 0.26
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.10.02.1",
+      "parent": "03.07.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.37,
+        "care": 0.28
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.10.04.1",
+      "parent": "03.07.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.61,
+        "care": 2.48
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.10.10.1",
+      "parent": "03.07.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.44,
+        "care": 0.33
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.10.11.1",
+      "parent": "03.07.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.93,
+        "care": 0.7
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.10.15.1",
+      "parent": "03.07.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.3,
+        "care": 0.26
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "03.07.15.01.1",
+      "parent": "03.07.15",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.82,
+        "care": 4.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.15.02.1",
+      "parent": "03.07.15",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 217.5,
+        "care": 206.63
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.15.03.1",
+      "parent": "03.07.15",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 18.57,
+        "care": 17.65
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.15.04.1",
+      "parent": "03.07.15",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 26.95,
+        "care": 25.6
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "03.07.15.05.1",
+      "parent": "03.07.15",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 36.23,
+        "care": 34.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.01.01.00.1",
+      "parent": "05.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 25.59,
+        "care": 23.09
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.01.02.00.1",
+      "parent": "05.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 30.01,
+        "care": 27
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.02.10.00.1",
+      "parent": "05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 21.78,
+        "care": 19.57
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.02.11.00.1",
+      "parent": "05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 24.19,
+        "care": 21.78
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.02.12.00.1",
+      "parent": "05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 66.85,
+        "care": 60.12
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.02.13.00.1",
+      "parent": "05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 73.57,
+        "care": 66.25
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.02.14.00.1",
+      "parent": "05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 81.3,
+        "care": 73.17
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.02.15.00.1",
+      "parent": "05.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 193.21,
+        "care": 173.89
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.02.20.00.1",
+      "parent": "05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 90.33,
+        "care": 81.3
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.04.10.00.1",
+      "parent": "05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 39.35,
+        "care": 35.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.04.11.00.1",
+      "parent": "05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 30.01,
+        "care": 27
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.04.12.00.1",
+      "parent": "05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 82.91,
+        "care": 74.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.04.13.00.1",
+      "parent": "05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 115.43,
+        "care": 103.88
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.04.15.00.1",
+      "parent": "05.04",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 200.64,
+        "care": 180.57
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.06.02.00.1",
+      "parent": "05.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 52.19,
+        "care": 46.97
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.07.01.00.1",
+      "parent": "05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 50.09,
+        "care": 45.07
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.07.10.00.1",
+      "parent": "05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 19.97,
+        "care": 17.97
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.07.11.00.1",
+      "parent": "05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 41.05,
+        "care": 36.94
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.07.12.00.1",
+      "parent": "05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 29.31,
+        "care": 26.4
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.07.13.00.1",
+      "parent": "05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 35.23,
+        "care": 31.72
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.07.14.00.1",
+      "parent": "05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 70.46,
+        "care": 63.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.08.05.00.1",
+      "parent": "05.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 21.08,
+        "care": 18.97
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "05.08.06.00.1",
+      "parent": "05.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 26.8,
+        "care": 24.09
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "05.08.07.00.1",
+      "parent": "05.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 69.16,
+        "care": 62.23
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "05.08.08.00.1",
+      "parent": "05.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 76.28,
+        "care": 68.65
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "05.08.09.00.1",
+      "parent": "05.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 55.61,
+        "care": 50.09
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "05.08.15.00.1",
+      "parent": "05.08",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 183.68,
+        "care": 165.31
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "05.09.05.00.1",
+      "parent": "05.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 100.67,
+        "care": 90.64
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.09.06.00.1",
+      "parent": "05.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 123.36,
+        "care": 111.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.10.01.00.1",
+      "parent": "05.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.22,
+        "care": 5.62
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.10.02.00.1",
+      "parent": "05.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.73,
+        "care": 6.93
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.10.03.00.1",
+      "parent": "05.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 11.54,
+        "care": 10.44
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.11.02.00.1",
+      "parent": "05.11",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 152.46,
+        "care": 137.21
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.11.06.00.1",
+      "parent": "05.11",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 136.4,
+        "care": 122.75
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.11.10.00.1",
+      "parent": "05.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 53.3,
+        "care": 47.98
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.11.15.00.1",
+      "parent": "05.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 164.01,
+        "care": 147.65
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.13.02.00.1",
+      "parent": "05.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 32.02,
+        "care": 28.81
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.14.01.00.1",
+      "parent": "05.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 79.8,
+        "care": 71.87
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.14.02.00.1",
+      "parent": "05.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 164.11,
+        "care": 147.75
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.14.05.00.1",
+      "parent": "05.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 145.84,
+        "care": 131.29
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.20.01.00.1",
+      "parent": "05.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.65,
+        "care": 0.59
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "05.20.02.00.1",
+      "parent": "05.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.95,
+        "care": 0.86
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "05.20.03.00.1",
+      "parent": "05.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.46,
+        "care": 1.31
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.20.04.00.1",
+      "parent": "05.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.61,
+        "care": 2.35
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.20.05.00.1",
+      "parent": "05.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.01,
+        "care": 3.61
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.20.06.00.1",
+      "parent": "05.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.86,
+        "care": 3.48
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "05.20.07.00.1",
+      "parent": "05.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.87,
+        "care": 4.39
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "06.01.01.00.1",
+      "parent": "06.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 301.11,
+        "care": 286.06
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "06.01.01.00.2",
+      "parent": "06.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1,
+        "care": 0.95
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "09.01.01.00.1",
+      "parent": "09.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 725.69,
+        "care": 689.4
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.01.01.01.1",
+      "parent": "09.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 58.97,
+        "care": 53.08
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.02.01.00.1",
+      "parent": "09.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 144.74,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.02.01.01.1",
+      "parent": "09.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 144.74,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.02.01.02.1",
+      "parent": "09.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 3.33,
+        "care": 3.16
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.02.01.03.1",
+      "parent": "09.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 17.92,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.02.01.04.1",
+      "parent": "09.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 33.98,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.02.03.00.1",
+      "parent": "09.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 379.88,
+        "care": 360.89
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.02.03.00.2",
+      "parent": "09.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.22,
+        "care": 0.21
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.02.03.01.1",
+      "parent": "09.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 62.85,
+        "care": 59.71
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.02.03.02.1",
+      "parent": "09.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 8.33,
+        "care": 7.91
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.02.03.03.1",
+      "parent": "09.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 10.33,
+        "care": 9.81
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.03.01.00.2",
+      "parent": "09.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 124.46,
+        "care": 124.46
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.03.01.01.2",
+      "parent": "09.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 107.29,
+        "care": 107.29
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.03.01.02.2",
+      "parent": "09.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 63.85,
+        "care": 63.85
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "09.04.01.00.2",
+      "parent": "09.04",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 14373.18,
+        "care": 14373.18
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "10.01.01.00.1",
+      "parent": "10.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 35.13,
+        "care": 29.86
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "10.01.01.01.1",
+      "parent": "10.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 60.22,
+        "care": 51.19
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "10.01.01.02.1",
+      "parent": "10.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 44.16,
+        "care": 37.54
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "10.01.01.02.2",
+      "parent": "10.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1.15,
+        "care": 1.04
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "10.02.01.00.1",
+      "parent": "10.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 39.14,
+        "care": 35.23
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "13.01.01.00.1",
+      "parent": "13.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "13.01.01.01.1",
+      "parent": "13.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 60.22,
+        "care": 51.19
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "13.01.01.02.1",
+      "parent": "13.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 120.45,
+        "care": 102.38
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "13.01.01.03.1",
+      "parent": "13.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 437.62,
+        "care": 415.74
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "14.01.01.00.1",
+      "parent": "14.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 195.72,
+        "care": 176.15
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.01.00.2",
+      "parent": "14.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.2,
+        "care": 0.19
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "14.01.01.01.3",
+      "parent": "14.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 39.6,
+        "care": 35.64
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.01.02.3",
+      "parent": "14.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 100.02,
+        "care": 90.02
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.01.03.2",
+      "parent": "14.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 25.09,
+        "care": 23.84
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.01.04.1",
+      "parent": "14.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.3,
+        "care": 0.27
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "14.01.03.00.1",
+      "parent": "14.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1119.14,
+        "care": 1063.18
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.03.00.2",
+      "parent": "14.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1,
+        "care": 0.95
+      },
+      "validFrom": "2023-01-01"
+    },
+    {
+      "code": "14.01.03.01.3",
+      "parent": "14.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 130.48,
+        "care": 117.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.03.02.3",
+      "parent": "14.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 86.32,
+        "care": 77.69
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.04.00.1",
+      "parent": "14.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 3671.99,
+        "care": 3488.39
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.04.00.2",
+      "parent": "14.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.41,
+        "care": 2.29
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.04.01.1",
+      "parent": "14.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 324,
+        "care": 291.6
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.30.10.3",
+      "parent": "14.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.02,
+        "care": 5.42
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.01.30.11.3",
+      "parent": "14.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 21.03,
+        "care": 18.93
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.02.02.00.1",
+      "parent": "14.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 34.43,
+        "care": 30.98
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.02.03.00.1",
+      "parent": "14.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 38.64,
+        "care": 34.78
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.02.04.00.1",
+      "parent": "14.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.93,
+        "care": 7.14
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.03.01.00.1",
+      "parent": "14.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 40.15,
+        "care": 38.14
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.03.05.00.1",
+      "parent": "14.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 40.15,
+        "care": 38.14
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.03.05.01.1",
+      "parent": "14.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 100.37,
+        "care": 95.35
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.03.15.00.1",
+      "parent": "14.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 7929.34,
+        "care": 7532.87
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.03.15.00.2",
+      "parent": "14.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 11,
+        "care": 10.45
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.03.15.00.3",
+      "parent": "14.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.51,
+        "care": 1.36
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.03.15.02.1",
+      "parent": "14.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 401.49,
+        "care": 381.41
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.20.00.1",
+      "parent": "14.10a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1226.54,
+        "care": 1104.09
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.20.00.2",
+      "parent": "14.10a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1.48,
+        "care": 1.33
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.10.20.01.1",
+      "parent": "14.10a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2242.3,
+        "care": 2130.18
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.20.01.2",
+      "parent": "14.10a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.54,
+        "care": 2.41
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.10.20.80.3",
+      "parent": "14.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 43.5,
+        "care": null
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.10.22.00.1",
+      "parent": "14.10a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 4195.52,
+        "care": 3985.75
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.22.00.2",
+      "parent": "14.10a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 6.02,
+        "care": 5.72
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.10.22.80.3",
+      "parent": "14.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 49.67,
+        "care": 47.19
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.10.25.90.1",
+      "parent": "14.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 105.04,
+        "care": 99.79
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.10.25.91.1",
+      "parent": "14.10a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 217.85,
+        "care": 206.96
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.10.25.92.1",
+      "parent": "14.10a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 417.8,
+        "care": 396.91
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.10.26.00.1",
+      "parent": "14.10a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 5167.12,
+        "care": 4908.76
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.26.00.2",
+      "parent": "14.10a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 4.42,
+        "care": 4.2
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.26.80.3",
+      "parent": "14.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 35.13,
+        "care": 33.37
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.26.90.1",
+      "parent": "14.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 110.41,
+        "care": 104.89
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.40.00.1",
+      "parent": "14.10b",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 53.2,
+        "care": 50.54
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.41.00.2",
+      "parent": "14.10b",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.44,
+        "care": 0.42
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "14.10.41.01.2",
+      "parent": "14.10b",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.55,
+        "care": 0.52
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "14.10.41.02.2",
+      "parent": "14.10b",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1.08,
+        "care": 1.03
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "14.10.42.00.2",
+      "parent": "14.10b",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.11,
+        "care": 0.1
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "14.10.43.00.2",
+      "parent": "14.10b",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.44,
+        "care": 0.42
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "14.10.45.50.1",
+      "parent": "14.10b",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 50.19,
+        "care": 47.68
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.45.80.1",
+      "parent": "14.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 116.93,
+        "care": 111.09
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.50.00.1",
+      "parent": "14.10c",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 110.41,
+        "care": 104.89
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.50.01.1",
+      "parent": "14.10c",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 158.59,
+        "care": 150.66
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.51.00.2",
+      "parent": "14.10c",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.56,
+        "care": 2.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.52.00.2",
+      "parent": "14.10c",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.06,
+        "care": 1.96
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.55.50.1",
+      "parent": "14.10c",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 50.19,
+        "care": 47.68
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.55.80.1",
+      "parent": "14.10c",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 116.93,
+        "care": 111.11
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.60.00.1",
+      "parent": "14.10d",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 185.69,
+        "care": 167.12
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.61.00.1",
+      "parent": "14.10d",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 402.49,
+        "care": 362.24
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.62.00.1",
+      "parent": "14.10d",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 289.57,
+        "care": 260.61
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.70.00.1",
+      "parent": "14.10e",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 200.74,
+        "care": 190.71
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.10.70.01.1",
+      "parent": "14.10e",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 301.11,
+        "care": 286.06
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.11.00.01.1",
+      "parent": "14.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 732.71,
+        "care": 732.71
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.11.02.00.1",
+      "parent": "14.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1227.54,
+        "care": 1166.17
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.11.02.00.2",
+      "parent": "14.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1.5,
+        "care": 1.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.11.02.01.1",
+      "parent": "14.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 526.95,
+        "care": 500.6
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.11.02.90.1",
+      "parent": "14.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 135.5,
+        "care": 128.73
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.11.03.00.2",
+      "parent": "14.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 7.7,
+        "care": 7.32
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.11.04.00.2",
+      "parent": "14.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 4.04,
+        "care": 3.84
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.11.05.00.1",
+      "parent": "14.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 381.41,
+        "care": 343.27
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.11.06.00.1",
+      "parent": "14.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 526.95,
+        "care": 500.6
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.12.02.00.2",
+      "parent": "14.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 6.61,
+        "care": 6.28
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.12.02.05.1",
+      "parent": "14.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 451.67,
+        "care": 406.5
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.12.03.00.2",
+      "parent": "14.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 22.06,
+        "care": 20.96
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.12.03.05.1",
+      "parent": "14.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1003.71,
+        "care": 903.34
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.12.03.06.1",
+      "parent": "14.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 3211.88,
+        "care": 2890.7
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "14.12.04.00.1",
+      "parent": "14.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1296.8,
+        "care": 1231.56
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.12.05.00.1",
+      "parent": "14.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 294.74,
+        "care": 265.27
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.12.06.00.1",
+      "parent": "14.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 785.91,
+        "care": 707.32
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "14.12.06.00.2",
+      "parent": "14.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.8,
+        "care": 0.7200000000000001
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "15.01.01.00.1",
+      "parent": "15.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 544.01,
+        "care": 408.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.01.02.00.1",
+      "parent": "15.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1112.12,
+        "care": 834.09
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.01.03.00.1",
+      "parent": "15.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1584.86,
+        "care": 1267.89
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "15.01.04.00.1",
+      "parent": "15.01.04",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 105.39,
+        "care": 94.85
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.10.01.00.1",
+      "parent": "15.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.95,
+        "care": 0.86
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "15.10.01.01.1",
+      "parent": "15.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.26,
+        "care": 2.04
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.10.02.00.1",
+      "parent": "15.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.66,
+        "care": 3.3
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.10.02.01.1",
+      "parent": "15.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.57,
+        "care": 5.02
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.10.03.00.1",
+      "parent": "15.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.63,
+        "care": 6.87
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.10.05.00.1",
+      "parent": "15.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.37,
+        "care": 4.84
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.10.06.00.1",
+      "parent": "15.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.78,
+        "care": 7.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.10.07.00.1",
+      "parent": "15.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.22,
+        "care": 4.7
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.11.01.00.1",
+      "parent": "15.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.36,
+        "care": 2.13
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.11.03.00.1",
+      "parent": "15.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 4.62,
+        "care": 4.16
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.11.04.00.1",
+      "parent": "15.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 3.36,
+        "care": 3.03
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.11.10.00.1",
+      "parent": "15.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 14.65,
+        "care": 12.46
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.11.11.00.1",
+      "parent": "15.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 15.86,
+        "care": 14.27
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.11.15.00.1",
+      "parent": "15.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 11.69,
+        "care": 10.53
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.11.20.00.1",
+      "parent": "15.11",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 55.91,
+        "care": 50.32
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.13.01.00.1",
+      "parent": "15.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.35,
+        "care": 0.32
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "15.13.01.01.1",
+      "parent": "15.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 27.2,
+        "care": 24.48
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.13.03.00.1",
+      "parent": "15.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 37.54,
+        "care": 35.66
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.13.03.01.1",
+      "parent": "15.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 20.73,
+        "care": 19.69
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.13.03.02.1",
+      "parent": "15.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 107.4,
+        "care": 102.03
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.13.05.00.1",
+      "parent": "15.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 295.09,
+        "care": 280.34
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.13.06.00.1",
+      "parent": "15.13",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 95.4,
+        "care": 90.64
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.13.07.00.1",
+      "parent": "15.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 11.49,
+        "care": 10.92
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.13.11.00.1",
+      "parent": "15.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.37,
+        "care": 4.84
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.13.15.00.1",
+      "parent": "15.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.98,
+        "care": 5.93
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.14.03.00.1",
+      "parent": "15.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.81,
+        "care": 1.63
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.14.04.00.1",
+      "parent": "15.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.92,
+        "care": 5.33
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.14.05.00.1",
+      "parent": "15.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.82,
+        "care": 4.34
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.14.06.00.1",
+      "parent": "15.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.22,
+        "care": 3.79
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.14.07.00.1",
+      "parent": "15.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.92,
+        "care": 5.33
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.14.99.01.1",
+      "parent": "15.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 11.64,
+        "care": 9.9
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.14.99.02.1",
+      "parent": "15.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 14.25,
+        "care": 12.83
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.15.01.00.1",
+      "parent": "15.15",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.95,
+        "care": 0.76
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "15.15.03.00.1",
+      "parent": "15.15",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.71,
+        "care": 1.37
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.15.04.00.1",
+      "parent": "15.15",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.66,
+        "care": 3.3
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.15.99.01.1",
+      "parent": "15.15",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.17,
+        "care": 4.66
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.16.01.00.1",
+      "parent": "15.16",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.66,
+        "care": 1.5
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.16.02.00.1",
+      "parent": "15.16",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.01,
+        "care": 3.61
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.16.99.01.1",
+      "parent": "15.16",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.25,
+        "care": 1.13
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "15.16.99.02.1",
+      "parent": "15.16",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.11,
+        "care": 1.9
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.16.99.03.1",
+      "parent": "15.16",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.28,
+        "care": 6.55
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.17.01.00.1",
+      "parent": "15.17",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3914.48,
+        "care": 3718.76
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.20.01.01.2",
+      "parent": "15.20",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.94,
+        "care": 0.85
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.30.01.00.1",
+      "parent": "15.30",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 56.16,
+        "care": 50.55
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.30.01.01.1",
+      "parent": "15.30",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 16.06,
+        "care": 14.45
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.30.50.00.1",
+      "parent": "15.30",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 9.84,
+        "care": 8.36
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "15.40.01.00.1",
+      "parent": "15.40",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.72,
+        "care": 6.05
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "16.01.01.00.1",
+      "parent": "16.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 10.64,
+        "care": 9.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "16.01.02.00.1",
+      "parent": "16.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 18.97,
+        "care": 17.07
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.01.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 70.01,
+        "care": 63.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.02.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 178.66,
+        "care": 160.79
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.03.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 99.42,
+        "care": 89.48
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.04.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 243.9,
+        "care": 219.51
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.05.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 100.57,
+        "care": 90.51
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.06.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 245.91,
+        "care": 221.32
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.07.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 109.91,
+        "care": 98.92
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.08.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 291.08,
+        "care": 261.97
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.09.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 155.58,
+        "care": 147.8
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.10.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 302.12,
+        "care": 287.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.11.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 44.01,
+        "care": 41.81
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.02.01.12.1",
+      "parent": "17.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 74.53,
+        "care": 70.8
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.03.01.01.1",
+      "parent": "17.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 75.18,
+        "care": 67.66
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.03.01.02.1",
+      "parent": "17.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 182.68,
+        "care": 173.54
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.03.01.03.1",
+      "parent": "17.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 86.97,
+        "care": 78.28
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.03.01.04.1",
+      "parent": "17.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 243.9,
+        "care": 231.71
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.03.01.05.1",
+      "parent": "17.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 105.84,
+        "care": 95.26
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.03.01.06.1",
+      "parent": "17.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 284.05,
+        "care": 269.85
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.03.01.07.1",
+      "parent": "17.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 130.48,
+        "care": 117.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.03.01.08.1",
+      "parent": "17.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 293.08,
+        "care": 278.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.03.01.10.1",
+      "parent": "17.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 80.55,
+        "care": 76.52
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.05.01.00.1",
+      "parent": "17.05",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 96.96,
+        "care": 87.26
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.05.02.00.1",
+      "parent": "17.05",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 53.2,
+        "care": 50.54
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "17.06.01.00.1",
+      "parent": "17.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 279.41,
+        "care": null
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "17.06.01.01.1",
+      "parent": "17.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 90.54,
+        "care": null
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "17.06.01.02.1",
+      "parent": "17.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 167.82,
+        "care": null
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "17.06.01.03.1",
+      "parent": "17.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 125.55,
+        "care": null
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "17.06.01.04.1",
+      "parent": "17.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 228.91,
+        "care": null
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "17.06.01.10.1",
+      "parent": "17.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 32.75,
+        "care": null
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "17.12.01.00.1",
+      "parent": "17.12.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 39.14,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.12.01.01.1",
+      "parent": "17.12.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 92.44,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.15.01.00.1",
+      "parent": "17.15",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "17.15.02.00.1",
+      "parent": "17.15",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "17.15.03.00.1",
+      "parent": "17.15",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "17.15.04.00.1",
+      "parent": "17.15",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "17.15.05.00.1",
+      "parent": "17.15",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "17.20.01.00.1",
+      "parent": "17.20.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2609.66,
+        "care": 2479.17
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.20.01.00.2",
+      "parent": "17.20.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.61,
+        "care": 2.48
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.20.01.00.3",
+      "parent": "17.20.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 521.93,
+        "care": 469.74
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.20.01.01.1",
+      "parent": "17.20.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1455.39,
+        "care": 1382.62
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.20.01.01.2",
+      "parent": "17.20.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1.86,
+        "care": 1.77
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.20.01.01.3",
+      "parent": "17.20.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 271,
+        "care": 243.9
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.01.1",
+      "parent": "17.30.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.28,
+        "care": 5.82
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.02.1",
+      "parent": "17.30.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 9.99,
+        "care": 7.49
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.03.1",
+      "parent": "17.30.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 12.09,
+        "care": 9.07
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.04.1",
+      "parent": "17.30.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 14.05,
+        "care": 11.94
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.10.1",
+      "parent": "17.30.01b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 14.75,
+        "care": 14.02
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.11.1",
+      "parent": "17.30.01b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 19.12,
+        "care": 18.17
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.12.1",
+      "parent": "17.30.01b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 20.88,
+        "care": 19.83
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.13.1",
+      "parent": "17.30.01b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 27.3,
+        "care": 25.94
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.20.1",
+      "parent": "17.30.01c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 13.7,
+        "care": 12.34
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.21.1",
+      "parent": "17.30.01c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 18.67,
+        "care": 15.87
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.22.1",
+      "parent": "17.30.01c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 25.04,
+        "care": 21.29
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.30.1",
+      "parent": "17.30.01d",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": 22.48
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.31.1",
+      "parent": "17.30.01d",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": 10.39
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.01.32.1",
+      "parent": "17.30.01d",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": 15.56
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.05.01.1",
+      "parent": "17.30.05a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.76,
+        "care": 2.49
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.05.02.1",
+      "parent": "17.30.05a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.32,
+        "care": 5.69
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.05.03.1",
+      "parent": "17.30.05a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.13,
+        "care": 6.41
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.05.04.1",
+      "parent": "17.30.05a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.07,
+        "care": 4.57
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "17.30.05.10.1",
+      "parent": "17.30.05b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.45,
+        "care": 0.41
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "17.30.05.11.1",
+      "parent": "17.30.05b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.7,
+        "care": 0.63
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "17.30.05.12.1",
+      "parent": "17.30.05b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1,
+        "care": 0.85
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "17.30.05.13.1",
+      "parent": "17.30.05b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.3,
+        "care": 1.1700000000000002
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "17.30.15.00.1",
+      "parent": "17.30.15a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 4.97,
+        "care": 4.48
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.01.04.00.1",
+      "parent": "21.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 50.69,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.01.05.00.1",
+      "parent": "21.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1455.39,
+        "care": 1382.62
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.01.05.00.2",
+      "parent": "21.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1.46,
+        "care": 1.39
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.01.05.01.1",
+      "parent": "21.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.42,
+        "care": 3.97
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.01.06.00.2",
+      "parent": "21.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 5.82,
+        "care": 5.53
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.01.06.01.1",
+      "parent": "21.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 11.99,
+        "care": 10.8
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.01.10.00.1",
+      "parent": "21.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 38.79,
+        "care": 36.86
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.01.15.00.1",
+      "parent": "21.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 501.86,
+        "care": 476.76
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.01.15.01.1",
+      "parent": "21.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 120.45,
+        "care": 114.42
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.02.01.00.1",
+      "parent": "21.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 43.16,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.02.03.00.1",
+      "parent": "21.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 58.47,
+        "care": 55.55
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.02.10.00.1",
+      "parent": "21.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 108.25,
+        "care": 102.84
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "21.02.11.00.1",
+      "parent": "21.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 853.16,
+        "care": 810.5
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.02.20.00.1",
+      "parent": "21.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 22.58,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.03.01.01.1",
+      "parent": "21.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.62,
+        "care": null
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "21.03.01.03.1",
+      "parent": "21.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.81,
+        "care": 2.53
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.03.05.00.1",
+      "parent": "21.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.12,
+        "care": null
+      },
+      "validFrom": "2022-01-01"
+    },
+    {
+      "code": "21.03.05.01.1",
+      "parent": "21.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 0.23
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "21.03.10.10.1",
+      "parent": "21.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.05,
+        "care": null
+      },
+      "validFrom": "2022-01-01"
+    },
+    {
+      "code": "21.03.20.00.1",
+      "parent": "21.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 127.77,
+        "care": 115
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.03.20.01.1",
+      "parent": "21.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 224.18,
+        "care": 201.77
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.04.05.00.1",
+      "parent": "21.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 13.2,
+        "care": 11.88
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.04.10.00.1",
+      "parent": "21.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 14.91,
+        "care": 13.42
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.04.20.00.1",
+      "parent": "21.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 13.95,
+        "care": 12.56
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.05.01.00.2",
+      "parent": "21.05",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.66,
+        "care": 2.53
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.05.02.00.3",
+      "parent": "21.05",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 11.74,
+        "care": 10.57
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.05.02.03.3",
+      "parent": "21.05",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1.91,
+        "care": 1.82
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.06.01.00.1",
+      "parent": "21.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 65.54,
+        "care": 65.54
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "21.06.02.00.1",
+      "parent": "21.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 4.85,
+        "care": 4.85
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.01.01.00.1",
+      "parent": "22.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 27.7,
+        "care": 24.89
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.01.02.00.1",
+      "parent": "22.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 120.95,
+        "care": 108.9
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.02.01.00.1",
+      "parent": "22.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 87.22,
+        "care": 78.49
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.02.02.00.1",
+      "parent": "22.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 84.51,
+        "care": 76.08
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.02.03.00.1",
+      "parent": "22.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 99.57,
+        "care": 89.63
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.02.04.00.1",
+      "parent": "22.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 176.55,
+        "care": 158.89
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.02.10.00.1",
+      "parent": "22.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 153.87,
+        "care": 138.51
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.03.01.00.1",
+      "parent": "22.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 141.62,
+        "care": 127.47
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.03.03.00.1",
+      "parent": "22.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 169.93,
+        "care": 152.97
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.03.04.00.1",
+      "parent": "22.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 198.74,
+        "care": 178.86
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.03.05.00.1",
+      "parent": "22.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 79.29,
+        "care": 71.36
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.04.01.00.1",
+      "parent": "22.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 161.3,
+        "care": 145.14
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.04.02.00.1",
+      "parent": "22.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 218.91,
+        "care": 197.03
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.04.03.00.1",
+      "parent": "22.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 106.69,
+        "care": 96.06
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.04.04.00.1",
+      "parent": "22.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 105.39,
+        "care": 94.85
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.04.05.00.1",
+      "parent": "22.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 211.68,
+        "care": 190.5
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.04.10.00.1",
+      "parent": "22.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 48.68,
+        "care": 43.86
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.05.02.00.1",
+      "parent": "22.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 222.32,
+        "care": 200.14
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.06.01.00.1",
+      "parent": "22.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 60.62,
+        "care": 54.6
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.06.03.00.1",
+      "parent": "22.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 56.81,
+        "care": 51.09
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.06.04.00.1",
+      "parent": "22.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 60.12,
+        "care": 54.1
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.06.05.00.1",
+      "parent": "22.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 65.24,
+        "care": 58.72
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.07.01.00.1",
+      "parent": "22.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 64.24,
+        "care": 57.81
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.07.02.00.1",
+      "parent": "22.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 46.67,
+        "care": 42.06
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.07.03.00.1",
+      "parent": "22.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 54,
+        "care": 48.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.07.04.00.1",
+      "parent": "22.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 86.22,
+        "care": 77.59
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.07.05.00.1",
+      "parent": "22.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 104.29,
+        "care": 93.85
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.08.03.00.1",
+      "parent": "22.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 39.95,
+        "care": 35.93
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.08.04.00.1",
+      "parent": "22.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 121.05,
+        "care": 108.9
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.08.05.00.1",
+      "parent": "22.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 309.45,
+        "care": 278.53
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.08.06.00.1",
+      "parent": "22.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 55.61,
+        "care": 50.09
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.09.01.00.1",
+      "parent": "22.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 91.34,
+        "care": 82.2
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.09.02.00.1",
+      "parent": "22.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 233.66,
+        "care": 210.28
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.09.03.00.1",
+      "parent": "22.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 167.62,
+        "care": 150.86
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.09.05.00.1",
+      "parent": "22.09",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 63.74,
+        "care": 57.41
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.11.01.00.1",
+      "parent": "22.11",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 136.61,
+        "care": 122.95
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.12.01.00.1",
+      "parent": "22.12",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 37.84,
+        "care": 34.03
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.12.02.00.1",
+      "parent": "22.12",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 46.87,
+        "care": 42.16
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.13.01.00.1",
+      "parent": "22.13",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 300.51,
+        "care": 270.5
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.13.02.00.1",
+      "parent": "22.13",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 91.94,
+        "care": 82.71
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.14.01.00.1",
+      "parent": "22.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 113.92,
+        "care": 102.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.14.02.00.1",
+      "parent": "22.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 201.75,
+        "care": 181.57
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.14.04.00.1",
+      "parent": "22.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 313.66,
+        "care": 282.34
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.14.06.00.1",
+      "parent": "22.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 276.92,
+        "care": 249.22
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.15.01.00.1",
+      "parent": "22.15",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 494.13,
+        "care": 444.75
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "22.15.02.00.1",
+      "parent": "22.15",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 443.44,
+        "care": 399.08
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "23.02.01.00.1",
+      "parent": "23.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "23.03.01.00.1",
+      "parent": "23.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "23.04.01.00.1",
+      "parent": "23.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "23.05.01.00.1",
+      "parent": "23.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "23.06.01.00.1",
+      "parent": "23.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-07-01"
+    },
+    {
+      "code": "23.10.01.00.1",
+      "parent": "23.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-07-01"
+    },
+    {
+      "code": "23.11.01.00.1",
+      "parent": "23.11",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "23.12.01.00.1",
+      "parent": "23.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "23.20.01.00.1",
+      "parent": "23.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "23.21.01.00.1",
+      "parent": "23.21",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "23.22.01.00.1",
+      "parent": "23.22",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "23.23.01.00.1",
+      "parent": "23.23",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "23.24.01.00.1",
+      "parent": "23.24",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "23.25.01.00.1",
+      "parent": "23.25",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "24.01.01.00.1",
+      "parent": "24.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 778.33,
+        "care": 778.33
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "24.01.01.01.1",
+      "parent": "24.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 3628.93,
+        "care": 3628.93
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "24.02.01.00.1",
+      "parent": "24.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 190.71,
+        "care": 171.64
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "24.02.01.01.1",
+      "parent": "24.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 100.37,
+        "care": 90.33
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "24.02.01.02.1",
+      "parent": "24.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 150.56,
+        "care": 143.03
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "24.02.01.03.1",
+      "parent": "24.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 37.64,
+        "care": 35.78
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "24.03.01.00.1",
+      "parent": "24.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "25.01.01.00.1",
+      "parent": "25.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 180.67,
+        "care": 180.67
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "25.02.01.00.1",
+      "parent": "25.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 180.67,
+        "care": 180.67
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "25.02.02.00.1",
+      "parent": "25.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 271,
+        "care": 271
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "25.02.03.00.1",
+      "parent": "25.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 632.34,
+        "care": 632.34
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "25.02.03.01.1",
+      "parent": "25.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 632.34,
+        "care": 632.34
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "25.02.04.00.1",
+      "parent": "25.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 850,
+        "care": 850
+      },
+      "validFrom": "2024-07-01"
+    },
+    {
+      "code": "25.03.01.00.1",
+      "parent": "25.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.93,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "26.01.01.00.1",
+      "parent": "26",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "26.01.02.00.1",
+      "parent": "26",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "26.01.03.00.1",
+      "parent": "26",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "26.01.04.00.1",
+      "parent": "26",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "26.01.04.01.1",
+      "parent": "26",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "26.01.04.02.1",
+      "parent": "26",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 35.13,
+        "care": 31.62
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "26.01.04.03.1",
+      "parent": "26",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 59.22,
+        "care": 53.3
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "26.01.04.04.1",
+      "parent": "26",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "26.01.04.05.1",
+      "parent": "26",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2022-04-01"
+    },
+    {
+      "code": "29.01.01.00.1",
+      "parent": "29.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5058.72,
+        "care": 4552.85
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "30.01.03.00.2",
+      "parent": "30.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 3.35,
+        "care": 3.18
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "30.01.03.01.2",
+      "parent": "30.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 281.04,
+        "care": 266.99
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "30.02.01.00.1",
+      "parent": "30.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 497.24,
+        "care": 447.52
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "30.02.01.01.1",
+      "parent": "30.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 16.56,
+        "care": 14.91
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "30.03.01.00.2",
+      "parent": "30.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 7.46,
+        "care": 7.09
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "30.03.01.01.1",
+      "parent": "30.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 180.67,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "31.10.00.01.1",
+      "parent": "31.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7628.23,
+        "care": 6483.99
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "31.10.01.00.1",
+      "parent": "31.10",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 271,
+        "care": 257.45
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "31.20.00.01.1",
+      "parent": "31.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7527.86,
+        "care": 6398.68
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "31.20.01.00.1",
+      "parent": "31.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 619.29,
+        "care": 526.4
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "31.20.04.00.1",
+      "parent": "31.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 893.31,
+        "care": 848.64
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "31.20.05.00.1",
+      "parent": "31.20",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 530.96,
+        "care": 504.42
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "31.30.02.00.1",
+      "parent": "31.30",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 456.69,
+        "care": 388.19
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "31.30.02.01.1",
+      "parent": "31.30",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 60.22,
+        "care": 51.19
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "31.30.03.00.1",
+      "parent": "31.30",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 34.03,
+        "care": 30.62
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "31.30.04.00.1",
+      "parent": "31.30",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.08,
+        "care": 6.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.01.01.1",
+      "parent": "35.01.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.17,
+        "care": 0.13
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.01.02.1",
+      "parent": "35.01.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.14,
+        "care": 0.11
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.01.03.1",
+      "parent": "35.01.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.29,
+        "care": 0.22
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.01.04.1",
+      "parent": "35.01.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.41,
+        "care": 0.31
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.01.05.1",
+      "parent": "35.01.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.11,
+        "care": 2.8
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.01.20.1",
+      "parent": "35.01.01b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.03,
+        "care": null
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.01.21.1",
+      "parent": "35.01.01b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.05,
+        "care": null
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.01.22.1",
+      "parent": "35.01.01b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.11,
+        "care": null
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.01.23.1",
+      "parent": "35.01.01b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.15,
+        "care": null
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.02.01.1",
+      "parent": "35.01.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.53,
+        "care": 0.45
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.02.02.1",
+      "parent": "35.01.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.54,
+        "care": 0.46
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.02.03.1",
+      "parent": "35.01.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.92,
+        "care": 0.78
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.02.04.1",
+      "parent": "35.01.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.58,
+        "care": 1.33
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.04.01.1",
+      "parent": "35.01.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.6,
+        "care": 0.48
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.04.02.1",
+      "parent": "35.01.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.85,
+        "care": 0.68
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.04.03.1",
+      "parent": "35.01.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.15,
+        "care": 0.9199999999999999
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.04.04.1",
+      "parent": "35.01.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.61,
+        "care": 1.28
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.04.05.1",
+      "parent": "35.01.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.96,
+        "care": 2.37
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.05.01.1",
+      "parent": "35.01.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.25,
+        "care": 0.21
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.06.01.1",
+      "parent": "35.01.06a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.71,
+        "care": 0.53
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.06.02.1",
+      "parent": "35.01.06a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.8,
+        "care": 0.68
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.06.03.1",
+      "parent": "35.01.06a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.95,
+        "care": 0.71
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.06.04.1",
+      "parent": "35.01.06a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.36,
+        "care": 1.15
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.05.1",
+      "parent": "35.01.06a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.15,
+        "care": 0.86
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.06.06.1",
+      "parent": "35.01.06a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.36,
+        "care": 2.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.10.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.26,
+        "care": 2.04
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.11.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.76,
+        "care": 2.49
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.12.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.66,
+        "care": 2.13
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.13.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 9.38,
+        "care": 8.45
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.14.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.46,
+        "care": 2.77
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.15.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 11.14,
+        "care": 10.03
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.16.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.61,
+        "care": 3.07
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.17.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 11.94,
+        "care": 10.75
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.18.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.91,
+        "care": 3.52
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.19.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 13.95,
+        "care": 12.56
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.20.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.87,
+        "care": 4.39
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.06.21.1",
+      "parent": "35.01.06b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 18.57,
+        "care": 16.71
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.01.1",
+      "parent": "35.01.07a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.97,
+        "care": 4.48
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.02.1",
+      "parent": "35.01.07a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.37,
+        "care": 3.71
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.03.1",
+      "parent": "35.01.07a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.72,
+        "care": 4.87
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.04.1",
+      "parent": "35.01.07a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.88,
+        "care": 6.19
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.05.1",
+      "parent": "35.01.07a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.73,
+        "care": 6.96
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.06.1",
+      "parent": "35.01.07a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.78,
+        "care": 7.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.07.1",
+      "parent": "35.01.07a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 13.65,
+        "care": 12.29
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.20.1",
+      "parent": "35.01.07b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.16,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.21.1",
+      "parent": "35.01.07b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.62,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.22.1",
+      "parent": "35.01.07b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.97,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.23.1",
+      "parent": "35.01.07b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.33,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.24.1",
+      "parent": "35.01.07b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 8.33,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.07.25.1",
+      "parent": "35.01.07b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.37,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.08.01.1",
+      "parent": "35.01.08a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.7,
+        "care": 0.63
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.08.02.1",
+      "parent": "35.01.08a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.5,
+        "care": 0.45
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.08.03.1",
+      "parent": "35.01.08a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.95,
+        "care": 0.81
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.08.04.1",
+      "parent": "35.01.08a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.1,
+        "care": 0.94
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.08.05.1",
+      "parent": "35.01.08a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.3,
+        "care": 1.11
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.08.06.1",
+      "parent": "35.01.08a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.51,
+        "care": 1.28
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.08.07.1",
+      "parent": "35.01.08a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.41,
+        "care": 2.17
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.08.08.1",
+      "parent": "35.01.08a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.11,
+        "care": 2.8
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.08.20.1",
+      "parent": "35.01.08c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.5,
+        "care": null
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.08.21.1",
+      "parent": "35.01.08c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.9,
+        "care": null
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.08.22.1",
+      "parent": "35.01.08c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.05,
+        "care": null
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.08.23.1",
+      "parent": "35.01.08c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.3,
+        "care": null
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.08.24.1",
+      "parent": "35.01.08c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.21,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.08.25.1",
+      "parent": "35.01.08c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.71,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.08.26.1",
+      "parent": "35.01.08c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.06,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.08.27.1",
+      "parent": "35.01.08c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.32,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.08.30.1",
+      "parent": "35.01.08d",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.92,
+        "care": 3.53
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.08.35.1",
+      "parent": "35.01.08e",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1003.71,
+        "care": 953.53
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "35.01.09.01.1",
+      "parent": "35.01.09a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.55,
+        "care": 0.44000000000000006
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.09.03.1",
+      "parent": "35.01.09a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.8,
+        "care": 0.6000000000000001
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.09.04.1",
+      "parent": "35.01.09a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.75,
+        "care": 0.56
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.09.10.1",
+      "parent": "35.01.09b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.2,
+        "care": 0.18000000000000002
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.09.12.1",
+      "parent": "35.01.09b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.45,
+        "care": 0.38
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.09.13.1",
+      "parent": "35.01.09b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.8,
+        "care": 0.7200000000000001
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.09.30.1",
+      "parent": "35.01.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.4,
+        "care": 0.36000000000000004
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.09.31.1",
+      "parent": "35.01.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.75,
+        "care": 0.6000000000000001
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.09.32.1",
+      "parent": "35.01.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.36,
+        "care": 1.08
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.09.33.1",
+      "parent": "35.01.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.86,
+        "care": 1.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.09.34.1",
+      "parent": "35.01.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.41,
+        "care": 2.17
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.09.35.1",
+      "parent": "35.01.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.26,
+        "care": 2.94
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.09.40.1",
+      "parent": "35.01.09d",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.66,
+        "care": 2.41
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.09.41.1",
+      "parent": "35.01.09d",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.32,
+        "care": 4.82
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.10.10.1",
+      "parent": "35.01.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.6,
+        "care": 0.44999999999999996
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.10.11.1",
+      "parent": "35.01.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.75,
+        "care": 0.56
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.10.12.1",
+      "parent": "35.01.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.05,
+        "care": 0.8400000000000001
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.10.13.1",
+      "parent": "35.01.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.2,
+        "care": 1.02
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.10.14.1",
+      "parent": "35.01.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.51,
+        "care": 1.28
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.10.15.1",
+      "parent": "35.01.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.51,
+        "care": 1.28
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.10.16.1",
+      "parent": "35.01.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.51,
+        "care": 1.36
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.10.20.1",
+      "parent": "35.01.10c",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1.55,
+        "care": 1.4
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "35.01.10.22.1",
+      "parent": "35.01.10c",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.65,
+        "care": 2.38
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "35.01.10.23.1",
+      "parent": "35.01.10c",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 3.49,
+        "care": 3.14
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "35.01.10.25.1",
+      "parent": "35.01.10c",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 4.07,
+        "care": 3.66
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "35.01.12.01.1",
+      "parent": "35.01.12",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.65,
+        "care": 0.55
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.12.03.1",
+      "parent": "35.01.12",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.2,
+        "care": 1.02
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.14.10.1",
+      "parent": "35.01.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.05,
+        "care": 0.04
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.01.14.11.1",
+      "parent": "35.01.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.93,
+        "care": 6.23
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.01.14.12.1",
+      "parent": "35.01.14",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.85,
+        "care": 0.72
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.03.01.01.1",
+      "parent": "35.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 4.52,
+        "care": 3.84
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.03.01.02.1",
+      "parent": "35.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 6.98,
+        "care": 5.93
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.03.01.03.1",
+      "parent": "35.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 10.44,
+        "care": 8.87
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.03.01.04.1",
+      "parent": "35.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 21.28,
+        "care": 18.09
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.03.01.06.1",
+      "parent": "35.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 32.37,
+        "care": 27.51
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.01.01.1",
+      "parent": "35.05.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.32,
+        "care": 4.79
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.01.02.1",
+      "parent": "35.05.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.33,
+        "care": 6.59
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.01.03.1",
+      "parent": "35.05.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.08,
+        "care": 6.37
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.01.04.1",
+      "parent": "35.05.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 9.33,
+        "care": 8.4
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.01.05.1",
+      "parent": "35.05.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 8.14,
+        "care": 7.33
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.01.06.1",
+      "parent": "35.05.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 10.83,
+        "care": 9.75
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.02.01.1",
+      "parent": "35.05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.82,
+        "care": 3.85
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.02.02.1",
+      "parent": "35.05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.62,
+        "care": 5.3
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.02.03.1",
+      "parent": "35.05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 10.59,
+        "care": 8.47
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.02.04.1",
+      "parent": "35.05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 19.02,
+        "care": 16.17
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.02.05.1",
+      "parent": "35.05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 25.54,
+        "care": 21.71
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.02.06.1",
+      "parent": "35.05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 38.79,
+        "care": 32.97
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.02.07.1",
+      "parent": "35.05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 62.28,
+        "care": 56.06
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.02.08.1",
+      "parent": "35.05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 35.53,
+        "care": 31.98
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.02.09.1",
+      "parent": "35.05.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 24.14,
+        "care": 21.73
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.03.01.1",
+      "parent": "35.05.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.72,
+        "care": 4.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.03.02.1",
+      "parent": "35.05.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.28,
+        "care": 5.82
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.03.03.1",
+      "parent": "35.05.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 12.09,
+        "care": 9.68
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.03.04.1",
+      "parent": "35.05.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 21.68,
+        "care": 18.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.03.05.1",
+      "parent": "35.05.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 32.17,
+        "care": 27.34
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.03.06.1",
+      "parent": "35.05.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 37.09,
+        "care": 31.53
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.03.07.1",
+      "parent": "35.05.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 45.57,
+        "care": 41.01
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.03.08.1",
+      "parent": "35.05.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 62.63,
+        "care": 56.37
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.03.10.1",
+      "parent": "35.05.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 32.72,
+        "care": 29.45
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.03.11.1",
+      "parent": "35.05.03",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 31.82,
+        "care": 28.64
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.04.01.1",
+      "parent": "35.05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.47,
+        "care": 3.79
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.04.02.1",
+      "parent": "35.05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.78,
+        "care": 6.61
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.04.03.1",
+      "parent": "35.05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 11.64,
+        "care": 9.31
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.04.04.1",
+      "parent": "35.05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 20.68,
+        "care": 17.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.04.05.1",
+      "parent": "35.05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 33.42,
+        "care": 30.08
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.04.06.1",
+      "parent": "35.05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 43.46,
+        "care": 39.11
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.04.07.1",
+      "parent": "35.05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 68.65,
+        "care": 61.79
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.04.08.1",
+      "parent": "35.05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 141.52,
+        "care": 127.37
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.04.10.1",
+      "parent": "35.05.04",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 36.79,
+        "care": 33.11
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.01.1",
+      "parent": "35.05.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.46,
+        "care": 3.12
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.02.1",
+      "parent": "35.05.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.72,
+        "care": 4.25
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.03.1",
+      "parent": "35.05.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.72,
+        "care": 5.38
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.04.1",
+      "parent": "35.05.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 11.34,
+        "care": 9.65
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.05.1",
+      "parent": "35.05.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 20.88,
+        "care": 18.79
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.06.1",
+      "parent": "35.05.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 24.44,
+        "care": 22
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.08.1",
+      "parent": "35.05.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 37.29,
+        "care": 33.56
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.09.1",
+      "parent": "35.05.05",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 108.7,
+        "care": 97.83
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.10.1",
+      "parent": "35.05.05a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 8.53,
+        "care": 7.68
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.11.1",
+      "parent": "35.05.05a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 10.84,
+        "care": 9.76
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.12.1",
+      "parent": "35.05.05a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 18.4,
+        "care": 16.56
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.13.1",
+      "parent": "35.05.05a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 32.12,
+        "care": 28.91
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.05.14.1",
+      "parent": "35.05.05a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 52.12,
+        "care": 46.91
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.06.01.1",
+      "parent": "35.05.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.41,
+        "care": 2.73
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.06.02.1",
+      "parent": "35.05.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 8.28,
+        "care": 6.62
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.06.03.1",
+      "parent": "35.05.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 14.2,
+        "care": 12.79
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.06.04.1",
+      "parent": "35.05.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 17.87,
+        "care": 16.08
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.06.05.1",
+      "parent": "35.05.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 27.15,
+        "care": 24.44
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.06.07.1",
+      "parent": "35.05.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 60.93,
+        "care": 54.83
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.06.08.1",
+      "parent": "35.05.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 17.87,
+        "care": 15.19
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.07.01.1",
+      "parent": "35.05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.52,
+        "care": 4.42
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.07.02.1",
+      "parent": "35.05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 9.74,
+        "care": 7.79
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.07.04.1",
+      "parent": "35.05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 28.46,
+        "care": 25.61
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.07.05.1",
+      "parent": "35.05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 50.94,
+        "care": 45.85
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.07.09.1",
+      "parent": "35.05.07",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 26.2,
+        "care": 23.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.08.01.1",
+      "parent": "35.05.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.57,
+        "care": 4.74
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.08.02.1",
+      "parent": "35.05.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.28,
+        "care": 6.55
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.08.03.1",
+      "parent": "35.05.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 18.77,
+        "care": 16.89
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.08.04.1",
+      "parent": "35.05.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 20.98,
+        "care": 18.88
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.08.05.1",
+      "parent": "35.05.08",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 48.33,
+        "care": 43.5
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.09.01.1",
+      "parent": "35.05.09a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.38,
+        "care": 6.27
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.09.02.1",
+      "parent": "35.05.09a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 9.59,
+        "care": 8.15
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.09.03.1",
+      "parent": "35.05.09a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 14.2,
+        "care": 12.79
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.09.10.1",
+      "parent": "35.05.09b",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 19.07,
+        "care": 17.16
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.09.11.1",
+      "parent": "35.05.09b",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 35.28,
+        "care": 31.76
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.09.12.1",
+      "parent": "35.05.09b",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": 85.34
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.09.15.1",
+      "parent": "35.05.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 8.33,
+        "care": 7.5
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.09.16.1",
+      "parent": "35.05.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 11.89,
+        "care": 10.71
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.09.17.1",
+      "parent": "35.05.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 13.55,
+        "care": 12.2
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.09.18.1",
+      "parent": "35.05.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 25.24,
+        "care": 22.72
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.01.1",
+      "parent": "35.05.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.3,
+        "care": 0.98
+      },
+      "validFrom": "2021-10-01"
+    },
+    {
+      "code": "35.05.10.02.1",
+      "parent": "35.05.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.86,
+        "care": 1.4
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.03.1",
+      "parent": "35.05.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.61,
+        "care": 1.96
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.04.1",
+      "parent": "35.05.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.76,
+        "care": 3.2
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.05.1",
+      "parent": "35.05.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 5.22,
+        "care": 4.44
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.06.1",
+      "parent": "35.05.10a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.52,
+        "care": 5.87
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.10.1",
+      "parent": "35.05.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.02,
+        "care": 5.42
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.11.1",
+      "parent": "35.05.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 10.04,
+        "care": 9.03
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.12.1",
+      "parent": "35.05.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 18.57,
+        "care": 16.71
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.13.1",
+      "parent": "35.05.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 35.13,
+        "care": 28.1
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.14.1",
+      "parent": "35.05.10b",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 50.19,
+        "care": 45.17
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.20.1",
+      "parent": "35.05.10c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.91,
+        "care": 1.72
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.22.1",
+      "parent": "35.05.10c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.61,
+        "care": 2.35
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.23.1",
+      "parent": "35.05.10c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 18.52,
+        "care": 16.67
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.24.1",
+      "parent": "35.05.10c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 19.62,
+        "care": 17.67
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.30.1",
+      "parent": "35.05.10d",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 18.07,
+        "care": 16.26
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.31.1",
+      "parent": "35.05.10d",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 28.61,
+        "care": 25.75
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.32.1",
+      "parent": "35.05.10d",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 36.13,
+        "care": 32.52
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.05.10.33.1",
+      "parent": "35.05.10d",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 48.18,
+        "care": 43.36
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.04.20.1",
+      "parent": "35.06.04a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 7,
+        "care": 6.29
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.04.21.1",
+      "parent": "35.06.04a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 7.84,
+        "care": 7.06
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.04.22.1",
+      "parent": "35.06.04a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 12.83,
+        "care": 11.54
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.04.23.1",
+      "parent": "35.06.04a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 19.42,
+        "care": 17.48
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.04.24.1",
+      "parent": "35.06.04a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 29.92,
+        "care": 26.93
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.04.25.1",
+      "parent": "35.06.04a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 41.87,
+        "care": 37.69
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.06.20.1",
+      "parent": "35.06.06a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 5.27,
+        "care": 4.75
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.06.21.1",
+      "parent": "35.06.06a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 13.81,
+        "care": 12.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.06.22.1",
+      "parent": "35.06.06a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 22.42,
+        "care": 20.18
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.06.23.1",
+      "parent": "35.06.06a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 26.31,
+        "care": 23.68
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.06.26.1",
+      "parent": "35.06.06a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 25.49,
+        "care": 22.94
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.07.20.1",
+      "parent": "35.06.07a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 7.27,
+        "care": 6.54
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.07.22.1",
+      "parent": "35.06.07a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 23.96,
+        "care": 21.56
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.07.24.1",
+      "parent": "35.06.07a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 41.15,
+        "care": 37.04
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.07.25.1",
+      "parent": "35.06.07a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 67.44,
+        "care": 60.69
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.07.26.1",
+      "parent": "35.06.07a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 62.93,
+        "care": 56.64
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.07.28.1",
+      "parent": "35.06.07a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 20.74,
+        "care": 18.67
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.08.01.1",
+      "parent": "35.06.08a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 7.66,
+        "care": 6.9
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.08.02.1",
+      "parent": "35.06.08a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 10.54,
+        "care": 9.49
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.08.03.1",
+      "parent": "35.06.08a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 33.17,
+        "care": 29.86
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.06.08.04.1",
+      "parent": "35.06.08a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 34.14,
+        "care": 30.72
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.01.10.1",
+      "parent": "35.07.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 10.54,
+        "care": 9.49
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.01.11.1",
+      "parent": "35.07.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 20.58,
+        "care": 18.52
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.01.12.1",
+      "parent": "35.07.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 35.88,
+        "care": 32.3
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.01.13.1",
+      "parent": "35.07.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 56.46,
+        "care": 50.82
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.01.14.1",
+      "parent": "35.07.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 78.36,
+        "care": 70.52
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.01.15.1",
+      "parent": "35.07.01a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 119.64,
+        "care": 107.7
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.09.30.1",
+      "parent": "35.07.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 12.45,
+        "care": 11.2
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.09.31.1",
+      "parent": "35.07.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 20.68,
+        "care": 18.61
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.09.32.1",
+      "parent": "35.07.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 31.01,
+        "care": 27.91
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.09.33.1",
+      "parent": "35.07.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 59.22,
+        "care": 53.3
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.09.34.1",
+      "parent": "35.07.09c",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 80.3,
+        "care": 72.27
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.11.10.1",
+      "parent": "35.07.11a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 7.48,
+        "care": 6.73
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.07.11.11.1",
+      "parent": "35.07.11a",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 20.98,
+        "care": 18.88
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.03.01.1",
+      "parent": "35.10.03a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 5.73,
+        "care": 5.16
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.03.02.1",
+      "parent": "35.10.03a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 7.25,
+        "care": 6.52
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.03.03.1",
+      "parent": "35.10.03a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 12.1,
+        "care": 10.89
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.03.04.1",
+      "parent": "35.10.03a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 21.73,
+        "care": 19.56
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.03.05.1",
+      "parent": "35.10.03a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 32.15,
+        "care": 28.94
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.03.06.1",
+      "parent": "35.10.03a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 33.51,
+        "care": 30.16
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.03.07.1",
+      "parent": "35.10.03a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 32.65,
+        "care": 29.39
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.05.01.1",
+      "parent": "35.10.05a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 5.73,
+        "care": 5.16
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.05.02.1",
+      "parent": "35.10.05a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 7.25,
+        "care": 6.52
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.05.03.1",
+      "parent": "35.10.05a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 12.1,
+        "care": 10.89
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.05.04.1",
+      "parent": "35.10.05a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 21.73,
+        "care": 19.56
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.05.05.1",
+      "parent": "35.10.05a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 32.11,
+        "care": 28.9
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.05.06.1",
+      "parent": "35.10.05a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 32.71,
+        "care": 29.44
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.06.01.1",
+      "parent": "35.10.06",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 25.09,
+        "care": 22.58
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.08.01.1",
+      "parent": "35.10.08a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 5.51,
+        "care": 4.96
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.08.02.1",
+      "parent": "35.10.08a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 7.25,
+        "care": 6.52
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.10.08.03.1",
+      "parent": "35.10.08a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 10.49,
+        "care": 9.44
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.11.01.01.2",
+      "parent": "35.11.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": 63.37
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.15.02.10.1",
+      "parent": "35.15.02a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 5.06,
+        "care": 4.56
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.15.02.11.1",
+      "parent": "35.15.02a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 8.32,
+        "care": 7.49
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.15.02.12.1",
+      "parent": "35.15.02a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 8.83,
+        "care": 7.95
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.15.02.13.1",
+      "parent": "35.15.02a",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 16.13,
+        "care": 14.51
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.20.01.01.1",
+      "parent": "35.20",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.21,
+        "care": 1.99
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.20.01.02.1",
+      "parent": "35.20",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 3.47,
+        "care": 3.13
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.25.01.00.1",
+      "parent": "35.25.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 164.81,
+        "care": 156.57
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.25.01.01.1",
+      "parent": "35.25.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 98.87,
+        "care": 93.93
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.25.01.02.1",
+      "parent": "35.25.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 67.75,
+        "care": 64.37
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.25.02.01.1",
+      "parent": "35.25.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 53.44,
+        "care": 48.1
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.25.02.02.1",
+      "parent": "35.25.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 68.23,
+        "care": 61.41
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.25.02.03.1",
+      "parent": "35.25.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 34.06,
+        "care": 30.64
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.30.01.00.1",
+      "parent": "35.30",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 12.83
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "35.30.01.10.1",
+      "parent": "35.30",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 24.59
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "36.02.00.00.1",
+      "parent": "36.02",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": null
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "99.01.01.01.1",
+      "parent": "99.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 378.4,
+        "care": 359.48
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.01.01.02.1",
+      "parent": "99.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 70.26,
+        "care": 66.75
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.01.01.03.1",
+      "parent": "99.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 20.07,
+        "care": 19.07
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.02.01.01.1",
+      "parent": "99.02.01",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.6,
+        "care": 0.54
+      },
+      "validFrom": "2025-01-01"
+    },
+    {
+      "code": "99.03.00.01.1",
+      "parent": "99.03.00",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.3,
+        "care": 0.27
+      },
+      "validFrom": "2025-07-01"
+    },
+    {
+      "code": "99.10.01.02.1",
+      "parent": "99.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.93,
+        "care": 6.23
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.10.02.00.1",
+      "parent": "99.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.71,
+        "care": 1.54
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.10.02.01.1",
+      "parent": "99.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.56,
+        "care": 2.31
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.10.02.02.1",
+      "parent": "99.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.61,
+        "care": 3.25
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.10.02.03.1",
+      "parent": "99.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.66,
+        "care": 2.4
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.10.02.04.1",
+      "parent": "99.10",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.31,
+        "care": 2.08
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.11.01.00.1",
+      "parent": "99.11",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 6.93,
+        "care": 6.23
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.11.01.01.1",
+      "parent": "99.11",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.21,
+        "care": 2.89
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.11.01.02.1",
+      "parent": "99.11",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.86,
+        "care": 2.43
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.11.01.03.1",
+      "parent": "99.11",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 4.12,
+        "care": 3.7
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.11.01.04.1",
+      "parent": "99.11",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 1.46,
+        "care": 1.23
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.12.03.00.1",
+      "parent": "99.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 15.46,
+        "care": 13.91
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.12.04.00.1",
+      "parent": "99.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 19.39,
+        "care": 17.45
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.12.05.00.1",
+      "parent": "99.12",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 32.12,
+        "care": 28.91
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.20.01.00.1",
+      "parent": "99.20.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 22.71,
+        "care": 20.45
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.20.01.01.1",
+      "parent": "99.20.01",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 1.36,
+        "care": null
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.30.02.01.1",
+      "parent": "99.30.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.56,
+        "care": 2.18
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.30.02.02.1",
+      "parent": "99.30.02",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 19.37,
+        "care": 16.47
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.30.03.01.1",
+      "parent": "99.30.03",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 0.69,
+        "care": 0.62
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "99.30.04.01.1",
+      "parent": "99.30.04",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 2.56,
+        "care": 2.31
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.30.06.02.1",
+      "parent": "99.30.06",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": null,
+        "care": 19.92
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.31.01.01.1",
+      "parent": "99.31",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.17,
+        "care": 0.15
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "99.31.03.01.1",
+      "parent": "99.31",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.1,
+        "care": 2.79
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.31.04.01.1",
+      "parent": "99.31",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 3.89,
+        "care": 3.5
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.31.05.01.1",
+      "parent": "99.31",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 0.54,
+        "care": 0.49
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "99.31.05.02.1",
+      "parent": "99.31",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": 2.93,
+        "care": 2.64
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.31.07.01.1",
+      "parent": "99.31",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 5.41,
+        "care": 4.87
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.31.08.01.1",
+      "parent": "99.31",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 0.6
+      },
+      "validFrom": "2022-10-01"
+    },
+    {
+      "code": "99.31.09.01.1",
+      "parent": "99.31",
+      "limitationFlag": false,
+      "prices": {
+        "selfApplication": null,
+        "care": 2.31
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.50.01.00.1",
+      "parent": "99.50",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 18.07,
+        "care": 13.55
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.50.15.00.1",
+      "parent": "99.50",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 13.05,
+        "care": 11.74
+      },
+      "validFrom": "2024-01-01"
+    },
+    {
+      "code": "99.50.20.00.1",
+      "parent": "99.50",
+      "limitationFlag": true,
+      "prices": {
+        "selfApplication": 13.05,
+        "care": 11.74
+      },
+      "validFrom": "2024-01-01"
+    }
+  ]
+}

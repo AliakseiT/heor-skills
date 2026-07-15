@@ -1,0 +1,85 @@
+name: Data refresh
+
+# Evergreen mechanism (CONVENTIONS.md §2): on a monthly schedule (and on demand)
+# re-run the data pipeline against the official sources. If anything under data/
+# changed, open a pull request with the change summary in the body. Merging the PR
+# is the only maintenance action; merged updates are released as data-YYYY-MM-DD tags.
+#
+# STATUS: wired up but DORMANT. `--download` only fetches sources whose sources.json
+# status is "download-verified"; today none are (CH is "landing-verified" — the BAG
+# Excel links are versioned per release; DE/FR/US are "verify"). So the scheduled run
+# currently reports every list as skipped and opens no PR. It activates automatically
+# once a source gains a direct downloadUrl + "download-verified" status, or once a
+# landing-page link resolver is added (see tools/data-pipeline TODOs). The CH Excel
+# files are refreshed manually with `refresh.ts --local` in the meantime.
+
+on:
+  schedule:
+    - cron: '0 6 1 * *' # 06:00 UTC on the 1st of every month
+  workflow_dispatch:
+    inputs:
+      lists:
+        description: 'Space-separated list keys to refresh (default: all download-verified). e.g. "ch/migel ch/analysenliste"'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run data pipeline
+        id: refresh
+        run: |
+          set -euo pipefail
+          LISTS="${{ github.event.inputs.lists }}"
+          ARGS="--download --summary-file refresh-summary.md"
+          if [ -n "$LISTS" ]; then
+            for key in $LISTS; do ARGS="$ARGS --list $key"; done
+          else
+            # Default scheduled run: attempt every registered list. Sources that
+            # need a manual download or whose normalizer is not yet implemented
+            # are reported as skipped in the summary (non-fatal).
+            ARGS="$ARGS --all"
+          fi
+          echo "Running: refresh.ts $ARGS"
+          pnpm exec tsx tools/data-pipeline/refresh.ts $ARGS
+
+      - name: Detect changes
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain data/)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes under data/."
+          fi
+
+      - name: Create pull request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: data-refresh/${{ github.run_id }}
+          commit-message: 'data: automated refresh from official sources'
+          title: 'Data refresh (${{ github.run_id }})'
+          body-path: refresh-summary.md
+          labels: data-refresh
+          add-paths: data/
+          delete-branch: true

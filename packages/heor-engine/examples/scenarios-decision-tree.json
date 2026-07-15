@@ -1,0 +1,17 @@
+{
+  "deviceClass": "digital-therapy",
+  "model": "decision-tree",
+  "scenarios": [
+    { "id": "baseline", "name": "Baseline (device-class defaults)" },
+    {
+      "id": "high-intervention-cost",
+      "name": "High intervention cost",
+      "overrides": { "costInterventionTest": 150 }
+    },
+    {
+      "id": "low-prevalence",
+      "name": "Low disease prevalence",
+      "overrides": { "prevalenceDisease": 0.08 }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "$id": "heor-skills/data/de/hmv",
+  "description": "Planned shape for the German Hilfsmittelverzeichnis (normalizer not yet implemented — see normalizers/de-hmv.ts). The HMV carries no prices.",
+  "$defs": {
+    "index": {
+      "type": "object",
+      "required": ["list", "jurisdiction", "version", "languages", "source", "hierarchy", "entries"],
+      "properties": {
+        "list": { "const": "hmv" },
+        "jurisdiction": { "const": "de" },
+        "version": { "type": "string", "pattern": "^\\d{4}-\\d{2}$" },
+        "languages": { "type": "array", "items": { "const": "de" } },
+        "hierarchy": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "level", "parent"],
+            "properties": {
+              "id": { "type": "string" },
+              "level": { "type": "integer", "minimum": 1, "maximum": 4 },
+              "parent": { "type": ["string", "null"] }
+            }
+          }
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["code", "parent"],
+            "properties": {
+              "code": { "type": "string", "pattern": "^\\d{2}\\.\\d{2}\\.\\d{2}\\.\\d{4}$" },
+              "parent": { "type": ["string", "null"] }
+            }
+          }
+        }
+      }
+    },
+    "labels": {
+      "type": "object",
+      "required": ["list", "jurisdiction", "version", "language", "hierarchy", "entries"],
+      "properties": {
+        "list": { "const": "hmv" },
+        "language": { "const": "de" },
+        "hierarchy": {
+          "type": "object",
+          "patternProperties": {
+            "^.+$": {
+              "type": "object",
+              "required": ["name"],
+              "properties": {
+                "name": { "type": "string" },
+                "indication": { "type": ["string", "null"] },
+                "qualityStandard": { "type": ["string", "null"] }
+              }
+            }
+          }
+        },
+        "entries": {
+          "type": "object",
+          "patternProperties": {
+            "^.+$": {
+              "type": "object",
+              "required": ["name"],
+              "properties": {
+                "name": { "type": "string" },
+                "indication": { "type": ["string", "null"] },
+                "qualityStandard": { "type": ["string", "null"] }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

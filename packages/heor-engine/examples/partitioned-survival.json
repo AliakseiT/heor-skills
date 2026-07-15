@@ -1,0 +1,13 @@
+{
+  "model": "partitioned-survival",
+  "inputs": {
+    "survivalCurveParam1": 12,
+    "survivalCurveParam2": 1.4,
+    "costPerCyclePre": 5000,
+    "costPerCyclePost": 2000,
+    "utilityPre": 0.75,
+    "utilityPost": 0.5,
+    "numCycles": 24,
+    "discountRate": 0.035
+  }
+}

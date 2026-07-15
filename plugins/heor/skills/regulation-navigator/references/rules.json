@@ -1,0 +1,518 @@
+{
+  "version": "v2025-12-10",
+  "lastVerified": "2025-12-10",
+  "description": "Market-access pathway ruleset. Pure data extracted from the upstream app's src/lib/pathway-rules.ts, decoupled from UI per docs/open-source-ruleset-strategy.md: icon → sectionType, colorTheme → pathwayType, ISO 3166 lowercase jurisdictions, dossier category taxonomy. Evaluate with scripts/evaluate.ts.",
+  "taxonomy": {
+    "jurisdictions": ["ch", "de", "fr", "us", "uk"],
+    "categories": ["digital-health", "ivd", "hardware", "procedure"],
+    "categorySourceMap": {
+      "digital-health": "SOFTWARE (Digital Health / DTx)",
+      "ivd": "DIAGNOSTIC (Diagnostic / IVD)",
+      "hardware": "HARDWARE (Medical Device / Hardware)",
+      "procedure": "PROCEDURE (Medical Procedure / Method)"
+    },
+    "riskClasses": ["I", "IIa", "III", "NA"],
+    "enums": {
+      "status": ["Fast-Track", "Standard", "Enterprise", "Phased"],
+      "pathwayType": [
+        "reimbursement-fast-track",
+        "list-inclusion",
+        "tariff-listing",
+        "coding",
+        "hospital-funding",
+        "hta-assessment",
+        "coverage-determination",
+        "conditional-coverage",
+        "strategic-assessment"
+      ],
+      "sectionType": ["regulatory", "clinical", "technical", "economic", "administrative", "strategy"],
+      "requirementType": ["PREREQUISITE", "DELIVERABLE"],
+      "automationLevel": ["NONE", "PARTIAL", "FULL"],
+      "availability": ["AVAILABLE", "WAITLIST"],
+      "criticality": ["HIGH", "MEDIUM"]
+    }
+  },
+  "selection": {
+    "note": "Base pathway is keyed only on (jurisdiction, category), faithful to the source's evaluatePathway. riskClass and hasAI never select the base pathway — they only add warnings/insights. Resolution order: exact (jurisdiction, category) → jurisdiction default → globalDefault.",
+    "order": ["jurisdiction+category", "jurisdiction-default", "global-default"]
+  },
+  "pathways": [
+    {
+      "jurisdiction": "ch",
+      "category": "digital-health",
+      "pathwayName": "dGA MiGeL Fast-Track (NEW July 2026)",
+      "authority": "BAG (FOPH) / EAMGK",
+      "timeline": "6-12 Months (estimated)",
+      "stopper": "WZW Criteria: Must prove clinical benefit for mild-to-moderate depression with CBT approach.",
+      "status": "Fast-Track",
+      "pathwayType": "reimbursement-fast-track",
+      "roleDescription": "Preparation of MiGeL application for digital cognitive behavioral therapy applications.",
+      "expertInsight": "NEW PATHWAY: As of July 1, 2026, Switzerland introduces its first dedicated dGA category for cognitive behavioral therapy (CBT) apps treating mild-to-moderate depression. This is Switzerland's first DiGA-like pathway. Apps must be prescribed by physicians with required specialist title and used as adjunct or bridge to psychotherapy.",
+      "adoptionBarrier": "Physician prescription required; limited to depression CBT indication initially.",
+      "sections": [
+        {
+          "id": "admin",
+          "title": "Prerequisites",
+          "sectionType": "regulatory",
+          "requirements": [
+            { "label": "CE Mark (MDR)", "description": "Medical device certification under MDR.", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE", "link": "https://www.swissmedic.ch/swissmedic/en/home/medical-devices/market-access.html" },
+            { "label": "Swiss Market Authorization", "description": "Registration with Swissmedic or MRA recognition.", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE" }
+          ]
+        },
+        {
+          "id": "clinical",
+          "title": "WZW Evidence (CBT-Specific)",
+          "sectionType": "clinical",
+          "requirements": [
+            { "label": "Clinical Efficacy Dossier", "description": "Evidence for CBT effectiveness in mild-to-moderate depression.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/mittel-und-gegenstande/antraege-migel.html" },
+            { "label": "WZW Assessment", "description": "Demonstration of Wirksamkeit, Zweckmässigkeit, Wirtschaftlichkeit.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE" }
+          ]
+        },
+        {
+          "id": "euro",
+          "title": "Reimbursement Application",
+          "sectionType": "administrative",
+          "requirements": [
+            { "label": "MiGeL Application Form", "description": "Standardized application to EAMGK commission.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/mittel-und-gegenstande/antraege-migel.html" },
+            { "label": "Prescription Limitation Model", "description": "Documentation of physician prescription requirements.", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "WAITLIST" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "ch",
+      "category": "procedure",
+      "pathwayName": "TARMED / TARDOC (Method)",
+      "authority": "BAG (FOPH)",
+      "timeline": "12-24 Months",
+      "stopper": "WZW: Must prove Economy (Wirtschaftlichkeit) vs existing methods.",
+      "status": "Standard",
+      "pathwayType": "tariff-listing",
+      "roleDescription": "Application for a new medical service position in the tariff structure.",
+      "expertInsight": "TARDOC is replacing TARMED in the ambulatory setting. Ensure applications reference the appropriate tariff structure.",
+      "sections": [
+        {
+          "id": "admin",
+          "title": "Tariff Request",
+          "sectionType": "administrative",
+          "requirements": [
+            { "label": "Tariff Proposal", "description": "Formal request to tariff partners (FMH, curafutura).", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "AVAILABLE", "link": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/aerztliche-leistungen.html" }
+          ]
+        },
+        {
+          "id": "clinical",
+          "title": "WZW Evidence",
+          "sectionType": "clinical",
+          "requirements": [
+            { "label": "HTA Report", "description": "Full Health Technology Assessment.", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "AVAILABLE", "link": "https://www.bag.admin.ch/bag/en/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/hta/hta-programm.html" },
+            { "label": "Budget Impact", "description": "Cost comparison to standard of care.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "ch",
+      "category": "ivd",
+      "pathwayName": "Analysenliste Listing (AL)",
+      "authority": "BAG (FOPH)",
+      "timeline": "6-12 Months",
+      "stopper": "WZW Criteria: Must prove Analytical Validity & Clinical Utility.",
+      "status": "Standard",
+      "pathwayType": "list-inclusion",
+      "roleDescription": "Application for inclusion in the List of Analyses (Analysenliste).",
+      "expertInsight": "For diagnostic labs, the Analysenliste (AL) determines reimbursement. New markers require explicit addition. Must demonstrate WZW (Efficiency, Appropriateness, Economy) and often requires HTA-like evidence of clinical utility.",
+      "sections": [
+        {
+          "id": "admin",
+          "title": "Application",
+          "sectionType": "administrative",
+          "requirements": [
+            { "label": "Analysenliste Application", "description": "Formal request for new analysis code.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/analysenliste.html" }
+          ]
+        },
+        {
+          "id": "clinical",
+          "title": "Evidence",
+          "sectionType": "clinical",
+          "requirements": [
+            { "label": "Clinical Validity Dossier", "description": "Evidence of sensitivity, specificity, and clinical impact.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/hta/hta-programm.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "ch",
+      "category": null,
+      "isDefault": true,
+      "pathwayName": "MiGeL Listing (Device)",
+      "authority": "BAG (FOPH) / EAMGK",
+      "timeline": "6-12 Months",
+      "stopper": "WZW Criteria: Wirksamkeit (Efficacy), Zweckmässigkeit (Appropriateness), Wirtschaftlichkeit (Economy).",
+      "status": "Standard",
+      "pathwayType": "list-inclusion",
+      "roleDescription": "Preparation of the Mittel- und Gegenständeliste (MiGeL) application.",
+      "expertInsight": "MiGeL is primarily for devices used by patients themselves or with non-professional help. Devices used by healthcare professionals in clinical settings may follow different pathways (TARMED, SwissDRG). Trust Principle may apply for physician-led digital services.",
+      "adoptionBarrier": "MiGeL focuses on self-administered devices; professional-use devices may need alternative pathways.",
+      "sections": [
+        {
+          "id": "admin",
+          "title": "Application",
+          "sectionType": "administrative",
+          "requirements": [
+            { "label": "Swiss Application Form", "description": "Standardized submission form for BAG.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/mittel-und-gegenstande/antraege-migel.html" },
+            { "label": "Regulatory Clearance", "description": "CE Mark (MDR/IVDR) or FDA (via MRA).", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE", "link": "https://www.swissmedic.ch/swissmedic/en/home/medical-devices/market-access.html" }
+          ]
+        },
+        {
+          "id": "clinical",
+          "title": "WZW Evidence",
+          "sectionType": "clinical",
+          "requirements": [
+            { "label": "WZW Assessment Dossier", "description": "Structuring evidence for Efficacy and Appropriateness.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/mittel-und-gegenstande.html" },
+            { "label": "Health Economic Analysis", "description": "Budget impact for Swiss basic insurance.", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "WAITLIST", "link": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung.html" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "de",
+      "category": "procedure",
+      "pathwayName": "NUB / OPS Code (Method)",
+      "authority": "InEK & DIMDI (BfArM)",
+      "timeline": "12-18 Months (Annual cycle)",
+      "stopper": "Status 1 Funding: Requires proof of 'Novelty' and economic gap.",
+      "status": "Standard",
+      "pathwayType": "hospital-funding",
+      "roleDescription": "Generation of NUB requests for hospital innovation funding.",
+      "sections": [
+        {
+          "id": "admin",
+          "title": "Coding",
+          "sectionType": "administrative",
+          "requirements": [
+            { "label": "OPS Code Proposal", "description": "Formal application for procedure code.", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "WAITLIST", "link": "https://www.bfarm.de/DE/Kodiersysteme/Prozeduren/OPS/_node.html" },
+            { "label": "NUB Template", "description": "Status 1 funding request argument.", "type": "DELIVERABLE", "automationLevel": "FULL", "criticality": "HIGH", "availability": "WAITLIST", "link": "https://www.g-drg.de/Neue_Untersuchungs-_und_Behandlungsmethoden_NUB" }
+          ]
+        },
+        {
+          "id": "euro",
+          "title": "Economics",
+          "sectionType": "economic",
+          "requirements": [
+            { "label": "Economic Risk Analysis", "description": "Calculation proving DRG insufficiency.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST", "link": "https://www.g-drg.de/G-DRG-System_2024" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "de",
+      "category": "ivd",
+      "pathwayName": "EBM / GOÄ (IVD/Diag)",
+      "authority": "G-BA & KBV",
+      "timeline": "24-36 Months",
+      "stopper": "Valuation Committee: Must prove diagnostic accuracy leads to therapeutic benefit (linked evidence).",
+      "status": "Enterprise",
+      "pathwayType": "tariff-listing",
+      "roleDescription": "Synthesizing 'Linked Evidence' chains for ambulatory reimbursement.",
+      "adoptionBarrier": "Proving clinical utility chain from diagnosis to improved outcomes is extremely challenging.",
+      "sections": [
+        {
+          "id": "admin",
+          "title": "Regulatory",
+          "sectionType": "regulatory",
+          "requirements": [
+            { "label": "IVDR Certification", "description": "CE Mark under IVD Regulation.", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE", "link": "https://health.ec.europa.eu/medical-devices-diagnostics/in-vitro-diagnostic-medical-devices-regulation_en" }
+          ]
+        },
+        {
+          "id": "euro",
+          "title": "Value Chain",
+          "sectionType": "economic",
+          "requirements": [
+            { "label": "EUnetHTA Core Dossier", "description": "Standardized clinical assessment.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.htacoremodel.info/BrowseModel.aspx" },
+            { "label": "EBM Application", "description": "Submission for statutory insurance.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST", "link": "https://www.g-ba.de/themen/methodenbewertung/ambulant/antrag/" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "de",
+      "category": "hardware",
+      "pathwayName": "G-BA Method Assessment",
+      "authority": "G-BA (IQWiG)",
+      "timeline": "3-5 Years",
+      "stopper": "High Evidence Bar: RCTs usually required for new methods.",
+      "status": "Enterprise",
+      "pathwayType": "hta-assessment",
+      "roleDescription": "Full HTA dossier for hardware-based methods (Methodenbewertung).",
+      "adoptionBarrier": "Extremely rigorous evidence requirements; most manufacturers pursue hospital NUB pathway instead.",
+      "sections": [
+        {
+          "id": "clinical",
+          "title": "Evidence",
+          "sectionType": "clinical",
+          "requirements": [
+            { "label": "Systematic Review", "description": "Full literature review per IQWiG methods.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.g-ba.de/themen/methodenbewertung/bewertungsverfahren/" },
+            { "label": "Study Protocol (RCT)", "description": "Design for required clinical trials.", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "WAITLIST", "link": "https://www.g-ba.de/themen/methodenbewertung/bewertungsverfahren/" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "de",
+      "category": null,
+      "isDefault": true,
+      "pathwayName": "DiGA Fast-Track",
+      "authority": "BfArM",
+      "timeline": "3 Months (+ 12-24 months provisional)",
+      "stopper": "Positive Care Effect (pVE): Medical benefit or structural improvement required.",
+      "status": "Fast-Track",
+      "pathwayType": "reimbursement-fast-track",
+      "roleDescription": "Drafting of the Evaluation Concept and Systematic Literature Search.",
+      "expertInsight": "DiPA pathway (Pflegeanwendungen) available for nursing/care apps (SGB XI). DiGA Class IIa maximum currently; Class IIb under discussion with DigiG legislation. Provisional listing allows 12-24 months to generate evidence.",
+      "successRate": "~60% achieve permanent listing after provisional phase",
+      "adoptionBarrier": "Low prescription rates by physicians (awareness gap); reimbursement rates often insufficient for sustainability.",
+      "sections": [
+        {
+          "id": "admin",
+          "title": "Prerequisites",
+          "sectionType": "regulatory",
+          "requirements": [
+            { "label": "MDR CE Mark", "description": "Class I or IIa certificate (IIb under discussion).", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE", "link": "https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/DiGA/_node.html" },
+            { "label": "Information Security (BSI)", "description": "BSI Grundschutz compliance or ISO 27001.", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE", "link": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/it-grundschutz_node.html" }
+          ]
+        },
+        {
+          "id": "clinical",
+          "title": "Clinical Evidence",
+          "sectionType": "clinical",
+          "requirements": [
+            { "label": "EUnetHTA REA Model", "description": "Core Clinical Effectiveness Model.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.htacoremodel.info/BrowseModel.aspx" },
+            { "label": "DiGA Evaluation Concept", "description": "Study design for provisional trial period.", "type": "DELIVERABLE", "automationLevel": "FULL", "criticality": "HIGH", "availability": "WAITLIST", "link": "https://www.bfarm.de/SharedDocs/Downloads/EN/MedicalDevices/DiGA_Guide.pdf?__blob=publicationFile" },
+            { "label": "Systematic Literature Review", "description": "Evidence synthesis per BfArM requirements.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "fr",
+      "category": "digital-health",
+      "pathwayName": "PECAN / LATM (DTx/Telemonitoring)",
+      "authority": "HAS & ANS",
+      "timeline": "12 Months (conditional) + 6-9 months for permanent",
+      "stopper": "Innovation: Must fill unmet need. PECAN has strict pricing caps and ~75% rejection rate.",
+      "status": "Fast-Track",
+      "pathwayType": "reimbursement-fast-track",
+      "roleDescription": "Generation of the Innovation Note and Matrice Demandeur.",
+      "expertInsight": "PECAN covers ALL risk classes (I-III). Strict pricing: DTx €780/year max, telemonitoring €50/month. High rejection rate (~75%). Must justify French healthcare system applicability. Interoperability (ANS) is major barrier.",
+      "expertInsightWhenHasAI": "CRITICAL: HAS requires 'White Box' AI transparency - training data sources must be disclosed. PECAN covers ALL risk classes (I-III), unlike DiGA. Pricing: DTx max €780/year (€435 first 3 months), telemonitoring €50/month. Must submit for permanent listing (LPPR for DTx, LATM for telemonitoring) within 6-9 months.",
+      "successRate": "~25% - only 2 of 17 initiated applications successful as of 2024",
+      "adoptionBarrier": "Very strict evidence requirements for French system applicability; fixed low pricing discourages many manufacturers.",
+      "sections": [
+        {
+          "id": "clinical",
+          "title": "Clinical (HAS)",
+          "sectionType": "clinical",
+          "requirements": [
+            { "label": "EUnetHTA Core Model", "description": "Rapid REA with French adaptation.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.htacoremodel.info/BrowseModel.aspx" },
+            { "label": "Matrice Demandeur", "description": "HAS-specific dossier for DTx/telemonitoring.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST", "link": "https://www.has-sante.fr/jcms/p_3310468/fr/evaluation-des-dispositifs-medicaux-numeriques-a-visee-therapeutique-et-de-telesurveillance-medicale" },
+            { "label": "French System Justification", "description": "Evidence applicability to French healthcare context.", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "WAITLIST" }
+          ]
+        },
+        {
+          "id": "tech",
+          "title": "Technical (ANS)",
+          "sectionType": "technical",
+          "requirements": [
+            { "label": "Interop Certificate", "description": "Convergence (INS, PSC, DMP integration).", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE", "link": "https://esante.gouv.fr/espace-industriels/certificats-et-labels" }
+          ]
+        },
+        {
+          "id": "euro",
+          "title": "Permanent Listing Path",
+          "sectionType": "administrative",
+          "requirements": [
+            { "label": "LPPR Application (DTx)", "description": "Permanent listing within 6 months.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST", "link": "https://www.has-sante.fr/jcms/c_419385/fr/depot-de-dossier-cnedimts" },
+            { "label": "LATM Application (Telemonitoring)", "description": "Permanent telemonitoring list within 9 months.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "fr",
+      "category": null,
+      "isDefault": true,
+      "pathwayName": "LPPR Listing (Brand)",
+      "authority": "HAS (CNEDiMTS)",
+      "timeline": "9-12 Months (~180 days evaluation)",
+      "stopper": "ASA Level: Improvement of Service Attendu (clinical benefit level).",
+      "status": "Standard",
+      "pathwayType": "list-inclusion",
+      "roleDescription": "Dossier for CNEDiMTS evaluation.",
+      "adoptionBarrier": "CEPS price negotiations can significantly delay market access post-HAS approval.",
+      "sections": [
+        {
+          "id": "clinical",
+          "title": "Clinical",
+          "sectionType": "clinical",
+          "requirements": [
+            { "label": "Clinical Dossier (SA)", "description": "Evidence of Service Attendu and ASA improvement.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST", "link": "https://www.has-sante.fr/jcms/c_419385/fr/depot-de-dossier-cnedimts" },
+            { "label": "French Evidence Adaptation", "description": "Justification for French healthcare context.", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "WAITLIST" }
+          ]
+        },
+        {
+          "id": "euro",
+          "title": "Price Negotiation",
+          "sectionType": "economic",
+          "requirements": [
+            { "label": "Budget Impact Model (CEPS)", "description": "Economic dossier for price negotiation.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST", "link": "https://www.has-sante.fr/jcms/c_2035489/fr/evaluation-economique-et-de-sante-publique" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "us",
+      "category": "procedure",
+      "pathwayName": "CPT Coding (AMA)",
+      "authority": "CMS & AMA",
+      "timeline": "18-24 Months",
+      "stopper": "Wide Utilization: CPT Category I requires widespread adoption.",
+      "status": "Standard",
+      "pathwayType": "coding",
+      "roleDescription": "Drafting CPT Code Applications and Value Analysis decks.",
+      "adoptionBarrier": "Requires demonstrated utilization; Category III (temporary) code often necessary first step.",
+      "sections": [
+        {
+          "id": "admin",
+          "title": "Regulatory",
+          "sectionType": "regulatory",
+          "requirements": [
+            { "label": "FDA Clearance", "description": "510(k), De Novo, or PMA.", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE", "link": "https://www.fda.gov/medical-devices/device-advice-comprehensive-regulatory-assistance/how-study-and-market-your-device" }
+          ]
+        },
+        {
+          "id": "euro",
+          "title": "Reimbursement",
+          "sectionType": "economic",
+          "requirements": [
+            { "label": "CPT Category III Application", "description": "Temporary tracking code request.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST", "link": "https://www.ama-assn.org/practice-management/cpt/cpt-application-process" },
+            { "label": "Value Analysis Deck", "description": "Hospital value committee presentation.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "us",
+      "category": null,
+      "isDefault": true,
+      "pathwayName": "CMS Coverage / TCET (Selective)",
+      "authority": "CMS & AMA",
+      "timeline": "TCET: 6 months post-FDA (goal) | Traditional: 18-36 months",
+      "stopper": "TCET: Highly selective (~5 devices/year). Must be FDA Breakthrough AND fit existing Medicare benefit category.",
+      "status": "Standard",
+      "pathwayType": "coverage-determination",
+      "roleDescription": "Drafting CPT Code Applications, TCET nominations, and Value Analysis materials.",
+      "expertInsight": "CRITICAL TCET LIMITATIONS: Only ~5 devices/year accepted. Requires FDA Breakthrough designation AND must fit existing Medicare benefit category (excludes most digital health). Quarterly review cycles. Pre-market engagement recommended 12+ months before FDA authorization. Most devices should pursue traditional MAC coverage or CPT coding instead.",
+      "successRate": "TCET: <5% of nominations accepted | Traditional NCD: ~30-40% approval rate",
+      "adoptionBarrier": "TCET highly competitive and restrictive; most digital health excluded from Medicare coverage due to benefit category limitations.",
+      "sections": [
+        {
+          "id": "admin",
+          "title": "Regulatory",
+          "sectionType": "regulatory",
+          "requirements": [
+            { "label": "FDA Clearance/Approval", "description": "510(k), De Novo, or PMA.", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE", "link": "https://www.fda.gov/medical-devices/device-advice-comprehensive-regulatory-assistance/how-study-and-market-your-device" },
+            { "label": "FDA Breakthrough Designation", "description": "Required for TCET eligibility.", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE", "link": "https://www.fda.gov/medical-devices/how-study-and-market-your-device/breakthrough-devices-program" }
+          ]
+        },
+        {
+          "id": "euro",
+          "title": "Reimbursement Pathways",
+          "sectionType": "economic",
+          "requirements": [
+            { "label": "CPT Application", "description": "Category I or III code for billing.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST", "link": "https://www.ama-assn.org/practice-management/cpt/cpt-application-process" },
+            { "label": "TCET Nomination (Selective)", "description": "Transitional Coverage - 12+ month pre-market engagement required.", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "WAITLIST", "link": "https://www.cms.gov/medicare/coverage/transitional-coverage-emerging-technologies" },
+            { "label": "MAC Coverage Strategy", "description": "Local Medicare Administrative Contractor pathway.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE" }
+          ]
+        }
+      ]
+    },
+    {
+      "jurisdiction": "uk",
+      "category": null,
+      "isDefault": true,
+      "pathwayName": "NICE EVA / DTAC",
+      "authority": "NICE & NHS England",
+      "timeline": "6-12 Months EVA (+ 3-4 years evidence generation)",
+      "stopper": "Evidence Standards Framework (ESF) Tier C compliance. DTAC mandatory for NHS procurement.",
+      "status": "Fast-Track",
+      "pathwayType": "conditional-coverage",
+      "roleDescription": "Preparation for Early Value Assessment and DTAC compliance.",
+      "expertInsight": "DTAC is mandatory entry requirement for NHS digital health market. EVA provides conditional recommendations for 3-4 years while generating real-world evidence. IMPORTANT: NICE recommendations are NOT binding - final adoption decisions made by local Integrated Care Systems (ICSs) based on budget impact.",
+      "successRate": "42 of 90 technologies recommended in EVAs conducted (47%)",
+      "adoptionBarrier": "NICE recommendations non-binding; local ICS commissioners make final decisions based on competing budget priorities.",
+      "sections": [
+        {
+          "id": "admin",
+          "title": "Regulatory & Standards",
+          "sectionType": "regulatory",
+          "requirements": [
+            { "label": "UKCA/CE Mark", "description": "MHRA registration (UKCA preferred).", "type": "PREREQUISITE", "automationLevel": "NONE", "availability": "AVAILABLE", "link": "https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk" },
+            { "label": "DTAC Compliance", "description": "Digital Technology Assessment Criteria (5 pillars: clinical safety, data protection, technical security, interoperability, usability).", "type": "DELIVERABLE", "automationLevel": "FULL", "criticality": "HIGH", "availability": "WAITLIST", "link": "https://transform.england.nhs.uk/key-tools-and-info/digital-technology-assessment-criteria-dtac/" }
+          ]
+        },
+        {
+          "id": "clinical",
+          "title": "Market Access",
+          "sectionType": "clinical",
+          "requirements": [
+            { "label": "NICE EVA Submission", "description": "Early Value Assessment dossier for conditional recommendation.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "WAITLIST", "link": "https://www.nice.org.uk/about/what-we-do/eva" },
+            { "label": "Real-World Evidence Plan", "description": "3-4 year data collection strategy during conditional period.", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "WAITLIST" },
+            { "label": "Budget Impact Analysis (ICS)", "description": "Local NHS budget impact model.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE", "link": "https://www.nice.org.uk/about/what-we-do/into-practice/resource-impact-assessment" }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalDefault": {
+    "jurisdiction": null,
+    "category": null,
+    "isDefault": true,
+    "pathwayName": "Strategic Assessment",
+    "authority": "Multiple Agencies",
+    "timeline": "Variable",
+    "stopper": "Evidence Gap",
+    "status": "Enterprise",
+    "pathwayType": "strategic-assessment",
+    "roleDescription": "Strategic mapping of regulatory and reimbursement requirements.",
+    "sections": [
+      {
+        "id": "strategy",
+        "title": "Roadmap",
+        "sectionType": "strategy",
+        "requirements": [
+          { "label": "EUnetHTA Core Model", "description": "Unified clinical assessment dossier.", "type": "DELIVERABLE", "automationLevel": "FULL", "availability": "AVAILABLE" },
+          { "label": "Evidence Gap Analysis", "description": "Identification of missing clinical data.", "type": "DELIVERABLE", "automationLevel": "PARTIAL", "availability": "AVAILABLE" }
+        ]
+      }
+    ]
+  },
+  "warnings": [
+    { "matcher": { "jurisdiction": "fr", "hasAI": true }, "message": "France (HAS) requires 'White Box' AI transparency. Training data sources must be disclosed. PECAN has ~75% rejection rate." },
+    { "matcher": { "jurisdiction": "fr", "category": "digital-health" }, "message": "PECAN has strict pricing caps (DTx: €780/year max, telemonitoring: €50/month) and high rejection rate (~75%). Evidence must justify French healthcare system applicability." },
+    { "matcher": { "jurisdiction": "us", "category": "digital-health" }, "message": "TCET is highly selective (~5 devices/year) and excludes most digital health apps unless they fit existing Medicare benefit category. Most manufacturers should pursue traditional MAC coverage or CPT coding." },
+    { "matcher": { "jurisdiction": "us" }, "message": "TCET requires both FDA Breakthrough designation AND fit within existing Medicare benefit categories. Quarterly review cycles only." },
+    { "matcher": { "jurisdiction": "uk" }, "message": "CRITICAL: NICE EVA recommendations are NOT binding. Final adoption decisions made by local Integrated Care Systems (ICSs) based on budget priorities. Success rate: ~47% of assessed technologies recommended." },
+    { "matcher": { "jurisdiction": "de", "category": "digital-health" }, "message": "DiGA approval doesn't guarantee adoption. Prescription rates remain low due to physician awareness gaps. ~60% achieve permanent listing after provisional phase. DiPA available for nursing/care apps (SGB XI)." },
+    { "matcher": { "jurisdiction": "ch", "category": "digital-health" }, "message": "NEW: dGA pathway launching July 1, 2026 for CBT apps treating mild-to-moderate depression. Physician prescription required. First DiGA-like pathway in Switzerland." },
+    { "matcher": { "category": "procedure" }, "message": "Reimbursing a 'Method' is distinct from a 'Device'. Widespread clinical adoption is critical for coding success." },
+    { "matcher": { "jurisdiction": "de", "riskClass": "III" }, "message": "DiGA currently limited to Class I-IIa. Class IIb expansion under discussion with DigiG legislation. High-risk devices must pursue G-BA pathway." }
+  ],
+  "insights": {
+    "ch": "Switzerland launching first dGA pathway (July 2026) for CBT depression apps. MiGeL focuses on patient-administered devices; professional-use follows different pathways (TARMED/TARDOC).",
+    "de": "Germany offers fastest digital health pathway (DiGA) but adoption remains challenge. DiPA available for nursing apps. G-BA method assessment extremely rigorous (3-5 years).",
+    "fr": "France's PECAN covers all risk classes but has ~75% rejection rate and strict pricing caps. High bar for French system applicability. Interoperability (ANS) is major technical barrier.",
+    "us": "TCET highly selective (~5/year) and excludes most digital health. Traditional pathways (MAC coverage, CPT coding) more realistic for most manufacturers. Hospital value committees critical.",
+    "uk": "DTAC mandatory for NHS digital health. EVA offers conditional coverage but NICE recommendations non-binding - local ICS budget decisions determine real market access."
+  }
+}

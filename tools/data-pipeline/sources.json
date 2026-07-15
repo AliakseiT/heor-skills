@@ -1,0 +1,93 @@
+{
+  "$comment": "Registry of official sources for every list under data/. Every data file is regenerated from one of these sources by tools/data-pipeline/refresh.ts (CONVENTIONS.md §2). status: download-verified = downloadUrl fetches the artifact directly; landing-verified = landing page confirmed reachable but the download link is versioned per release (manual --local or link scraping needed); verify = URL/API not yet confirmed.",
+  "updated": "2026-07-15",
+  "sources": {
+    "ch/migel": {
+      "name": "Mittel- und Gegenständeliste (MiGeL)",
+      "jurisdiction": "ch",
+      "list": "migel",
+      "authority": "BAG / FOPH (Bundesamt für Gesundheit)",
+      "landingUrl": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/Mittel-und-Gegenstaendeliste.html",
+      "downloadUrl": null,
+      "format": "xlsx",
+      "languages": ["de", "fr", "it"],
+      "languageLayout": "one workbook, one sheet per language (MiGeL D / MiGeL F / MiGeL I)",
+      "updateCadence": "irregular, typically 1-2 revisions per year (validity 1 Jan / 1 Jul)",
+      "status": "landing-verified",
+      "notes": "Excel download links on the landing page embed the release name (…xlsx.download.xlsx/…) and change each revision. Download manually and run refresh.ts with --local.",
+      "normalizer": "normalizers/ch-migel.ts"
+    },
+    "ch/analysenliste": {
+      "name": "Analysenliste (AL)",
+      "jurisdiction": "ch",
+      "list": "analysenliste",
+      "authority": "BAG / FOPH (Bundesamt für Gesundheit)",
+      "landingUrl": "https://www.bag.admin.ch/bag/de/home/versicherungen/krankenversicherung/krankenversicherung-leistungen-tarife/Analysenliste.html",
+      "downloadUrl": null,
+      "format": "xlsx",
+      "languages": ["de", "fr", "it"],
+      "languageLayout": "each language edition contains all three sheets (Deutsch / Français / Italiano); one file suffices",
+      "updateCadence": "1-2 revisions per year (validity 1 Jan / 1 Jul)",
+      "status": "landing-verified",
+      "notes": "Excel download links on the landing page are versioned per release. Download manually and run refresh.ts with --local.",
+      "normalizer": "normalizers/ch-analysenliste.ts"
+    },
+    "de/diga": {
+      "name": "DiGA-Verzeichnis (digital health applications directory)",
+      "jurisdiction": "de",
+      "list": "diga",
+      "authority": "BfArM (Bundesinstitut für Arzneimittel und Medizinprodukte)",
+      "landingUrl": "https://diga.bfarm.de/de/verzeichnis",
+      "downloadUrl": null,
+      "apiUrl": "https://diga.bfarm.de/api/fhir/v3.0",
+      "format": "json (FHIR)",
+      "languages": ["de"],
+      "updateCadence": "continuous (directory entries added/updated as decided)",
+      "status": "verify",
+      "notes": "FHIR API endpoint discovered from the site bundle; a bare GET returns 401 Unauthorized — access requirements (headers/API key) still to be verified. Fallback: HTML directory scraping (upstream scripts/scrape-diga.ts).",
+      "normalizer": "normalizers/de-diga.ts"
+    },
+    "de/hmv": {
+      "name": "Hilfsmittelverzeichnis (HMV, §139 SGB V)",
+      "jurisdiction": "de",
+      "list": "hmv",
+      "authority": "GKV-Spitzenverband",
+      "landingUrl": "https://hilfsmittel.gkv-spitzenverband.de/",
+      "downloadUrl": null,
+      "format": "xml (in zip, e.g. YYYYMMDD_HMV.zip)",
+      "languages": ["de"],
+      "updateCadence": "periodic (multiple releases per year)",
+      "status": "verify",
+      "notes": "Landing page reachable; the exact stable XML-ZIP download path still to be verified. Structure per upstream ingest: hv:HMV_GRUPPE/ORT/UNTERGRUPPE/ART/PRODUKT, code GG.OO.UU.APPP.",
+      "normalizer": "normalizers/de-hmv.ts"
+    },
+    "fr/lpp": {
+      "name": "Liste des Produits et Prestations (LPP)",
+      "jurisdiction": "fr",
+      "list": "lpp",
+      "authority": "Assurance Maladie (CNAM) / ameli",
+      "landingUrl": "http://www.codage.ext.cnamts.fr/codif/tips//telecharge/index_tele.php?p_site=AMELI",
+      "downloadUrl": null,
+      "format": "dbf (fiche + histo tables in LPP<nnn>.zip)",
+      "languages": ["fr"],
+      "updateCadence": "roughly monthly (archive number increments per release)",
+      "status": "landing-verified",
+      "notes": "Download index page reachable; the per-release LPP<nnn>.zip URL must be picked from it (verify a stable 'latest' link). General info: https://www.ameli.fr/entreprise/professionnels-sante/exercice-liberal/nomenclatures-codage/lpp",
+      "normalizer": "normalizers/fr-lpp.ts"
+    },
+    "us/hcpcs": {
+      "name": "HCPCS Level II code set (quarterly update)",
+      "jurisdiction": "us",
+      "list": "hcpcs",
+      "authority": "CMS (Centers for Medicare & Medicaid Services)",
+      "landingUrl": "https://www.cms.gov/medicare/coding-billing/healthcare-common-procedure-system/quarterly-update",
+      "downloadUrl": null,
+      "format": "xlsx (in quarterly zip, e.g. hcpc2025_oct_anweb_v4.zip)",
+      "languages": ["en"],
+      "updateCadence": "quarterly",
+      "status": "landing-verified",
+      "notes": "Landing page reachable; quarterly ZIP links are versioned per release — verify/scrape the current quarter's link when implementing the normalizer.",
+      "normalizer": "normalizers/us-hcpcs.ts"
+    }
+  }
+}

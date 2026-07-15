@@ -1,0 +1,12 @@
+{
+  "name": "heor",
+  "version": "0.1.0",
+  "description": "Health Economics & Outcomes Research and market-access skills: systematic literature review (PRISMA 2020), EUnetHTA dossier drafting, deterministic economic modeling (CEA/BIA/PSA), regulatory pathway navigation, and reimbursement applications for CH/DE/FR/US.",
+  "author": {
+    "name": "Aliaksei Tsitovich",
+    "email": "aliaksei.tsitovich@adalyon.com"
+  },
+  "homepage": "https://www.medtechaccess.ch/",
+  "license": "Apache-2.0",
+  "keywords": ["heor", "hta", "market-access", "prisma", "systematic-review", "cost-effectiveness", "budget-impact", "migel", "eunethta", "reimbursement", "medtech"]
+}

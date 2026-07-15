@@ -1,0 +1,15 @@
+{
+  "model": "state-transition",
+  "inputs": {
+    "transitionMatrix": [
+      [0.8, 0.15, 0.05],
+      [0.1, 0.8, 0.1],
+      [0, 0, 1]
+    ],
+    "initialStateDistribution": [0.7, 0.3, 0],
+    "stateCosts": [100, 2000, 0],
+    "stateUtilities": [0.9, 0.6, 0],
+    "numCycles": 10,
+    "discountRate": 0.03
+  }
+}

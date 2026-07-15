@@ -1,0 +1,20 @@
+{
+  "model": "decision-tree",
+  "inputs": {
+    "costInterventionTest": 50,
+    "sensitivityInterventionTest": 0.85,
+    "specificityInterventionTest": 0.9,
+    "costComparatorTest": 40,
+    "sensitivityComparatorTest": 0.75,
+    "specificityComparatorTest": 0.8,
+    "prevalenceDisease": 0.15,
+    "costTreatmentCorrectPositive": 2000,
+    "utilityTreatmentCorrectPositive": 0.8,
+    "costFalsePositiveManagement": 500,
+    "utilityFalsePositiveState": 0.6,
+    "costFalseNegativeConsequence": 5000,
+    "utilityFalseNegativeState": 0.3,
+    "costCorrectNegativeManagement": 100,
+    "utilityCorrectNegativeState": 1.0
+  }
+}
