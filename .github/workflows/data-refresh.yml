@@ -5,13 +5,13 @@ name: Data refresh
 # changed, open a pull request with the change summary in the body. Merging the PR
 # is the only maintenance action; merged updates are released as data-YYYY-MM-DD tags.
 #
-# STATUS: wired up but DORMANT. `--download` only fetches sources whose sources.json
-# status is "download-verified"; today none are (CH is "landing-verified" — the BAG
-# Excel links are versioned per release; DE/FR/US are "verify"). So the scheduled run
-# currently reports every list as skipped and opens no PR. It activates automatically
-# once a source gains a direct downloadUrl + "download-verified" status, or once a
-# landing-page link resolver is added (see tools/data-pipeline TODOs). The CH Excel
-# files are refreshed manually with `refresh.ts --local` in the meantime.
+# STATUS: ACTIVE for de/hmv (GKV REST API), de/diga (BfArM FHIR API with token
+# handshake), fr/lpp (latest LPP<nnn>.zip resolved from the CNAM index page), and
+# us/hcpcs (quarterly ZIP resolved from the CMS landing page) — all live-verified
+# 2026-07-15. The two CH lists (ch/migel, ch/analysenliste) remain manual: BAG
+# Excel links are versioned per release with opaque tokens; refresh them with
+# `refresh.ts --list ch/<list> --local <xlsx>` (a landing-page link resolver is a
+# known TODO). Manual/unimplemented sources are reported as skipped, non-fatally.
 
 on:
   schedule:

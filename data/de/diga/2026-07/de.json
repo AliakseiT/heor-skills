@@ -1,0 +1,398 @@
+{
+  "list": "diga",
+  "jurisdiction": "de",
+  "version": "2026-07",
+  "language": "de",
+  "entries": {
+    "00876": {
+      "name": "Selfapys Online-Kurs bei Depression",
+      "manufacturer": "Selfapy GmbH",
+      "url": "https://www.selfapy.com/kurse/depression"
+    },
+    "01644": {
+      "name": "Kranus Lutera",
+      "manufacturer": "Kranus Health GmbH",
+      "url": "https://www.kranushealth.com/de/"
+    },
+    "01967": {
+      "name": "Untire®",
+      "manufacturer": "Tired of Cancer B.V. ",
+      "url": "https://untire.app/de/"
+    },
+    "01613": {
+      "name": "optimune",
+      "manufacturer": "GAIA AG",
+      "url": "https://optimune.de/"
+    },
+    "01823": {
+      "name": "ProHerz",
+      "manufacturer": "ProCarement  GmbH",
+      "url": "https://procarement.com/"
+    },
+    "00329": {
+      "name": "Mindable: Panik & Agoraphobie",
+      "manufacturer": "Mindable Health GmbH",
+      "url": "https://www.mindable.health"
+    },
+    "02078": {
+      "name": "mebix",
+      "manufacturer": "Vision2B GmbH",
+      "url": "https://www.mebix.de"
+    },
+    "01052": {
+      "name": "Selfapys Online-Kurs bei Panikstörung",
+      "manufacturer": "Selfapy GmbH",
+      "url": "https://www.selfapy.com/de/kurse/panik"
+    },
+    "00965": {
+      "name": "HelloBetter Stress und Burnout",
+      "manufacturer": "GET.ON Institut für Online Gesundheitstrainings GmbH",
+      "url": "https://hellobetter.de/online-trainings/burnout-stress/"
+    },
+    "01834": {
+      "name": "Selfapys Online-Kurs bei Bulimia Nervosa",
+      "manufacturer": "Selfapy GmbH",
+      "url": "https://www.selfapy.com/kurse/bulimie"
+    },
+    "00746": {
+      "name": "Vitadio",
+      "manufacturer": "Vitadio s.r.o.",
+      "url": "https://vitadio.de"
+    },
+    "01820": {
+      "name": "Novego: Ängste überwinden",
+      "manufacturer": "IVPNetworks GmbH",
+      "url": "https://www.novego.de/novego-programme/hilfe-bei-aengsten/"
+    },
+    "02133": {
+      "name": "companion® shoulder",
+      "manufacturer": "PrehApp GmbH",
+      "url": "https://medi.biz/companion-shoulder"
+    },
+    "01683": {
+      "name": "MindDoc Auf Rezept",
+      "manufacturer": "MindDoc Health GmbH",
+      "url": "https://minddoc.com/de/de/auf-rezept"
+    },
+    "00961": {
+      "name": "CANKADO PRO-React Onco",
+      "manufacturer": "CANKADO GmbH",
+      "url": "https://diga.cankado.com"
+    },
+    "01954": {
+      "name": "Selfapys Online-Kurs bei chronischen Schmerzen",
+      "manufacturer": "Selfapy GmbH",
+      "url": "https://www.selfapy.com/kurse/chronische-schmerzen"
+    },
+    "02173": {
+      "name": "eCovery - Therapie bei Schmerzen im unteren Rücken",
+      "manufacturer": "eCovery GmbH",
+      "url": "https://ecovery.de"
+    },
+    "00450": {
+      "name": "deprexis",
+      "manufacturer": "GAIA AG",
+      "url": "https://de.deprexis.com/"
+    },
+    "01330": {
+      "name": "Kaia Rückenschmerzen - Rückentraining für Zuhause",
+      "manufacturer": "kaia health software GmbH",
+      "url": "https://www.kaiahealth.de/rueckenschmerzen/"
+    },
+    "01329": {
+      "name": "Kaia COPD: Meine aktive COPD Therapie",
+      "manufacturer": "kaia health software GmbH",
+      "url": "https://kaiahealth.de/copd/"
+    },
+    "01113": {
+      "name": "NeuroNation MED",
+      "manufacturer": "Synaptikon GmbH",
+      "url": "https://neuronation-med.de/"
+    },
+    "01282": {
+      "name": "Kranus Edera",
+      "manufacturer": "Kranus Health GmbH",
+      "url": "https://www.kranushealth.com"
+    },
+    "00752": {
+      "name": "levidex",
+      "manufacturer": "GAIA AG",
+      "url": "https://levidex.de/"
+    },
+    "00993": {
+      "name": "Mawendo",
+      "manufacturer": "Mawendo GmbH",
+      "url": "https://mawendo.com/"
+    },
+    "01853": {
+      "name": "priovi - digitale Unterstützung der Borderline-Behandlung",
+      "manufacturer": "GAIA AG",
+      "url": "https://priovi.de/"
+    },
+    "01830": {
+      "name": "Selfapys Online-Kurs bei Binge-Eating-Störung",
+      "manufacturer": "Selfapy GmbH",
+      "url": "https://www.selfapy.com/kurse/binge-eating"
+    },
+    "01510": {
+      "name": "My Dose Coach",
+      "manufacturer": "METEDA s.r.l.",
+      "url": "https://www.mydosecoach.de"
+    },
+    "00315": {
+      "name": "M-sense Migräne",
+      "manufacturer": "Newsenselab GmbH",
+      "url": "https://www.m-sense.de/diga-migraene"
+    },
+    "01815": {
+      "name": "edupression.com®",
+      "manufacturer": "SOFY GmbH",
+      "url": "https://edupression.com/"
+    },
+    "01049": {
+      "name": "Selfapys Online-Kurs bei Generalisierter Angststörung",
+      "manufacturer": "Selfapy GmbH",
+      "url": "https://www.selfapy.com/kurse/generalisierte-angststoerung"
+    },
+    "02302": {
+      "name": "actensio",
+      "manufacturer": "mementor DE GmbH",
+      "url": "https://actens.io/"
+    },
+    "02273": {
+      "name": "Vantis | KHK und Herzinfarkt",
+      "manufacturer": "Vantis GmbH",
+      "url": "https://www.vantis-health.com/therapie/"
+    },
+    "00387": {
+      "name": "Vivira",
+      "manufacturer": "Vivira Health Lab GmbH",
+      "url": "https://www.vivira.com"
+    },
+    "00474": {
+      "name": "re.flex",
+      "manufacturer": "Kineto Tech Rehab SRL",
+      "url": "https://www.sporlastic.de/reflex"
+    },
+    "01909": {
+      "name": "Smoke Free - Rauchen aufhören",
+      "manufacturer": "Smoke Free 23 GmbH",
+      "url": "https://www.smokefree.de"
+    },
+    "00939": {
+      "name": "ESYSTA App & Portal – Digitales Diabetesmanagement",
+      "manufacturer": "Emperra GmbH E-Health Technologies",
+      "url": "https://www.emperra.com/de/esysta/digitales-produktsystem/"
+    },
+    "01513": {
+      "name": "HelloBetter Panik",
+      "manufacturer": "GET.ON Institut für Online Gesundheitstrainings GmbH",
+      "url": "https://hellobetter.de/online-kurse/panik/"
+    },
+    "02568": {
+      "name": "ORIKO ADHS-Therapie",
+      "manufacturer": "MiNDNET e-Health Solutions GmbH",
+      "url": "https://www.oriko-adhs.de"
+    },
+    "01110": {
+      "name": "Novego: Depressionen bewältigen",
+      "manufacturer": "IVPNetworks GmbH",
+      "url": "https://www.novego.de"
+    },
+    "01254": {
+      "name": "elona therapy Depression",
+      "manufacturer": "Elona Health GmbH",
+      "url": "https://www.elona.health/elona-therapy-patienten"
+    },
+    "01734": {
+      "name": "Endo-App",
+      "manufacturer": "Endo Health GmbH",
+      "url": "https://diga.endometriose.app/"
+    },
+    "01376": {
+      "name": "HelloBetter Diabetes",
+      "manufacturer": "GET.ON Institut für Online Gesundheitstrainings GmbH",
+      "url": "https://hellobetter.de/online-kurse/diabetes/"
+    },
+    "00998": {
+      "name": "companion patella powered by medi - proved by Dt. Kniegesellschaft",
+      "manufacturer": "PrehApp GmbH",
+      "url": "https://www.medi.de/digitale-anwendungen/diga-companion-patella/"
+    },
+    "00875": {
+      "name": "Mika",
+      "manufacturer": "Fosanis GmbH",
+      "url": "https://www.mitmika.de/"
+    },
+    "00691": {
+      "name": "Rehappy",
+      "manufacturer": "Rehappy GmbH",
+      "url": "https://www.rehappy.de/"
+    },
+    "01772": {
+      "name": "HelloBetter Schlafen",
+      "manufacturer": "GET.ON Institut für Online Gesundheitstrainings GmbH",
+      "url": "https://hellobetter.de/online-kurse/schlafen/"
+    },
+    "02373": {
+      "name": "elona explore – für die mentale Gesundheit",
+      "manufacturer": "Elona Health GmbH",
+      "url": "https://www.elona.health/elona-explore-patienten"
+    },
+    "02815": {
+      "name": "Kranus Mictera",
+      "manufacturer": "Kranus Health GmbH",
+      "url": "https://www.kranushealth.com/de/therapien/inkontinenz"
+    },
+    "02814": {
+      "name": "attexis - die digitale Therapie bei ADHS im Erwachsenenalter",
+      "manufacturer": "GAIA AG",
+      "url": "https://attexis.de/"
+    },
+    "01497": {
+      "name": "HelloBetter Vaginismus Plus",
+      "manufacturer": "GET.ON Institut für Online Gesundheitstrainings GmbH",
+      "url": "https://hellobetter.de/online-kurse/vaginismus-plus/"
+    },
+    "01304": {
+      "name": "HelloBetter Chronische Schmerzen",
+      "manufacturer": "GET.ON Institut für Online Gesundheitstrainings GmbH",
+      "url": "https://hellobetter.de/online-kurse/chronische-schmerzen/"
+    },
+    "00872": {
+      "name": "Oviva Direkt für Adipositas ",
+      "manufacturer": "Oviva AG (Zweigniederlassung Deutschland)",
+      "url": "https://oviva.com/de/de/direkt/"
+    },
+    "01514": {
+      "name": "Mindable: Soziale Phobie",
+      "manufacturer": "Mindable Health GmbH",
+      "url": "https://www.mindable.health/soziale-phobie"
+    },
+    "02866": {
+      "name": "memodio",
+      "manufacturer": "memodio GmbH",
+      "url": "https://memodio-app.com/"
+    },
+    "00350": {
+      "name": "Kalmeda",
+      "manufacturer": "Pohl-Boskamp Digital Health GmbH",
+      "url": "https://www.kalmeda.de"
+    },
+    "01085": {
+      "name": "NichtraucherHelden-App",
+      "manufacturer": "Sanero Medical GmbH",
+      "url": "https://www.nichtraucherhelden.de/medizinprogramm.jsf"
+    },
+    "01786": {
+      "name": "My7steps App",
+      "manufacturer": "My7steps GmbH",
+      "url": "https://diga.my7steps.org"
+    },
+    "01775": {
+      "name": "sinCephalea - Migräneprophylaxe",
+      "manufacturer": "Perfood GmbH",
+      "url": "https://www.sincephalea.de/"
+    },
+    "02789": {
+      "name": "Oviva Direkt Bluthochdruck",
+      "manufacturer": "Oviva AG (Zweigniederlassung Deutschland)",
+      "url": "https://oviva.com/de/de/direkt-bluthochdruck/"
+    },
+    "02856": {
+      "name": "Axia - für axiale Spondyloarthritis (axSpA)",
+      "manufacturer": "Applimeda GmbH",
+      "url": "https://www.axia-app.de"
+    },
+    "02090": {
+      "name": "glucura Diabetestherapie",
+      "manufacturer": "Perfood GmbH",
+      "url": "https://www.glucura.de"
+    },
+    "02097": {
+      "name": "somnovia",
+      "manufacturer": "GAIA AG",
+      "url": "https://somnovia.de/"
+    },
+    "02906": {
+      "name": "INKA",
+      "manufacturer": "NEXTEC Medical GmbH",
+      "url": "https://www.meine-inka.de/"
+    },
+    "00316": {
+      "name": "velibra",
+      "manufacturer": "GAIA AG",
+      "url": "https://de.velibra.com/"
+    },
+    "00868": {
+      "name": "vorvida",
+      "manufacturer": "GAIA AG",
+      "url": "https://vorvida.de/"
+    },
+    "00419": {
+      "name": "elevida",
+      "manufacturer": "GAIA AG",
+      "url": "https://elevida.de/"
+    },
+    "00294": {
+      "name": "zanadio",
+      "manufacturer": "Sidekick Health Germany GmbH",
+      "url": "https://zanadio.de/"
+    },
+    "01346": {
+      "name": "Cara Care für Reizdarm",
+      "manufacturer": "HiDoc Technologies GmbH",
+      "url": "https://www.cara.care/de"
+    },
+    "02194": {
+      "name": "Uroletics",
+      "manufacturer": "Rocketlane Medical Ventures GmbH",
+      "url": "https://www.uroletics.com/"
+    },
+    "02777": {
+      "name": "hiToco®: ADHS Elterntraining",
+      "manufacturer": "medigital GmbH",
+      "url": "https://hitoco.de/weitere-produktinformationen/"
+    },
+    "02858": {
+      "name": "Vera-App für Wechseljahresbeschwerden",
+      "manufacturer": "Endo Health GmbH",
+      "url": "https://diga.veraapp.de/"
+    },
+    "01496": {
+      "name": "Meine Tinnitus App - Das digitale Tinnitus Counseling",
+      "manufacturer": "BAYOOCARE GmbH",
+      "url": "https://www.meinetinnitusapp.de"
+    },
+    "01196": {
+      "name": "neolexon Aphasie",
+      "manufacturer": "Limedix GmbH",
+      "url": "https://neolexon.de/patienten/aphasie-app/"
+    },
+    "00300": {
+      "name": "Invirto - Die Therapie gegen Angst",
+      "manufacturer": "Sympatient GmbH",
+      "url": "https://www.invirto.de"
+    },
+    "00902": {
+      "name": "Orthopy bei Knieverletzungen",
+      "manufacturer": "Orthopy Health GmbH",
+      "url": "https://www.orthopy.de"
+    },
+    "01464": {
+      "name": "PINK! Coach",
+      "manufacturer": "PINK gegen Brustkrebs GmbH",
+      "url": "https://www.pink-brustkrebs.de/das-bietet-pink/lp-pink-coach"
+    },
+    "00508": {
+      "name": "somnio",
+      "manufacturer": "mementor DE GmbH",
+      "url": "https://www.somn.io"
+    },
+    "02286": {
+      "name": "Una Health für Diabetes",
+      "manufacturer": "Una Health GmbH",
+      "url": "https://unahealth.de/"
+    }
+  }
+}

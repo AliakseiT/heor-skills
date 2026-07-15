@@ -1,6 +1,6 @@
 {
   "$id": "heor-skills/data/de/diga",
-  "description": "Planned shape for the German DiGA directory (normalizer not yet implemented — see normalizers/de-diga.ts).",
+  "description": "German DiGA directory (see normalizers/de-diga.ts). status follows FHIR CatalogEntry (observed: active, retired). prices is the list of prescription-unit price components (publisher-price etc.), each with PZN and unit title where available.",
   "$defs": {
     "index": {
       "type": "object",
@@ -18,10 +18,20 @@
             "required": ["code", "status"],
             "properties": {
               "code": { "type": "string", "minLength": 1 },
-              "status": { "enum": ["active", "provisional", "deleted"] },
+              "status": { "enum": ["draft", "active", "retired", "unknown"] },
               "prices": {
-                "type": "object",
-                "properties": { "manufacturerPrice": { "type": ["number", "null"], "minimum": 0 } }
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["type", "amount", "currency"],
+                  "properties": {
+                    "type": { "type": "string" },
+                    "amount": { "type": "number", "minimum": 0 },
+                    "currency": { "type": "string" },
+                    "unit": { "type": "string" },
+                    "pzn": { "type": "string" }
+                  }
+                }
               },
               "icdCodes": { "type": "array", "items": { "type": "string" } },
               "validFrom": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }

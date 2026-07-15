@@ -1,0 +1,2486 @@
+{
+  "list": "diga",
+  "jurisdiction": "de",
+  "version": "2026-07",
+  "currency": "EUR",
+  "languages": [
+    "de"
+  ],
+  "source": {
+    "api": "https://diga.bfarm.de/api/fhir/v3.0",
+    "landingUrl": "https://diga.bfarm.de/de/verzeichnis"
+  },
+  "entries": [
+    {
+      "code": "00294",
+      "status": "active",
+      "validFrom": "2020-10-22",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 499.8,
+          "currency": "EUR",
+          "unit": "zanadio 001",
+          "pzn": "16898701"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 185.3,
+          "currency": "EUR",
+          "unit": "zanadio 001",
+          "pzn": "16898701"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 185.3,
+          "currency": "EUR",
+          "unit": "zanadio 001",
+          "pzn": "16898701"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 218,
+          "currency": "EUR",
+          "unit": "zanadio 001",
+          "pzn": "16898701"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 218,
+          "currency": "EUR",
+          "unit": "zanadio 001",
+          "pzn": "16898701"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 218,
+          "currency": "EUR",
+          "unit": "zanadio 001",
+          "pzn": "16898701"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 218,
+          "currency": "EUR",
+          "unit": "zanadio 001",
+          "pzn": "16898701"
+        }
+      ]
+    },
+    {
+      "code": "00300",
+      "status": "active",
+      "validFrom": "2020-12-03",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 220,
+          "currency": "EUR",
+          "unit": "Invirto",
+          "pzn": "17148066"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 220,
+          "currency": "EUR",
+          "unit": "Invirto",
+          "pzn": "17148043"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 428.4,
+          "currency": "EUR",
+          "unit": "Invirto",
+          "pzn": "17148072"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 213,
+          "currency": "EUR",
+          "unit": "Invirto ",
+          "pzn": "17148043"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 213,
+          "currency": "EUR",
+          "unit": "Invirto",
+          "pzn": "17148072"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 220,
+          "currency": "EUR",
+          "unit": "Invirto",
+          "pzn": "17148066"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 220,
+          "currency": "EUR",
+          "unit": "Invirto ",
+          "pzn": "17148043"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 220,
+          "currency": "EUR",
+          "unit": "Invirto",
+          "pzn": "17148072"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 220,
+          "currency": "EUR",
+          "unit": "Invirto Agoraphobie 001",
+          "pzn": "19340997"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 220,
+          "currency": "EUR",
+          "unit": "Invirto Panikstörung 003",
+          "pzn": "19341011"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 220,
+          "currency": "EUR",
+          "unit": "Invirto",
+          "pzn": "17148072"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 428.4,
+          "currency": "EUR",
+          "unit": "Invirto",
+          "pzn": "17148066"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 428.4,
+          "currency": "EUR",
+          "unit": "Invirto ",
+          "pzn": "17148043"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 213,
+          "currency": "EUR",
+          "unit": "Invirto",
+          "pzn": "17148066"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 220,
+          "currency": "EUR",
+          "unit": "Invirto Soziale Phobie 002",
+          "pzn": "19341005"
+        }
+      ]
+    },
+    {
+      "code": "00315",
+      "status": "retired",
+      "validFrom": "2020-12-16",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 219.98,
+          "currency": "EUR",
+          "unit": "M-sense Migräne 001",
+          "pzn": "17169789"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 10,
+          "currency": "EUR",
+          "unit": "M-sense Migräne 001",
+          "pzn": "17169789"
+        }
+      ]
+    },
+    {
+      "code": "00316",
+      "status": "active",
+      "validFrom": "2020-10-01",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 476,
+          "currency": "EUR",
+          "unit": "velibra 001",
+          "pzn": "16879359"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 230,
+          "currency": "EUR",
+          "unit": "velibra 001",
+          "pzn": "16879359"
+        }
+      ]
+    },
+    {
+      "code": "00329",
+      "status": "active",
+      "validFrom": "2021-04-29",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 576,
+          "currency": "EUR",
+          "unit": "Mindable 001",
+          "pzn": "17454202"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 230.34,
+          "currency": "EUR",
+          "unit": "Mindable: Panikstörung 001",
+          "pzn": "17454202"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 245.5,
+          "currency": "EUR",
+          "unit": "Mindable: Panikstörung 001",
+          "pzn": "17454202"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 230.34,
+          "currency": "EUR",
+          "unit": "Mindable 001",
+          "pzn": "17454202"
+        }
+      ]
+    },
+    {
+      "code": "00350",
+      "status": "active",
+      "validFrom": "2020-09-25",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 203.97,
+          "currency": "EUR",
+          "unit": "Kalmeda 001",
+          "pzn": "16876740"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 116.97,
+          "currency": "EUR",
+          "unit": "Kalmeda 001",
+          "pzn": "16876740"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 189,
+          "currency": "EUR",
+          "unit": "Kalmeda 001",
+          "pzn": "16876740"
+        }
+      ]
+    },
+    {
+      "code": "00387",
+      "status": "active",
+      "validFrom": "2020-10-22",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 239.96,
+          "currency": "EUR",
+          "unit": "Vivira 001",
+          "pzn": "16898718"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 190.64,
+          "currency": "EUR",
+          "unit": "Vivira 001",
+          "pzn": "16898718"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 133.45,
+          "currency": "EUR",
+          "unit": "Vivira 001",
+          "pzn": "16898718"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 206.79,
+          "currency": "EUR",
+          "unit": "Vivira 001",
+          "pzn": "16898718"
+        }
+      ]
+    },
+    {
+      "code": "00419",
+      "status": "active",
+      "validFrom": "2020-12-15",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 743.75,
+          "currency": "EUR",
+          "unit": "elevida 001",
+          "pzn": "17161032"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 243,
+          "currency": "EUR",
+          "unit": "elevida 001",
+          "pzn": "17161032"
+        }
+      ]
+    },
+    {
+      "code": "00450",
+      "status": "active",
+      "validFrom": "2021-02-20",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 297.5,
+          "currency": "EUR",
+          "unit": "deprexis 001",
+          "pzn": "17265872"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 210,
+          "currency": "EUR",
+          "unit": "deprexis 001",
+          "pzn": "17265872"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 228,
+          "currency": "EUR",
+          "unit": "deprexis 001",
+          "pzn": "17265872"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 228,
+          "currency": "EUR",
+          "unit": "deprexis 001",
+          "pzn": "17265872"
+        }
+      ]
+    },
+    {
+      "code": "00474",
+      "status": "retired",
+      "validFrom": "2022-09-29",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 784.21,
+          "currency": "EUR",
+          "unit": "re.flex 001",
+          "pzn": "18334842"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "re.flex 001",
+          "pzn": "18334842"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "re.flex 001",
+          "pzn": "18334842"
+        }
+      ]
+    },
+    {
+      "code": "00508",
+      "status": "active",
+      "validFrom": "2020-10-22",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 224.99,
+          "currency": "EUR",
+          "unit": "somnio 001",
+          "pzn": "16898724"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 464,
+          "currency": "EUR",
+          "unit": "somnio 001",
+          "pzn": "16898724"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 224.99,
+          "currency": "EUR",
+          "unit": "somnio 001",
+          "pzn": "16898724"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 224.99,
+          "currency": "EUR",
+          "unit": "somnio 001",
+          "pzn": "16898724"
+        }
+      ]
+    },
+    {
+      "code": "00691",
+      "status": "retired",
+      "validFrom": "2020-12-29",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 449,
+          "currency": "EUR",
+          "unit": "Rehappy mit Energieband 001",
+          "pzn": "17186606"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 299,
+          "currency": "EUR",
+          "unit": "Rehappy ohne Energieband (Folgeverordnung) 002",
+          "pzn": "17186635"
+        }
+      ]
+    },
+    {
+      "code": "00746",
+      "status": "active",
+      "validFrom": "2022-04-15",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 499.8,
+          "currency": "EUR",
+          "unit": "Vitadio 001 ohne Hardware",
+          "pzn": "18107046"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 224.01,
+          "currency": "EUR",
+          "unit": "Vitadio 001 ohne Hardware",
+          "pzn": "18107046"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 224.01,
+          "currency": "EUR",
+          "unit": "Vitadio 001 ohne Hardware",
+          "pzn": "18107046"
+        }
+      ]
+    },
+    {
+      "code": "00752",
+      "status": "active",
+      "validFrom": "2023-01-07",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 2077.4,
+          "currency": "EUR",
+          "unit": "levidex 001",
+          "pzn": "18467678"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 280,
+          "currency": "EUR",
+          "unit": "levidex 001",
+          "pzn": "18467678"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 280,
+          "currency": "EUR",
+          "unit": "levidex 001",
+          "pzn": "18467678"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 247.81,
+          "currency": "EUR",
+          "unit": "levidex 001",
+          "pzn": "18467678"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 247.81,
+          "currency": "EUR",
+          "unit": "levidex 001",
+          "pzn": "18467678"
+        }
+      ]
+    },
+    {
+      "code": "00868",
+      "status": "active",
+      "validFrom": "2021-05-06",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 192.01,
+          "currency": "EUR",
+          "unit": "vorvida 001",
+          "pzn": "17506382"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 476,
+          "currency": "EUR",
+          "unit": "vorvida 001",
+          "pzn": "17506382"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 185,
+          "currency": "EUR",
+          "unit": "vorvida 001",
+          "pzn": "17506382"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 185,
+          "currency": "EUR",
+          "unit": "vorvida 001",
+          "pzn": "17506382"
+        }
+      ]
+    },
+    {
+      "code": "00872",
+      "status": "active",
+      "validFrom": "2021-10-03",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 426.96,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 187.77,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 187.77,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 220.9,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 220.9,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 187.77,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 187.77,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 345,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 445,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 243,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 243,
+          "currency": "EUR",
+          "unit": "Oviva Direkt",
+          "pzn": "17850257"
+        }
+      ]
+    },
+    {
+      "code": "00875",
+      "status": "retired",
+      "validFrom": "2021-03-25",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 419,
+          "currency": "EUR",
+          "unit": "Mika",
+          "pzn": "17391424"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 499,
+          "currency": "EUR",
+          "unit": "Mika",
+          "pzn": "17391424"
+        }
+      ]
+    },
+    {
+      "code": "00876",
+      "status": "active",
+      "validFrom": "2020-12-16",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 196.46,
+          "currency": "EUR",
+          "unit": "Selfapy Depression 001",
+          "pzn": "16954730"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 540,
+          "currency": "EUR",
+          "unit": "Selfapy Depression 001",
+          "pzn": "16954730"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 217.18,
+          "currency": "EUR",
+          "unit": "Selfapy Depression 001",
+          "pzn": "16954730"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 217.18,
+          "currency": "EUR",
+          "unit": "Selfapy Depression 001",
+          "pzn": "16954730"
+        }
+      ]
+    },
+    {
+      "code": "00902",
+      "status": "retired",
+      "validFrom": "2023-09-09",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 487.84,
+          "currency": "EUR",
+          "unit": "Orthopy 001",
+          "pzn": "19076394"
+        }
+      ]
+    },
+    {
+      "code": "00939",
+      "status": "retired",
+      "validFrom": "2021-07-04",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "ESYSTA 001",
+          "pzn": "17582851"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "ESYSTA 001",
+          "pzn": "17582851"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 249.86,
+          "currency": "EUR",
+          "unit": "ESYSTA 001",
+          "pzn": "17582851"
+        }
+      ]
+    },
+    {
+      "code": "00961",
+      "status": "retired",
+      "validFrom": "2021-05-03",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 499.8,
+          "currency": "EUR",
+          "unit": "CANKADO 001",
+          "pzn": "17491545"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "CANKADO 001",
+          "pzn": "17491545"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "CANKADO 001",
+          "pzn": "17491545"
+        }
+      ]
+    },
+    {
+      "code": "00965",
+      "status": "active",
+      "validFrom": "2021-10-18",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 599,
+          "currency": "EUR",
+          "unit": "HelloBetter Burnout 001",
+          "pzn": "17871905"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 235,
+          "currency": "EUR",
+          "unit": "HelloBetter Burnout 001",
+          "pzn": "17871905"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 235,
+          "currency": "EUR",
+          "unit": "HelloBetter Burnout 001",
+          "pzn": "17871905"
+        }
+      ]
+    },
+    {
+      "code": "00993",
+      "status": "active",
+      "validFrom": "2021-08-09",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 119,
+          "currency": "EUR",
+          "unit": "Mawendo 001",
+          "pzn": "17622734"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 119,
+          "currency": "EUR",
+          "unit": "Mawendo 001",
+          "pzn": "17622734"
+        }
+      ]
+    },
+    {
+      "code": "00998",
+      "status": "active",
+      "validFrom": "2021-10-04",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 223.49,
+          "currency": "EUR",
+          "unit": "companion patella",
+          "pzn": "17850263"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 223.49,
+          "currency": "EUR",
+          "unit": "companion patella",
+          "pzn": "17850263"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 345.1,
+          "currency": "EUR",
+          "unit": "companion patella",
+          "pzn": "17850263"
+        }
+      ]
+    },
+    {
+      "code": "01049",
+      "status": "active",
+      "validFrom": "2021-06-19",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 228.5,
+          "currency": "EUR",
+          "unit": "Selfapy Angst 001",
+          "pzn": "17554323"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 228.5,
+          "currency": "EUR",
+          "unit": "Selfapy Angst 001",
+          "pzn": "17554323"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 228.5,
+          "currency": "EUR",
+          "unit": "Selfapy Angst 001",
+          "pzn": "17554323"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 228.5,
+          "currency": "EUR",
+          "unit": "Selfapy Angst 001",
+          "pzn": "17554323"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 540,
+          "currency": "EUR",
+          "unit": "Selfapy Angst 001",
+          "pzn": "17554323"
+        }
+      ]
+    },
+    {
+      "code": "01052",
+      "status": "retired",
+      "validFrom": "2021-06-19",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 540,
+          "currency": "EUR",
+          "unit": "Selfapy Panik 001",
+          "pzn": "17554346"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "Selfapy Panik 001",
+          "pzn": "17554346"
+        }
+      ]
+    },
+    {
+      "code": "01085",
+      "status": "active",
+      "validFrom": "2021-07-03",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 195.01,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 001",
+          "pzn": "17575561"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 195.01,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 001",
+          "pzn": "17575561"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 329,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 001",
+          "pzn": "17575561"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 211,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 001",
+          "pzn": "17575561"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 211,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 001",
+          "pzn": "17575561"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 211,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 002",
+          "pzn": "17575578"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 211,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 002",
+          "pzn": "17575578"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 119,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 002",
+          "pzn": "17575578"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 99,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 002",
+          "pzn": "17575578"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 195.01,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 002",
+          "pzn": "17575578"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 195.01,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 002",
+          "pzn": "17575578"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 239,
+          "currency": "EUR",
+          "unit": "NichtraucherHelden-App 001",
+          "pzn": "17575561"
+        }
+      ]
+    },
+    {
+      "code": "01110",
+      "status": "active",
+      "validFrom": "2021-10-10",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 199,
+          "currency": "EUR",
+          "unit": "Novego: Depression 001",
+          "pzn": "17865862"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 199,
+          "currency": "EUR",
+          "unit": "Novego: Depression 001",
+          "pzn": "17865862"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 199,
+          "currency": "EUR",
+          "unit": "Novego: Depression 001",
+          "pzn": "17865862"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 199,
+          "currency": "EUR",
+          "unit": "Novego: Depression 001",
+          "pzn": "17865862"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 249,
+          "currency": "EUR",
+          "unit": "Novego: Depression 001",
+          "pzn": "17865862"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 199,
+          "currency": "EUR",
+          "unit": "Novego: Depression 001",
+          "pzn": "17865862"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 199,
+          "currency": "EUR",
+          "unit": "Novego: Depression 001",
+          "pzn": "17865862"
+        }
+      ]
+    },
+    {
+      "code": "01113",
+      "status": "active",
+      "validFrom": "2023-05-13",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 229,
+          "currency": "EUR",
+          "unit": "NeuroNation MED 001",
+          "pzn": "18787822"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 229,
+          "currency": "EUR",
+          "unit": "NeuroNation MED 001",
+          "pzn": "18787822"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 479.7,
+          "currency": "EUR",
+          "unit": "NeuroNation MED 001",
+          "pzn": "18787822"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 479.7,
+          "currency": "EUR",
+          "unit": "NeuroNation MED 001",
+          "pzn": "18787822"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 499,
+          "currency": "EUR",
+          "unit": "NeuroNation MED 001",
+          "pzn": "18787822"
+        }
+      ]
+    },
+    {
+      "code": "01196",
+      "status": "active",
+      "validFrom": "2022-02-06",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 487.9,
+          "currency": "EUR",
+          "unit": "neolexon Aphasie 001",
+          "pzn": "18017082"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 223.01,
+          "currency": "EUR",
+          "unit": "neolexon Aphasie 001",
+          "pzn": "18017082"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 223.01,
+          "currency": "EUR",
+          "unit": "neolexon Aphasie 001",
+          "pzn": "18017082"
+        }
+      ]
+    },
+    {
+      "code": "01254",
+      "status": "active",
+      "validFrom": "2022-12-26",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 535.49,
+          "currency": "EUR",
+          "unit": "elona therapy Depression 001",
+          "pzn": "18458314"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 229.5,
+          "currency": "EUR",
+          "unit": "elona therapy Depression 001",
+          "pzn": "18458314"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 229.5,
+          "currency": "EUR",
+          "unit": "elona therapy Depression 001",
+          "pzn": "18458314"
+        }
+      ]
+    },
+    {
+      "code": "01282",
+      "status": "active",
+      "validFrom": "2021-12-18",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 235,
+          "currency": "EUR",
+          "unit": "Kranus Edera 001",
+          "pzn": "17946632"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 235,
+          "currency": "EUR",
+          "unit": "Kranus Edera 001",
+          "pzn": "17946632"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 552.01,
+          "currency": "EUR",
+          "unit": "Kranus Edera 001",
+          "pzn": "17946632"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 656.88,
+          "currency": "EUR",
+          "unit": "Kranus Edera 001",
+          "pzn": "17946632"
+        }
+      ]
+    },
+    {
+      "code": "01304",
+      "status": "active",
+      "validFrom": "2021-12-18",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 599,
+          "currency": "EUR",
+          "unit": "HelloBetter ratiopharm 001",
+          "pzn": "17946626"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 176.25,
+          "currency": "EUR",
+          "unit": "HelloBetter ratiopharm 001",
+          "pzn": "17946626"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 176.25,
+          "currency": "EUR",
+          "unit": "HelloBetter ratiopharm 001",
+          "pzn": "17946626"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 235,
+          "currency": "EUR",
+          "unit": "HelloBetter ratiopharm 001",
+          "pzn": "17946626"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 235,
+          "currency": "EUR",
+          "unit": "HelloBetter Schmerzen 001",
+          "pzn": "17946626"
+        }
+      ]
+    },
+    {
+      "code": "01329",
+      "status": "retired",
+      "validFrom": "2022-12-26",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 415,
+          "currency": "EUR",
+          "unit": "Kaia COPD: Meine aktive COPD Therapie 001",
+          "pzn": "18458662"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 332,
+          "currency": "EUR",
+          "unit": "Kaia COPD: Meine aktive COPD Therapie 001",
+          "pzn": "18458662"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 332,
+          "currency": "EUR",
+          "unit": "Kaia COPD: Meine aktive COPD Therapie 001",
+          "pzn": "18458662"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "Kaia COPD: Meine aktive COPD Therapie 001",
+          "pzn": "18458662"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "Kaia COPD: Meine aktive COPD Therapie 001",
+          "pzn": "18458662"
+        }
+      ]
+    },
+    {
+      "code": "01330",
+      "status": "active",
+      "validFrom": "2023-02-03",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 489.39,
+          "currency": "EUR",
+          "unit": "Kaia Rückenschmerzen 001",
+          "pzn": "18603466"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 221.49,
+          "currency": "EUR",
+          "unit": "Kaia Rückenschmerzen 001",
+          "pzn": "18603466"
+        }
+      ]
+    },
+    {
+      "code": "01346",
+      "status": "active",
+      "validFrom": "2021-12-26",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 718.2,
+          "currency": "EUR",
+          "unit": "Cara Care für Reizdarm 001",
+          "pzn": "17964363"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 248,
+          "currency": "EUR",
+          "unit": "Cara Care für Reizdarm 001",
+          "pzn": "17964363"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 248,
+          "currency": "EUR",
+          "unit": "Cara Care für Reizdarm 001",
+          "pzn": "17964363"
+        }
+      ]
+    },
+    {
+      "code": "01376",
+      "status": "active",
+      "validFrom": "2021-12-11",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 599,
+          "currency": "EUR",
+          "unit": "HelloBetter Diabetes 001",
+          "pzn": "17937797"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 222.99,
+          "currency": "EUR",
+          "unit": "HelloBetter Diabetes 001",
+          "pzn": "17937797"
+        }
+      ]
+    },
+    {
+      "code": "01464",
+      "status": "active",
+      "validFrom": "2022-06-27",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 535.5,
+          "currency": "EUR",
+          "unit": "PINK Coach 001",
+          "pzn": "18206191"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 234.5,
+          "currency": "EUR",
+          "unit": "PINK Coach 001",
+          "pzn": "18206191"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 234.5,
+          "currency": "EUR",
+          "unit": "PINK Coach 001",
+          "pzn": "18206191"
+        }
+      ]
+    },
+    {
+      "code": "01496",
+      "status": "active",
+      "validFrom": "2022-03-06",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 250,
+          "currency": "EUR",
+          "unit": "Meine Tinnitus App 001 ",
+          "pzn": "18053770"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 260,
+          "currency": "EUR",
+          "unit": "Meine Tinnitus App 001",
+          "pzn": "18053770"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 260,
+          "currency": "EUR",
+          "unit": "Meine Tinnitus App 001",
+          "pzn": "18053770"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 449,
+          "currency": "EUR",
+          "unit": "Meine Tinnitus App 001",
+          "pzn": "18053770"
+        }
+      ]
+    },
+    {
+      "code": "01497",
+      "status": "active",
+      "validFrom": "2022-02-04",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 599,
+          "currency": "EUR",
+          "unit": "HelloBetter Vaginismus 001",
+          "pzn": "18016941"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 235,
+          "currency": "EUR",
+          "unit": "HelloBetter Vaginismus 001",
+          "pzn": "18016941"
+        }
+      ]
+    },
+    {
+      "code": "01510",
+      "status": "retired",
+      "validFrom": "2024-06-16",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 478.8,
+          "currency": "EUR",
+          "unit": "My Dose Coach 001",
+          "pzn": "19420584"
+        }
+      ]
+    },
+    {
+      "code": "01513",
+      "status": "active",
+      "validFrom": "2022-04-03",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 599,
+          "currency": "EUR",
+          "unit": "HelloBetter Panik 001",
+          "pzn": "18094846"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 230,
+          "currency": "EUR",
+          "unit": "HelloBetter Panik 001",
+          "pzn": "18094846"
+        }
+      ]
+    },
+    {
+      "code": "01514",
+      "status": "active",
+      "validFrom": "2023-12-11",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 765,
+          "currency": "EUR",
+          "unit": "Mindable: Soziale Phobie 001",
+          "pzn": "19166938"
+        }
+      ]
+    },
+    {
+      "code": "01613",
+      "status": "retired",
+      "validFrom": "2022-07-14",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 952,
+          "currency": "EUR",
+          "unit": "optimune 001",
+          "pzn": "18227709"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "optimune 001",
+          "pzn": "18227709"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "optimune 001",
+          "pzn": "18227709"
+        }
+      ]
+    },
+    {
+      "code": "01644",
+      "status": "active",
+      "validFrom": "2024-04-14",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 670.49,
+          "currency": "EUR",
+          "unit": "Kranus Lutera 001",
+          "pzn": "18453819"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 240.5,
+          "currency": "EUR",
+          "unit": "Kranus Lutera 001",
+          "pzn": "18453819"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 240.5,
+          "currency": "EUR",
+          "unit": "Kranus Lutera 001",
+          "pzn": "18453819"
+        }
+      ]
+    },
+    {
+      "code": "01683",
+      "status": "retired",
+      "validFrom": "2024-02-08",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 199,
+          "currency": "EUR",
+          "unit": "MindDoc Auf Rezept 001",
+          "pzn": "19234031"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "MindDoc Auf Rezept 001",
+          "pzn": "19234031"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "MindDoc Auf Rezept 001",
+          "pzn": "19234031"
+        }
+      ]
+    },
+    {
+      "code": "01734",
+      "status": "active",
+      "validFrom": "2022-10-09",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 235.8,
+          "currency": "EUR",
+          "unit": "Endo-App 001",
+          "pzn": "18355726"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 235.8,
+          "currency": "EUR",
+          "unit": "Endo-App 001",
+          "pzn": "18355726"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 235.8,
+          "currency": "EUR",
+          "unit": "Endo-App 001",
+          "pzn": "18355726"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 235.8,
+          "currency": "EUR",
+          "unit": "Endo-App 001",
+          "pzn": "18355726"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 598.95,
+          "currency": "EUR",
+          "unit": "Endo-App 001",
+          "pzn": "18355726"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 536.4,
+          "currency": "EUR",
+          "unit": "Endo-App 001",
+          "pzn": "18355726"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 536.4,
+          "currency": "EUR",
+          "unit": "Endo-App 001",
+          "pzn": "18355726"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 402.3,
+          "currency": "EUR",
+          "unit": "Endo-App 001",
+          "pzn": "18355726"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 402.3,
+          "currency": "EUR",
+          "unit": "Endo-App 001",
+          "pzn": "18355726"
+        }
+      ]
+    },
+    {
+      "code": "01772",
+      "status": "active",
+      "validFrom": "2022-12-18",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 599,
+          "currency": "EUR",
+          "unit": "HelloBetter Schlafen 001",
+          "pzn": "18453937"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 241.25,
+          "currency": "EUR",
+          "unit": "HelloBetter Schlafen 001",
+          "pzn": "18453937"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 241.25,
+          "currency": "EUR",
+          "unit": "HelloBetter Schlafen 001",
+          "pzn": "18453937"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 249,
+          "currency": "EUR",
+          "unit": "HelloBetter Schlafen 001",
+          "pzn": "18453937"
+        }
+      ]
+    },
+    {
+      "code": "01775",
+      "status": "retired",
+      "validFrom": "2022-10-10",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 690,
+          "currency": "EUR",
+          "unit": "sinCephalea-Migräneprophylaxe 001",
+          "pzn": "19665707"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 690,
+          "currency": "EUR",
+          "unit": "sinCephalea-Migräneprophylaxe 001",
+          "pzn": "18358966"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 690,
+          "currency": "EUR",
+          "unit": "sinCephalea-Migräneprophylaxe 001",
+          "pzn": "18358966"
+        }
+      ]
+    },
+    {
+      "code": "01786",
+      "status": "active",
+      "validFrom": "2023-02-17",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 470.05,
+          "currency": "EUR",
+          "unit": "My7steps App 001",
+          "pzn": "18672881"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 199,
+          "currency": "EUR",
+          "unit": "My7steps App 001",
+          "pzn": "18672881"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 199,
+          "currency": "EUR",
+          "unit": "My7steps App 001",
+          "pzn": "18672881"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 207,
+          "currency": "EUR",
+          "unit": "My7steps App ErstVO 001",
+          "pzn": "20285051"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 207,
+          "currency": "EUR",
+          "unit": "My7steps App ErstVO 001",
+          "pzn": "20285051"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "My7steps App FolgeVO 002",
+          "pzn": "20285068"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "My7steps App FolgeVO 002",
+          "pzn": "20285068"
+        }
+      ]
+    },
+    {
+      "code": "01815",
+      "status": "active",
+      "validFrom": "2022-12-26",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 178.5,
+          "currency": "EUR",
+          "unit": "edupression.com® 002",
+          "pzn": "18458308"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 357,
+          "currency": "EUR",
+          "unit": "edupression.com® 001",
+          "pzn": "18458283"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 224.8,
+          "currency": "EUR",
+          "unit": "edupression.com® 001",
+          "pzn": "18458283"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 224.8,
+          "currency": "EUR",
+          "unit": "edupression.com® 001",
+          "pzn": "18458283"
+        }
+      ]
+    },
+    {
+      "code": "01820",
+      "status": "active",
+      "validFrom": "2023-03-24",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 219.98,
+          "currency": "EUR",
+          "unit": "Novego: Ängste überwinden 001",
+          "pzn": "18726714"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 189,
+          "currency": "EUR",
+          "unit": "Novego: Ängste überwinden 001",
+          "pzn": "18726714"
+        }
+      ]
+    },
+    {
+      "code": "01823",
+      "status": "active",
+      "validFrom": "2023-05-15",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 605,
+          "currency": "EUR",
+          "unit": "ProHerz 001",
+          "pzn": "18789175"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 495,
+          "currency": "EUR",
+          "unit": "ProHerz 002",
+          "pzn": "18789181"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 225.01,
+          "currency": "EUR",
+          "unit": "ProHerz 002",
+          "pzn": "18789181"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 225.01,
+          "currency": "EUR",
+          "unit": "ProHerz 002",
+          "pzn": "18789181"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 225.01,
+          "currency": "EUR",
+          "unit": "ProHerz 002 ",
+          "pzn": "18789181"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 225.01,
+          "currency": "EUR",
+          "unit": "ProHerz 002 ",
+          "pzn": "18789181"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 225.01,
+          "currency": "EUR",
+          "unit": "ProHerz 001",
+          "pzn": "18789175"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 225.01,
+          "currency": "EUR",
+          "unit": "ProHerz 001",
+          "pzn": "18789175"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 235,
+          "currency": "EUR",
+          "unit": "ProHerz 001",
+          "pzn": "18789175"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 235,
+          "currency": "EUR",
+          "unit": "ProHerz 001",
+          "pzn": "18789175"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 225.01,
+          "currency": "EUR",
+          "unit": "ProHerz 001 ",
+          "pzn": "18789175"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 225.01,
+          "currency": "EUR",
+          "unit": "ProHerz 001 ",
+          "pzn": "18789175"
+        }
+      ]
+    },
+    {
+      "code": "01830",
+      "status": "active",
+      "validFrom": "2023-01-05",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 540,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei Binge-Eating-Störung 001",
+          "pzn": "18468382"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 232,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei Binge-Eating-Störung 001",
+          "pzn": "18468382"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 232,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei Binge-Eating-Störung 001",
+          "pzn": "18468382"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 540,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei Binge-Eating-Störung 001",
+          "pzn": "18468382"
+        }
+      ]
+    },
+    {
+      "code": "01834",
+      "status": "active",
+      "validFrom": "2023-01-05",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 540,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei Bulimia Nervosa 001",
+          "pzn": "18468376"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 232,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei Bulimia Nervosa 001",
+          "pzn": "18468376"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 232,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei Bulimia Nervosa 001",
+          "pzn": "18468376"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 540,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei Bulimia Nervosa 001",
+          "pzn": "18468376"
+        }
+      ]
+    },
+    {
+      "code": "01853",
+      "status": "active",
+      "validFrom": "2023-03-05",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 855.82,
+          "currency": "EUR",
+          "unit": "priovi 001",
+          "pzn": "18704486"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 268,
+          "currency": "EUR",
+          "unit": "priovi 001",
+          "pzn": "18704486"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 268,
+          "currency": "EUR",
+          "unit": "priovi 001",
+          "pzn": "18704486"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 244,
+          "currency": "EUR",
+          "unit": "priovi 001",
+          "pzn": "18704486"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 244,
+          "currency": "EUR",
+          "unit": "priovi 001",
+          "pzn": "18704486"
+        }
+      ]
+    },
+    {
+      "code": "01909",
+      "status": "active",
+      "validFrom": "2023-01-29",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 249,
+          "currency": "EUR",
+          "unit": "Smoke Free 001",
+          "pzn": "18500476"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 231.25,
+          "currency": "EUR",
+          "unit": "Smoke Free 001",
+          "pzn": "18500476"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 231.25,
+          "currency": "EUR",
+          "unit": "Smoke Free 001",
+          "pzn": "18500476"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 389,
+          "currency": "EUR",
+          "unit": "Smoke Free 001",
+          "pzn": "18500476"
+        }
+      ]
+    },
+    {
+      "code": "01954",
+      "status": "retired",
+      "validFrom": "2023-04-21",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 540,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei chronischen Schmerzen 001",
+          "pzn": "18759010"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 540,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei chronischen Schmerzen 001",
+          "pzn": "18759010"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei chronischen Schmerzen 001",
+          "pzn": "18759010"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "Selfapys Online-Kurs bei chronischen Schmerzen 001",
+          "pzn": "18759010"
+        }
+      ]
+    },
+    {
+      "code": "01967",
+      "status": "active",
+      "validFrom": "2023-12-25",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 618,
+          "currency": "EUR",
+          "unit": "Untire 001",
+          "pzn": "19191758"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 240.5,
+          "currency": "EUR",
+          "unit": "Untire 001",
+          "pzn": "19191758"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 240.5,
+          "currency": "EUR",
+          "unit": "Untire 001",
+          "pzn": "19191758"
+        }
+      ]
+    },
+    {
+      "code": "02078",
+      "status": "retired",
+      "validFrom": "2023-07-14",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 499,
+          "currency": "EUR",
+          "unit": "mebix 001",
+          "pzn": "18851431"
+        }
+      ]
+    },
+    {
+      "code": "02090",
+      "status": "active",
+      "validFrom": "2024-01-11",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 499.8,
+          "currency": "EUR",
+          "unit": "glucura 001",
+          "pzn": "19198111"
+        }
+      ]
+    },
+    {
+      "code": "02097",
+      "status": "active",
+      "validFrom": "2024-10-28",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 599.4,
+          "currency": "EUR",
+          "unit": "somnovia 001",
+          "pzn": "19642882"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 236,
+          "currency": "EUR",
+          "unit": "somnovia 001",
+          "pzn": "19642882"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 236,
+          "currency": "EUR",
+          "unit": "somnovia 001",
+          "pzn": "19642882"
+        }
+      ]
+    },
+    {
+      "code": "02133",
+      "status": "draft",
+      "validFrom": "2024-12-27",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 419,
+          "currency": "EUR",
+          "unit": "companion shoulder 001",
+          "pzn": "19746699"
+        }
+      ]
+    },
+    {
+      "code": "02173",
+      "status": "draft",
+      "validFrom": "2024-12-27",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 574,
+          "currency": "EUR",
+          "unit": "eCovery Unterer Rücken 001",
+          "pzn": "19746707"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 574,
+          "currency": "EUR",
+          "unit": "eCovery Unterer Rücken 001",
+          "pzn": "19746707"
+        }
+      ]
+    },
+    {
+      "code": "02194",
+      "status": "retired",
+      "validFrom": "2024-12-16",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 895,
+          "currency": "EUR",
+          "unit": "Uroletics-App 001",
+          "pzn": "19731953"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "Uroletics-App 001",
+          "pzn": "19731953"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "Uroletics-App 001",
+          "pzn": "19731953"
+        }
+      ]
+    },
+    {
+      "code": "02273",
+      "status": "retired",
+      "validFrom": "2024-01-19",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 595,
+          "currency": "EUR",
+          "unit": "Vantis KHK und Herzinfarkt 001",
+          "pzn": "19205615"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "Vantis KHK und Herzinfarkt 001",
+          "pzn": "19205615"
+        }
+      ]
+    },
+    {
+      "code": "02286",
+      "status": "draft",
+      "validFrom": "2024-02-09",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 740,
+          "currency": "EUR",
+          "unit": "Una Health 001",
+          "pzn": "19235763"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 740,
+          "currency": "EUR",
+          "unit": "Una Health 001",
+          "pzn": "19235763"
+        }
+      ]
+    },
+    {
+      "code": "02302",
+      "status": "retired",
+      "validFrom": "2023-12-30",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "actensio 001",
+          "pzn": "19192829"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 0,
+          "currency": "EUR",
+          "unit": "actensio 001",
+          "pzn": "19192829"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 593.81,
+          "currency": "EUR",
+          "unit": "actensio 001",
+          "pzn": "19192829"
+        }
+      ]
+    },
+    {
+      "code": "02373",
+      "status": "draft",
+      "validFrom": "2025-02-18",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 535.49,
+          "currency": "EUR",
+          "unit": "elona explore 001",
+          "pzn": "19822147"
+        }
+      ]
+    },
+    {
+      "code": "02568",
+      "status": "draft",
+      "validFrom": "2025-07-09",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 441,
+          "currency": "EUR",
+          "unit": "ORIKO 001",
+          "pzn": "20053263"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 441,
+          "currency": "EUR",
+          "unit": "ORIKO 001",
+          "pzn": "20053263"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 479.7,
+          "currency": "EUR",
+          "unit": "ORIKO 001",
+          "pzn": "20053263"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 360,
+          "currency": "EUR",
+          "unit": "ORIKO 001",
+          "pzn": "20053263"
+        },
+        {
+          "type": "maximum-amount",
+          "amount": 360,
+          "currency": "EUR",
+          "unit": "ORIKO 001",
+          "pzn": "20053263"
+        }
+      ]
+    },
+    {
+      "code": "02777",
+      "status": "draft",
+      "validFrom": "2025-07-16",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 599,
+          "currency": "EUR",
+          "unit": "hiToco® Elterntraining 001",
+          "pzn": "20081213"
+        }
+      ]
+    },
+    {
+      "code": "02789",
+      "status": "draft",
+      "validFrom": "2026-01-19",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 599,
+          "currency": "EUR",
+          "unit": "Oviva Bluthochdruck 001",
+          "pzn": "20401936"
+        }
+      ]
+    },
+    {
+      "code": "02814",
+      "status": "active",
+      "validFrom": "2025-08-06",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 551.7,
+          "currency": "EUR",
+          "unit": "attexis 001",
+          "pzn": "20112847"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 599.4,
+          "currency": "EUR",
+          "unit": "attexis 001",
+          "pzn": "20112847"
+        },
+        {
+          "type": "publisher-price",
+          "amount": 599.4,
+          "currency": "EUR",
+          "unit": "attexis 001",
+          "pzn": "20112847"
+        }
+      ]
+    },
+    {
+      "code": "02815",
+      "status": "active",
+      "validFrom": "2025-10-27",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 681.3,
+          "currency": "EUR",
+          "unit": "Kranus Mictera 001",
+          "pzn": "20287989"
+        }
+      ]
+    },
+    {
+      "code": "02856",
+      "status": "active",
+      "validFrom": "2026-02-04",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 599,
+          "currency": "EUR",
+          "unit": "Axia 001",
+          "pzn": "20516705"
+        }
+      ]
+    },
+    {
+      "code": "02858",
+      "status": "draft",
+      "validFrom": "2026-01-20",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 598.95,
+          "currency": "EUR",
+          "unit": "Vera-App 001",
+          "pzn": "20401095"
+        }
+      ]
+    },
+    {
+      "code": "02866",
+      "status": "draft",
+      "validFrom": "2025-12-27",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 595,
+          "currency": "EUR",
+          "unit": "memodio",
+          "pzn": "20386496"
+        }
+      ]
+    },
+    {
+      "code": "02906",
+      "status": "draft",
+      "validFrom": "2026-02-03",
+      "prices": [
+        {
+          "type": "publisher-price",
+          "amount": 670.49,
+          "currency": "EUR",
+          "unit": "INKA 001",
+          "pzn": "20514505"
+        }
+      ]
+    }
+  ]
+}
