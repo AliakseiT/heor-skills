@@ -1,6 +1,6 @@
 {
   "$id": "heor-skills/data/de/hmv",
-  "description": "Planned shape for the German Hilfsmittelverzeichnis (normalizer not yet implemented — see normalizers/de-hmv.ts). The HMV carries no prices.",
+  "description": "German Hilfsmittelverzeichnis (HMV, 139 SGB V) from the GKV-Spitzenverband REST API. The HMV carries no prices.",
   "$defs": {
     "index": {
       "type": "object",
