@@ -47,7 +47,7 @@ npx vitest run --config vitest.config.ts  # all 71+ tests
 - [ ] Typecheck passes: `pnpm --filter @heor/engine typecheck`
 - [ ] No new runtime dependencies in `@heor/engine` (zero-dependency policy)
 - [ ] New data files have a schema in `tools/data-pipeline/schemas/`
-- [ ] New skills have a `SKILL.md` with frontmatter (`name`, `description`, `metadata`)
+- [ ] New skills have a `SKILL.md` with frontmatter (`name`, `description`, `metadata` with `version`, `jurisdiction`, `languages`, `last-verified`)
 - [ ] Documentation updated if behavior changed
 
 ## Commit messages

@@ -16,6 +16,7 @@ metadata:
   jurisdiction: ch
   languages: [de, fr]
   last-verified: 2026-07-15
+  version: "1.0.0"
 ---
 
 # MiGeL Application (Mittel- und Gegenständeliste)

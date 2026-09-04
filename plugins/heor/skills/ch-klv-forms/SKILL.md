@@ -17,6 +17,7 @@ metadata:
   jurisdiction: ch
   languages: [de, fr, it]
   last-verified: 2026-07-15
+  version: "1.0.0"
 ---
 
 # Swiss KLV Forms (Meldung / Antrag neue Leistung, Umstrittenheit)

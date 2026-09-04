@@ -25,7 +25,7 @@ Jurisdiction is the primary axis everywhere; language is a variant within a juri
 
 - One directory per skill under `plugins/heor/skills/<skill-name>/`, `SKILL.md` frontmatter `name` matches the directory name.
 - Skill bodies must be harness-neutral (portable beyond Claude Code): no reliance on Claude-specific tools in the core workflow; Claude Code extras (subagents, slash commands, MCP wiring) live at the plugin level.
-- Frontmatter `metadata` includes `jurisdiction`, `languages`, and `last-verified` (date the regulatory content was last checked against the official source).
+- Frontmatter `metadata` includes `jurisdiction`, `languages`, `last-verified` (date the regulatory content was last checked against the official source), and `version` (semver — breaking workflow change = major, new reference = minor, fix = patch).
 - Numerical work is always delegated to `packages/heor-engine` scripts (`npx tsx <script>`); skills must instruct the agent never to compute model results itself.
 - Every skill that drafts regulatory content ends its workflow with an explicit human-review disclaimer step.
 

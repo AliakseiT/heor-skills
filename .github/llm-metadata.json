@@ -7,46 +7,55 @@
   "skills": [
     {
       "name": "regulation-navigator",
+      "version": "1.0.0",
       "description": "Maps a product to its reimbursement pathway across CH, DE, FR, US with prerequisites and timelines",
       "triggerPhrases": ["regulatory pathway", "reimbursement route", "market access"]
     },
     {
       "name": "tariff-scout",
+      "version": "1.0.0",
       "description": "Searches official reimbursement lists for existing codes and comparable products",
       "triggerPhrases": ["reimbursement code", "tariff search", "existing code"]
     },
     {
       "name": "prisma-review",
+      "version": "1.0.0",
       "description": "Runs a PRISMA 2020 systematic literature review: PICO, search, screening, diagram, synthesis",
       "triggerPhrases": ["literature review", "PRISMA", "systematic search", "PICO"]
     },
     {
       "name": "economic-modeling",
+      "version": "1.0.0",
       "description": "Builds and runs cost-effectiveness and budget-impact models through a deterministic engine",
       "triggerPhrases": ["cost-effectiveness", "CEA", "BIA", "Markov", "ICER", "PSA"]
     },
     {
       "name": "ch-migel-application",
+      "version": "1.0.0",
       "description": "Drafts a Swiss MiGeL (device list) application form",
       "triggerPhrases": ["MiGeL", "Mittel- und Gegenständeliste", "Swiss device list"]
     },
     {
       "name": "ch-analysenliste-application",
+      "version": "1.0.0",
       "description": "Drafts a Swiss Analysenliste (laboratory test) application form",
       "triggerPhrases": ["Analysenliste", "lab test reimbursement", "Swiss lab list"]
     },
     {
       "name": "ch-klv-forms",
+      "version": "1.0.0",
       "description": "Drafts Swiss KLV forms: Meldung, Antrag, Umstrittenheit",
       "triggerPhrases": ["KLV", "Antrag", "Meldung", "Umstrittenheit"]
     },
     {
       "name": "eurhta-report",
+      "version": "1.0.0",
       "description": "Drafts a EUnetHTA Core Model HTA report chapter by chapter",
       "triggerPhrases": ["HTA report", "EUnetHTA", "Core Model", "dossier chapter"]
     },
     {
       "name": "hta-quality-check",
+      "version": "1.0.0",
       "description": "Scores a draft against BAG rubrics and checks cross-section consistency",
       "triggerPhrases": ["quality check", "score", "consistency check"]
     }

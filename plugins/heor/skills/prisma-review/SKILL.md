@@ -13,6 +13,7 @@ metadata:
   jurisdiction: global
   languages: [en]
   last-verified: 2026-07-15
+  version: "1.0.0"
 ---
 
 # PRISMA Systematic Literature Review
