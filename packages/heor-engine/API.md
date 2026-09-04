@@ -22,7 +22,7 @@ calculateDiscreteEventSimulationModel(inputs: DiscreteEventSimulationInputParame
 | Markov Chain | `markov-chain` | yes | full |
 | Budget Impact | `budget-impact` | yes | full |
 | State Transition | `state-transition` | no | full |
-| Partitioned Survival | `partitioned-survival` | no | stub |
+| Partitioned Survival | `partitioned-survival` | no | full |
 | Discrete Event Simulation | `discrete-event-simulation` | no | stub |
 
 ### PSA (`src/probabilistic-sensitivity-analysis.ts`)

@@ -367,43 +367,79 @@ export function calculateStateTransitionModel(params: StateTransitionModelInputP
 }
 
 /**
- * Partitioned Survival Model calculation stub.
- * This is a placeholder. Real implementation would use survival curves and partition logic.
+ * Partitioned Survival Model — Weibull survival curve partitions the cohort
+ * into pre-progression and post-progression states per cycle.
+ *
+ * survivalCurveParam1 = Weibull scale (λ), survivalCurveParam2 = Weibull shape (k).
+ * S(t) = exp(-(t/λ)^k) is the progression-free survival function.
+ * At each cycle t (1-indexed): pre-progression = S(t), post-progression = 1 - S(t).
+ * Costs and utilities are accumulated with discounting and half-cycle correction.
  */
 export function calculatePartitionedSurvivalModel(params: PartitionedSurvivalModelInputParameters): PartitionedSurvivalModelResults {
   const {
+    survivalCurveParam1: scale,
+    survivalCurveParam2: shape,
     costPerCyclePre, costPerCyclePost,
     utilityPre, utilityPost,
     numCycles, discountRate
   } = params;
 
-  // Basic validation
   const invalidParams = Object.entries(params)
     .filter(([, value]) => typeof value !== 'number' || Number.isNaN(value))
     .map(([key]) => key);
   if (invalidParams.length > 0) {
-    return { error: `Invalid or missing numeric inputs for Partitioned Survival Model: ${invalidParams.join(', ')}.`, totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0 };
+    return { error: `Invalid or missing numeric inputs for Partitioned Survival Model: ${invalidParams.join(', ')}.`, totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0, stateTrace: [] };
   }
 
-  // Placeholder logic: split cycles 50/50 pre/post, simple cost/utility sum
-  const preCycles = Math.floor(numCycles / 2);
-  const postCycles = numCycles - preCycles;
+  if (scale <= 0) {
+    return { error: "Survival curve scale parameter (survivalCurveParam1) must be positive.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0, stateTrace: [] };
+  }
+  if (shape <= 0) {
+    return { error: "Survival curve shape parameter (survivalCurveParam2) must be positive.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0, stateTrace: [] };
+  }
+  if (!Number.isInteger(numCycles) || numCycles <= 0) {
+    return { error: "Number of cycles must be a positive integer.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0, stateTrace: [] };
+  }
+  if (discountRate < 0) {
+    return { error: "Discount rate cannot be negative.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0, stateTrace: [] };
+  }
+
+  const weibullSurvival = (t: number): number => Math.exp(-Math.pow(t / scale, shape));
+
   let totalDiscountedCost = 0;
   let totalDiscountedQALYs = 0;
-  for (let i = 0; i < numCycles; i++) {
-    const isPre = i < preCycles;
-    const cost = isPre ? costPerCyclePre : costPerCyclePost;
-    const util = isPre ? utilityPre : utilityPost;
-    const discount = 1 / Math.pow(1 + discountRate, i);
-    totalDiscountedCost += cost * discount;
-    totalDiscountedQALYs += util * discount;
+  let preProgressionCycles = 0;
+  let postProgressionCycles = 0;
+  const stateTrace: Array<{ cycle: number; preProgression: number; postProgression: number }> = [];
+
+  for (let cycle = 0; cycle < numCycles; cycle++) {
+    const t = cycle + 1;
+    const sCurrent = weibullSurvival(t);
+    const sNext = weibullSurvival(t + 1);
+
+    // Half-cycle correction: average of start- and end-of-cycle survival
+    const preFrac = (sCurrent + sNext) / 2;
+    const postFrac = 1 - preFrac;
+
+    stateTrace.push({ cycle: t, preProgression: preFrac, postProgression: postFrac });
+
+    const cycleCost = preFrac * costPerCyclePre + postFrac * costPerCyclePost;
+    const cycleQALYs = preFrac * utilityPre + postFrac * utilityPost;
+    const discount = 1 / Math.pow(1 + discountRate, cycle);
+
+    totalDiscountedCost += cycleCost * discount;
+    totalDiscountedQALYs += cycleQALYs * discount;
+    preProgressionCycles += preFrac * discount;
+    postProgressionCycles += postFrac * discount;
   }
+
   return {
     totalDiscountedCost: parseFloat(totalDiscountedCost.toFixed(2)),
     totalDiscountedQALYs: parseFloat(totalDiscountedQALYs.toFixed(4)),
-    preProgressionCycles: preCycles,
-    postProgressionCycles: postCycles,
-    details: "Stub: Cycles split 50/50 pre/post-progression. Replace with real survival curve logic."
+    preProgressionCycles: parseFloat(preProgressionCycles.toFixed(4)),
+    postProgressionCycles: parseFloat(postProgressionCycles.toFixed(4)),
+    stateTrace,
+    details: `Partitioned survival model: Weibull survival curve (scale=${scale}, shape=${shape}), ${numCycles} cycles, ${discountRate * 100}% discount rate, half-cycle correction applied.`
   };
 }
 
