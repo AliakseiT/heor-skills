@@ -114,6 +114,58 @@ Very long ClinicalTrials.gov records (>~5,000 chars of protocol text): keep
 the brief summary as the screening `abstract`; summarize the full record only
 when it is needed later for synthesis, and label the summary as AI-generated.
 
+## OpenAlex citation enrichment (optional, recommended)
+
+The source app enriched every PubMed record with citation-count data from
+[OpenAlex](https://openalex.org) — a free, open scholarly metadata API. This
+helps with screening triage (highly cited studies are likely seminal) and
+provides open-access PDF/HTML links for full-text retrieval.
+
+**When to do it:** after deduplication, before screening. Iterate over the
+`records` array and add `citationCount`, `openAlexUrl`, and optionally
+`oaPdfUrl` to each PubMed record that has a DOI or title.
+
+**API endpoints** (no API key needed; be polite — 1 request per 400ms max):
+
+```bash
+# By DOI (preferred — exact match):
+curl -s "https://api.openalex.org/works/https://doi.org/<DOI>" | jq '{cited_by_count, id, best_oa_location: .best_oa_location.url_for_pdf}'
+
+# By title (less reliable — first result):
+curl -s "https://api.openalex.org/works?filter=title.search:<URL-ENCODED-TITLE>" | jq '.results[0] | {cited_by_count, id, best_oa_location: .best_oa_location.url_for_pdf}'
+```
+
+**Extracted fields:**
+
+| Field | JSON path | Purpose |
+|---|---|---|
+| Citation count | `.cited_by_count` | Screening triage — highly cited studies are likely seminal |
+| OpenAlex URL | `.id` (e.g. `https://openalex.org/W123`) | Permanent link for reference lists |
+| OA PDF URL | `.best_oa_location.url_for_pdf` | Full-text retrieval for included studies |
+| OA HTML URL | `.best_oa_location.url` | Fallback full-text source |
+
+**Enriched record shape** (add to `search-results.json` records):
+
+```json
+{
+  "id": "38123456",
+  "source": "pubmed",
+  "title": "...",
+  "doi": "10.1000/xyz",
+  "citationCount": 42,
+  "openAlexUrl": "https://openalex.org/W123456",
+  "oaPdfUrl": "https://..."
+}
+```
+
+**Rate limiting:** OpenAlex asks for max ~10 requests/second. Add a 400ms
+delay between requests (the source app used a simple serial queue with
+`OPENALEX_MIN_SPACING_MS = 400`). If a request fails or returns non-200,
+skip enrichment for that record — it is optional, not blocking.
+
+**Do NOT use OpenAlex for ClinicalTrials.gov records** — they rarely have
+DOIs and the metadata is already complete from the CT API.
+
 ## Output: `prisma/search-results.json` (machine-owned — regenerate, never hand-edit)
 
 ```json
