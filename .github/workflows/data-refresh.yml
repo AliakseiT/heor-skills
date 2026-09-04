@@ -34,12 +34,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: pnpm/action-setup@v4
-        with:
-          version: 10
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
 
       - name: Install dependencies
@@ -54,9 +52,8 @@ jobs:
           if [ -n "$LISTS" ]; then
             for key in $LISTS; do ARGS="$ARGS --list $key"; done
           else
-            # Default scheduled run: attempt every registered list. Sources that
-            # need a manual download or whose normalizer is not yet implemented
-            # are reported as skipped in the summary (non-fatal).
+            # Default scheduled run: attempt every registered list. The two CH
+            # lists need a manual download and are reported as skipped (non-fatal).
             ARGS="$ARGS --all"
           fi
           echo "Running: refresh.ts $ARGS"
