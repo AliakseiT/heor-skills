@@ -31,8 +31,8 @@ Model identifiers (accepted as kebab-case slug or display name):
 | `decision-tree` | Decision Tree | yes |
 | `markov-chain` | Markov Chain | yes |
 | `budget-impact` | Budget Impact Assessment | yes |
-| `state-transition` | State Transition Model | no (stub calculator) |
-| `partitioned-survival` | Partitioned Survival Model | no (stub calculator) |
+| `state-transition` | State Transition Model | no |
+| `partitioned-survival` | Partitioned Survival Model | no |
 | `discrete-event-simulation` | Discrete Event Simulation | no |
 
 ## `run-model.ts` input format
@@ -127,9 +127,9 @@ Market shares are percentages (0–100); assessment horizon is 1–5 years (year
 
 Results: `netBudgetImpactPerYear` (impact + patient counts per year), `totalNetBudgetImpact`.
 
-### State Transition Model (`state-transition`) — stub
+### State Transition Model (`state-transition`)
 
-Arbitrary n-state vector propagation (`stateVec × transitionMatrix` per cycle).
+Arbitrary n-state cohort propagation with transition matrix. Applies half-cycle correction (averages start- and end-of-cycle occupancy for cost/QALY accumulation).
 
 ```json
 {
@@ -145,9 +145,9 @@ Arbitrary n-state vector propagation (`stateVec × transitionMatrix` per cycle).
 }
 ```
 
-### Partitioned Survival Model (`partitioned-survival`) — stub
+### Partitioned Survival Model (`partitioned-survival`)
 
-Cycles are split 50/50 pre/post-progression; the survival-curve parameters are accepted but not yet used by the stub.
+Weibull survival curve partitions the cohort into pre-progression and post-progression states. `survivalCurveParam1` = scale (λ), `survivalCurveParam2` = shape (k). S(t) = exp(-(t/λ)^k). Half-cycle correction applied.
 
 ```json
 {

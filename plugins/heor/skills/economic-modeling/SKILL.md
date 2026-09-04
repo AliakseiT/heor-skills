@@ -85,8 +85,8 @@ Decision Tree, Markov Chain, Partitioned Survival Model, Discrete Event
 Simulation, State Transition Model — plus, when payer budget questions are in
 scope, a **separate, complementary** Budget Impact Assessment. Give a 2–3
 sentence justification tied to the intervention's care pathway and time
-horizon, and state the engine's support tier (full calculator vs. stub;
-PSA availability). Present the recommendation and wait for the user to
+horizon, and state the engine's support tier (full calculator vs. partial
+support; PSA availability). Present the recommendation and wait for the user to
 confirm or override before populating parameters.
 
 ### 2. Parameter population → `models/inputs/<model>.json`

@@ -51,8 +51,8 @@ substitute for the pathway/time-horizon justification.
 | `decision-tree` | full | yes |
 | `markov-chain` | full | yes |
 | `budget-impact` | full | yes |
-| `state-transition` | **stub** (vector × matrix propagation only) | no |
-| `partitioned-survival` | **stub** (50/50 pre/post split; survival-curve params accepted but unused) | no |
+| `state-transition` | full (half-cycle correction) | no |
+| `partitioned-survival` | full (Weibull survival curve) | no |
 | `discrete-event-simulation` | full (M/M/c queue) | no |
 
 When two models are scientifically defensible and one has PSA support,
