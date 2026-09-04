@@ -187,8 +187,8 @@ required before use in any submission or decision-making."*
   problem in the inputs file, re-run. Do not hand-write a "results" file.
 - Run file contains an `error` field → treat the run as failed; diagnose
   from the inputs (e.g. Markov transition rows not summing to 1) and re-run.
-- PSA requested for a partially supported model (partitioned-survival,
-  discrete-event-simulation) → explain it is unsupported and offer scenario
-  comparison or a supported model instead.
+- PSA requested for a model without PSA support (state-transition,
+  partitioned-survival, discrete-event-simulation) → explain it is
+  unsupported and offer scenario comparison or a PSA-supported model instead.
 - A required parameter has no defensible value and the user is unavailable →
   stop after step 2 and report the gap; do not run on invented numbers.

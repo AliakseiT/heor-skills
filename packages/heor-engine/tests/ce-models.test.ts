@@ -448,19 +448,47 @@ describe('calculatePartitionedSurvivalModel', () => {
 });
 
 describe('calculateDiscreteEventSimulationModel', () => {
-  it('computes patient volume, cost, QALYs and average wait deterministically', () => {
+  it('simulates an M/M/c queue with no waiting when capacity exceeds demand', () => {
     const r = calculateDiscreteEventSimulationModel({
-      eventRateAlpha: 5,
+      eventRateAlpha: 5,     // service time = 1/5 = 0.2 time units
       resourceCostBeta: 250,
-      patientArrivalRate: 2,
-      queueCapacity: 10,
+      patientArrivalRate: 2,  // inter-arrival = 0.5 time units
+      queueCapacity: 10,     // 10 slots — far more than needed
       simulationDuration: 30,
     });
     expect(r.error).toBeUndefined();
-    expect(r.numSimulatedPatients).toBe(60); // floor(2 * 30)
-    expect(r.totalCost).toBe(15000); // 60 * 250
-    expect(r.totalQALYs).toBe(3); // 60 * (5 / 100)
-    expect(r.averageWaitTime).toBe(6); // 60 / 10
+    expect(r.numSimulatedPatients).toBe(60);  // floor(2 * 30)
+    expect(r.totalCost).toBe(15000);           // 60 * 250
+    // With 10 slots and 0.2 service time, no patient ever waits
+    expect(r.averageWaitTime).toBe(0);
+    // QALYs = 60 * 0.2 * (1 - 0/30) = 12
+    expect(r.totalQALYs).toBeCloseTo(12, 4);
+  });
+
+  it('produces non-zero wait times when capacity is constrained', () => {
+    const r = calculateDiscreteEventSimulationModel({
+      eventRateAlpha: 1,     // service time = 1.0
+      resourceCostBeta: 100,
+      patientArrivalRate: 2, // inter-arrival = 0.5
+      queueCapacity: 1,      // only 1 slot — patients must queue
+      simulationDuration: 10,
+    });
+    expect(r.error).toBeUndefined();
+    expect(r.numSimulatedPatients).toBe(20);  // floor(2 * 10)
+    // With 1 slot and service time 1.0, inter-arrival 0.5:
+    // Patient 0: arrives 0, served 0-1, wait=0
+    // Patient 1: arrives 0.5, waits until 1.0, served 1.0-2.0, wait=0.5
+    // Patient 2: arrives 1.0, waits until 2.0, served 2.0-3.0, wait=1.0
+    // Pattern: patient i arrives at i*0.5, waits max(0, (i)*1.0 - i*0.5) = max(0, i*0.5)
+    // Wait times: 0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5
+    // Total wait = sum(0, 0.5, 1.0, ..., 9.5) = 0.5 * (0+1+2+...+19) = 0.5 * 190 = 95
+    // Average wait = 95 / 20 = 4.75
+    expect(r.averageWaitTime).toBe(4.75);
+    expect(r.totalCost).toBe(2000);  // 20 * 100
+    // QALYs: each patient gets 1.0 * (1 - waitTime/10)
+    // Patient i: QALY = 1 - (i*0.5)/10 = 1 - i/20
+    // Total QALY = sum(1 - i/20 for i in 0..19) = 20 - (0+1+...+19)/20 = 20 - 190/20 = 20 - 9.5 = 10.5
+    expect(r.totalQALYs).toBeCloseTo(10.5, 4);
   });
 
   it('reports invalid numeric inputs', () => {
@@ -472,5 +500,38 @@ describe('calculateDiscreteEventSimulationModel', () => {
       simulationDuration: 30,
     });
     expect(r.error).toContain('patientArrivalRate');
+  });
+
+  it('rejects non-positive patient arrival rate', () => {
+    const r = calculateDiscreteEventSimulationModel({
+      eventRateAlpha: 5,
+      resourceCostBeta: 250,
+      patientArrivalRate: 0,
+      queueCapacity: 10,
+      simulationDuration: 30,
+    });
+    expect(r.error).toContain('arrival rate');
+  });
+
+  it('rejects non-integer queue capacity', () => {
+    const r = calculateDiscreteEventSimulationModel({
+      eventRateAlpha: 5,
+      resourceCostBeta: 250,
+      patientArrivalRate: 2,
+      queueCapacity: 2.5,
+      simulationDuration: 30,
+    });
+    expect(r.error).toContain('Queue capacity');
+  });
+
+  it('rejects negative resource cost', () => {
+    const r = calculateDiscreteEventSimulationModel({
+      eventRateAlpha: 5,
+      resourceCostBeta: -100,
+      patientArrivalRate: 2,
+      queueCapacity: 10,
+      simulationDuration: 30,
+    });
+    expect(r.error).toContain('Resource cost');
   });
 });

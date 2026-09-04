@@ -4,7 +4,7 @@ Pure-TypeScript health-economic modeling engine with **zero runtime dependencies
 
 Contents:
 
-- **Six model calculators** (`src/ce-models.ts`): Decision Tree, Markov Chain, Budget Impact Assessment, State Transition Model, Partitioned Survival Model, Discrete Event Simulation (stub).
+- **Six model calculators** (`src/ce-models.ts`): Decision Tree, Markov Chain, Budget Impact Assessment, State Transition Model, Partitioned Survival Model, Discrete Event Simulation.
 - **Probabilistic sensitivity analysis** (`src/probabilistic-sensitivity-analysis.ts`): Monte Carlo simulation with summary statistics, CEAC curve, and tornado diagram. Supports Decision Tree, Markov Chain, and Budget Impact models. Deterministic via `seed` or an injectable `rng: () => number`.
 - **Batch scenario execution** (`src/batch-scenario-executor.ts`): baseline vs. alternative scenario comparison with device-class defaults, input merging, caching, and aggregated metrics.
 - **Device-class default parameter sets** (`src/economic-model-defaults.ts`) and **input merging/name mapping** utilities.
@@ -33,7 +33,7 @@ Model identifiers (accepted as kebab-case slug or display name):
 | `budget-impact` | Budget Impact Assessment | yes |
 | `state-transition` | State Transition Model | no |
 | `partitioned-survival` | Partitioned Survival Model | no |
-| `discrete-event-simulation` | Discrete Event Simulation | no (stub calculator) |
+| `discrete-event-simulation` | Discrete Event Simulation | no |
 
 ## `run-model.ts` input format
 
@@ -165,9 +165,9 @@ Weibull survival curve partitions the cohort into pre-progression and post-progr
 }
 ```
 
-### Discrete Event Simulation (`discrete-event-simulation`) — stub
+### Discrete Event Simulation (`discrete-event-simulation`)
 
-Deterministic patient-volume approximation (`floor(arrivalRate × duration)` patients).
+Deterministic M/M/c queueing model. Patients arrive at regular intervals (mean inter-arrival = 1/patientArrivalRate), each occupies a treatment slot for mean service time 1/eventRateAlpha. Tracks wait times from queue dynamics, cost per treatment, and QALYs (proportional to treatment time, reduced by waiting).
 
 ```json
 {

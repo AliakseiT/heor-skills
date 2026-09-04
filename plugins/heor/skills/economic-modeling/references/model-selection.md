@@ -53,13 +53,13 @@ substitute for the pathway/time-horizon justification.
 | `budget-impact` | full | yes |
 | `state-transition` | full (half-cycle correction) | no |
 | `partitioned-survival` | full (Weibull survival curve) | no |
-| `discrete-event-simulation` | **stub** (deterministic volume approximation) | no |
+| `discrete-event-simulation` | full (M/M/c queue) | no |
 
-When two models are scientifically defensible and one is fully implemented,
-prefer the fully implemented one and say why. If a partially supported model is
-clearly the right science (e.g. oncology with real survival curves), still
-recommend it — but warn the user explicitly about any engine limitations, and
-offer a fully supported model as a pragmatic alternative.
+When two models are scientifically defensible and one has PSA support,
+prefer the one with PSA. If a model without PSA is clearly the right
+science, still recommend it — but warn the user that PSA is unavailable
+and offer scenario comparison or a PSA-supported model as a pragmatic
+alternative.
 
 ## Output of this step
 

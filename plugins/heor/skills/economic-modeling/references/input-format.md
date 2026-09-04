@@ -199,10 +199,12 @@ Half-cycle correction applied.
 }
 ```
 
-## Discrete Event Simulation (`discrete-event-simulation`) — STUB
+## Discrete Event Simulation (`discrete-event-simulation`)
 
-Deterministic patient-volume approximation
-(`floor(patientArrivalRate × simulationDuration)` patients).
+Deterministic M/M/c queueing model. Patients arrive at regular intervals
+(mean inter-arrival = 1/patientArrivalRate), each occupies a treatment
+slot for mean service time 1/eventRateAlpha. Tracks wait times, cost per
+treatment, and QALYs (proportional to treatment time, reduced by waiting).
 
 ```json
 {
