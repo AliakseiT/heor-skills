@@ -369,15 +369,21 @@ export function calculatePartitionedSurvivalModel(params: PartitionedSurvivalMod
 }
 
 /**
- * Discrete Event Simulation calculation stub.
- * This is a placeholder. Real implementation would simulate patient flow/events.
+ * Discrete Event Simulation — deterministic M/M/c queueing model.
+ *
+ * Patients arrive at regular intervals (deterministic Poisson with mean
+ * inter-arrival time 1/patientArrivalRate). Each patient occupies a
+ * treatment slot for a service time of 1/eventRateAlpha (the mean
+ * inter-event time, representing the expected treatment duration).
+ * With queueCapacity simultaneous slots, patients queue when all slots
+ * are busy. The simulation tracks wait times, treatment costs, and
+ * QALYs (proportional to treatment time, reduced by waiting).
  */
 export function calculateDiscreteEventSimulationModel(params: DiscreteEventSimulationInputParameters): DiscreteEventSimulationResults {
   const {
     eventRateAlpha, resourceCostBeta, patientArrivalRate, queueCapacity, simulationDuration
   } = params;
 
-  // Basic validation
   const invalidParams = Object.entries(params)
     .filter(([, value]) => typeof value !== 'number' || Number.isNaN(value))
     .map(([key]) => key);
@@ -385,17 +391,62 @@ export function calculateDiscreteEventSimulationModel(params: DiscreteEventSimul
     return { error: `Invalid or missing numeric inputs for Discrete Event Simulation: ${invalidParams.join(', ')}.`, totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
   }
 
-  // Placeholder logic: simulate a fixed number of patients, simple cost/wait calculation
+  if (patientArrivalRate <= 0) {
+    return { error: "Patient arrival rate must be positive.", totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
+  }
+  if (eventRateAlpha <= 0) {
+    return { error: "Event rate alpha must be positive.", totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
+  }
+  if (resourceCostBeta < 0) {
+    return { error: "Resource cost beta cannot be negative.", totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
+  }
+  if (!Number.isInteger(queueCapacity) || queueCapacity <= 0) {
+    return { error: "Queue capacity must be a positive integer.", totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
+  }
+  if (simulationDuration <= 0) {
+    return { error: "Simulation duration must be positive.", totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
+  }
+
   const numPatients = Math.floor(patientArrivalRate * simulationDuration);
-  const totalCost = numPatients * resourceCostBeta;
-  const totalQALYs = numPatients * (eventRateAlpha / 100); // Arbitrary QALY assignment
-  const averageWaitTime = queueCapacity > 0 ? (numPatients / queueCapacity) : NaN;
+  const interArrivalTime = 1 / patientArrivalRate;
+  const serviceTime = 1 / eventRateAlpha;
+
+  const resourceFreeAt: number[] = Array(queueCapacity).fill(0);
+  let totalCost = 0;
+  let totalQALYs = 0;
+  let totalWaitTime = 0;
+
+  for (let i = 0; i < numPatients; i++) {
+    const arrivalTime = i * interArrivalTime;
+
+    let earliestSlot = 0;
+    for (let j = 1; j < queueCapacity; j++) {
+      if (resourceFreeAt[j] < resourceFreeAt[earliestSlot]) {
+        earliestSlot = j;
+      }
+    }
+
+    const serviceStart = Math.max(arrivalTime, resourceFreeAt[earliestSlot]);
+    const waitTime = serviceStart - arrivalTime;
+    resourceFreeAt[earliestSlot] = serviceStart + serviceTime;
+
+    totalWaitTime += waitTime;
+    totalCost += resourceCostBeta;
+
+    // QALYs: treatment benefit proportional to service time, reduced by
+    // waiting (delayed treatment = time spent in worse health state).
+    // Patient QALY = serviceTime * (1 - waitTime / simulationDuration)
+    const qalyContribution = serviceTime * Math.max(0, 1 - waitTime / simulationDuration);
+    totalQALYs += qalyContribution;
+  }
+
+  const averageWaitTime = numPatients > 0 ? totalWaitTime / numPatients : 0;
 
   return {
     totalCost: parseFloat(totalCost.toFixed(2)),
     totalQALYs: parseFloat(totalQALYs.toFixed(4)),
     averageWaitTime: parseFloat(averageWaitTime.toFixed(2)),
     numSimulatedPatients: numPatients,
-    details: "Stub: Simple DES logic. Replace with real event simulation."
+    details: `Deterministic M/M/${queueCapacity} queue: ${numPatients} patients, mean inter-arrival ${interArrivalTime.toFixed(4)}, mean service ${serviceTime.toFixed(4)}, utilization ${((numPatients * serviceTime) / (queueCapacity * simulationDuration) * 100).toFixed(1)}%.`
   };
 }
