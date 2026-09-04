@@ -16,6 +16,7 @@ metadata:
   jurisdiction: ch
   languages: [de, en]
   last-verified: 2026-07-15
+  version: "1.0.0"
 ---
 
 # HTA Quality Check (scoring + consistency)

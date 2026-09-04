@@ -5,6 +5,7 @@ metadata:
   jurisdiction: [ch, de, fr, us, uk]
   languages: [en]
   last-verified: 2025-12-10
+  version: "1.0.0"
 ---
 
 # Regulation Navigator

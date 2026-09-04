@@ -5,6 +5,7 @@ metadata:
   jurisdiction: [ch, de, fr, us]
   languages: [de, fr, it, en]
   last-verified: 2025-07-01
+  version: "1.0.0"
 ---
 
 # Tariff Scout

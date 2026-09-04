@@ -18,6 +18,8 @@ core workflows).
 
 ## Skills (9)
 
+All skills are version 1.0.0 (semver, in SKILL.md frontmatter `metadata.version`).
+
 | Skill | Trigger phrases | What it does |
 |---|---|---|
 | regulation-navigator | "regulatory pathway", "reimbursement route", "market access" | Maps a product to its reimbursement pathway across CH, DE, FR, US |
