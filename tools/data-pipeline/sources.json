@@ -1,6 +1,6 @@
 {
   "$comment": "Registry of official sources for every list under data/. Every data file is regenerated from one of these sources by tools/data-pipeline/refresh.ts (CONVENTIONS.md §2). status: download-verified = downloadUrl fetches the artifact directly; landing-verified = landing page confirmed reachable but the download link is versioned per release (manual --local or link scraping needed); verify = URL/API not yet confirmed.",
-  "updated": "2026-07-15",
+  "updated": "2026-09-04",
   "sources": {
     "ch/migel": {
       "name": "Mittel- und Gegenständeliste (MiGeL)",
@@ -54,7 +54,7 @@
       ],
       "updateCadence": "continuous (directory entries added/updated as decided)",
       "status": "download-verified",
-      "notes": "FHIR API works with a token handshake: POST {\"data\":{\"type\":\"tokens\",\"attributes\":{}}} (Content-Type application/vnd.api+json, Origin+Referer headers) to /api/diga-vz/tokens; send the returned data.id as Authorization: Bearer <id> AND a Referer header on every FHIR request (401 otherwise). Bundles fetched per _profile (HealthApp, HealthAppCatalogEntry, HealthAppManufacturer, HealthAppPrescriptionUnit, HealthAppModule). Live-verified 2026-07-15. Fallback: upstream scripts/scrape-diga.ts.",
+      "notes": "FHIR API works with a token handshake: POST {\"data\":{\"type\":\"tokens\",\"attributes\":{}}} (Content-Type application/vnd.api+json, Origin+Referer headers) to /api/diga-vz/tokens; send the returned data.id as Authorization: Bearer <id> AND a Referer header on every FHIR request (401 otherwise). Bundles fetched per _profile (HealthApp, HealthAppCatalogEntry, HealthAppManufacturer, HealthAppPrescriptionUnit, HealthAppModule). Live-verified 2026-09-04. Fallback: upstream scripts/scrape-diga.ts.",
       "normalizer": "normalizers/de-diga.ts"
     },
     "de/hmv": {
@@ -70,7 +70,7 @@
       ],
       "updateCadence": "periodic (multiple releases per year)",
       "status": "download-verified",
-      "notes": "Normalizer fetches the REST API directly (no downloadUrl). /VerzeichnisTree/<depth> — depth 4 returns the full Gruppe/Ort/Untergruppe/Art hierarchy. With --local pass a directory containing produkte.json + tree.json. Live-verified 2026-07-15.",
+      "notes": "Normalizer fetches the REST API directly (no downloadUrl). /VerzeichnisTree/<depth> — depth 4 returns the full Gruppe/Ort/Untergruppe/Art hierarchy. With --local pass a directory containing produkte.json + tree.json. Live-verified 2026-09-04.",
       "normalizer": "normalizers/de-hmv.ts",
       "apiUrl": "https://hilfsmittel-api.gkv-spitzenverband.de/api/verzeichnis"
     },
@@ -87,7 +87,7 @@
       ],
       "updateCadence": "roughly monthly (archive number increments per release)",
       "status": "download-verified",
-      "notes": "Normalizer resolves the highest LPP<nnn>.zip from the landing/index page, then downloads via download_file.php?filename=tips/LPP<nnn>.zip. DBF tables parsed with the built-in pure-TS reader (lib/dbf.ts). Live-verified 2026-07-15 (archive 892).",
+      "notes": "Normalizer resolves the highest LPP<nnn>.zip from the landing/index page, then downloads via download_file.php?filename=tips/LPP<nnn>.zip. DBF tables parsed with the built-in pure-TS reader (lib/dbf.ts). Live-verified 2026-09-04 (archive 900).",
       "normalizer": "normalizers/fr-lpp.ts"
     },
     "us/hcpcs": {
@@ -103,7 +103,7 @@
       ],
       "updateCadence": "quarterly",
       "status": "download-verified",
-      "notes": "Normalizer resolves the quarterly link (pattern /files/zip/<month>-<year>-alpha-numeric-hcpcs-file.zip) from the landing page. Live-verified 2026-07-15 (July 2026 file). Includes 2-char modifiers (category \"modifier\").",
+      "notes": "Normalizer resolves the quarterly link (pattern /files/zip/<month>-<year>-alpha-numeric-hcpcs-file.zip) from the landing page. Live-verified 2026-09-04 (October 2026 file). Includes 2-char modifiers (category \"modifier\").",
       "normalizer": "normalizers/us-hcpcs.ts"
     }
   }
