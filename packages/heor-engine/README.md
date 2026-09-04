@@ -230,6 +230,37 @@ Compares a baseline against alternative parameter sets, layered on device-class 
 
 Per scenario you may also set `inputs` (merged over the shared `baselineInputs`), `aiSuggestedInputs`, `expertProvidedInputs`, `runPSA`, and `psa`. Merge priority is AI-suggested > expert-provided > caller baseline > device-class defaults; `overrides` always win. Note (source behavior): caller `baselineInputs` only replace defaults that have no documented literature source in the defaults library. Output includes per-scenario results plus aggregated metrics (`averageICER`, `icer_range`, average incrementals).
 
+## `export-excel.ts` — Excel export
+
+Exports one or more run-record JSON files to a multi-sheet `.xlsx` workbook. Each model produces an Inputs sheet, a Calculation sheet with **live Excel formulas** referencing the Inputs sheet (so stakeholders can tweak parameters and see recalculation), and an Engine Results sheet for verification.
+
+```bash
+# Single model run
+npx tsx src/cli/export-excel.ts models/runs/2026-01-markov.json --output markov.xlsx
+
+# Multiple runs (creates sheets for each)
+npx tsx src/cli/export-excel.ts models/runs/baseline.json models/runs/high-cost.json --output comparison.xlsx
+
+# PSA run (adds statistics, CEAC, and tornado sheets)
+npx tsx src/cli/export-excel.ts models/runs/psa-markov.json --output psa.xlsx
+
+# Scenario batch (adds scenario comparison sheets)
+npx tsx src/cli/export-excel.ts models/runs/scenarios.json --output scenarios.xlsx
+```
+
+Live formulas are generated for Decision Tree (PPV/NPV/expected cost/utility per arm), Markov Chain (per-cycle state propagation with discounting), and Budget Impact (per-year patient counts and costs). Stub models export inputs and results as values.
+
+## `compare-runs.ts` — structured run comparison
+
+Compares two or more model run records and produces a structured analysis: parameter differences with impact assessment, result variations with percentage changes, and recommendations for further analysis.
+
+```bash
+npx tsx src/cli/compare-runs.ts models/runs/baseline.json models/runs/high-cost.json models/runs/low-prevalence.json
+npx tsx src/cli/compare-runs.ts run-a.json run-b.json --baseline run-a.json
+```
+
+Output: a JSON object with `keyDifferences` (parameters that changed, rated low/medium/high impact), `resultVariations` (metrics that changed, with % delta per alternative run), and `recommendations` (e.g. "ICER shows high sensitivity — consider PSA").
+
 ## Determinism
 
 - All six calculators are pure and deterministic.
