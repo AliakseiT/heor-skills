@@ -1,0 +1,20 @@
+---
+name: Data source update
+about: Report a broken or changed official data source
+title: "[data] "
+labels: data-refresh
+---
+
+**Which data source?**
+<!-- e.g. "de/hmv" or "fr/lpp" -->
+
+**What happened?**
+<!-- e.g. "GKV API returns 401" or "LPP archive number jumped to 950 and schema changed" -->
+
+**Source URL**
+<!-- The official URL that's broken -->
+
+**Output from refresh.ts**
+```
+# Paste the error output here
+```

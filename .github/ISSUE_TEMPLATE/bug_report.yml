@@ -1,0 +1,22 @@
+---
+name: Bug report
+about: Report a defect in a skill, the engine, or the data pipeline
+title: "[bug] "
+labels: bug
+---
+
+**What's broken?**
+<!-- e.g. "tariff-scout search for 'Inkontinenz' returns 0 results" -->
+
+**How to reproduce**
+```bash
+# Commands you ran
+```
+
+**Expected vs actual**
+<!-- What you expected, what you got -->
+
+**Environment**
+- OS:
+- Node version:
+- Harness (Claude Code, Codex, Cursor, Gemini CLI):

@@ -1,0 +1,70 @@
+{
+  "name": "heor-skills",
+  "summary": "Open-source HEOR and medical device market-access skills for AI agents. Nine skills, a deterministic economic modeling engine, and six jurisdictional reimbursement databases (CH, DE, FR, US). Works with Claude Code, Codex, Cursor, Gemini CLI.",
+  "license": "Apache-2.0",
+  "languages": ["TypeScript", "Markdown", "JSON"],
+  "topics": ["heor", "health-economics", "hta", "market-access", "medical-devices", "reimbursement", "cost-effectiveness", "prisma", "budget-impact"],
+  "skills": [
+    {
+      "name": "regulation-navigator",
+      "description": "Maps a product to its reimbursement pathway across CH, DE, FR, US with prerequisites and timelines",
+      "triggerPhrases": ["regulatory pathway", "reimbursement route", "market access"]
+    },
+    {
+      "name": "tariff-scout",
+      "description": "Searches official reimbursement lists for existing codes and comparable products",
+      "triggerPhrases": ["reimbursement code", "tariff search", "existing code"]
+    },
+    {
+      "name": "prisma-review",
+      "description": "Runs a PRISMA 2020 systematic literature review: PICO, search, screening, diagram, synthesis",
+      "triggerPhrases": ["literature review", "PRISMA", "systematic search", "PICO"]
+    },
+    {
+      "name": "economic-modeling",
+      "description": "Builds and runs cost-effectiveness and budget-impact models through a deterministic engine",
+      "triggerPhrases": ["cost-effectiveness", "CEA", "BIA", "Markov", "ICER", "PSA"]
+    },
+    {
+      "name": "ch-migel-application",
+      "description": "Drafts a Swiss MiGeL (device list) application form",
+      "triggerPhrases": ["MiGeL", "Mittel- und Gegenständeliste", "Swiss device list"]
+    },
+    {
+      "name": "ch-analysenliste-application",
+      "description": "Drafts a Swiss Analysenliste (laboratory test) application form",
+      "triggerPhrases": ["Analysenliste", "lab test reimbursement", "Swiss lab list"]
+    },
+    {
+      "name": "ch-klv-forms",
+      "description": "Drafts Swiss KLV forms: Meldung, Antrag, Umstrittenheit",
+      "triggerPhrases": ["KLV", "Antrag", "Meldung", "Umstrittenheit"]
+    },
+    {
+      "name": "eurhta-report",
+      "description": "Drafts a EUnetHTA Core Model HTA report chapter by chapter",
+      "triggerPhrases": ["HTA report", "EUnetHTA", "Core Model", "dossier chapter"]
+    },
+    {
+      "name": "hta-quality-check",
+      "description": "Scores a draft against BAG rubrics and checks cross-section consistency",
+      "triggerPhrases": ["quality check", "score", "consistency check"]
+    }
+  ],
+  "engine": {
+    "name": "@heor/engine",
+    "description": "Pure-TypeScript economic modeling engine with zero runtime dependencies",
+    "models": ["decision-tree", "markov-chain", "budget-impact", "state-transition", "partitioned-survival", "discrete-event-simulation"],
+    "psaSupport": ["decision-tree", "markov-chain", "budget-impact"],
+    "cli": ["run-model.ts", "run-psa.ts", "run-scenarios.ts", "export-excel.ts", "compare-runs.ts"]
+  },
+  "databases": [
+    {"country": "CH", "list": "MiGeL", "source": "BAG/FOPH", "autoRefresh": false},
+    {"country": "CH", "list": "Analysenliste", "source": "BAG/FOPH", "autoRefresh": false},
+    {"country": "DE", "list": "DiGA", "source": "BfArM FHIR API", "autoRefresh": true},
+    {"country": "DE", "list": "HMV", "source": "GKV REST API", "autoRefresh": true},
+    {"country": "FR", "list": "LPP", "source": "CNAM", "autoRefresh": true},
+    {"country": "US", "list": "HCPCS", "source": "CMS", "autoRefresh": true}
+  ],
+  "harnesses": ["Claude Code", "Codex", "Cursor", "Gemini CLI"]
+}
