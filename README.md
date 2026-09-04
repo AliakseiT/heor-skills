@@ -1,49 +1,120 @@
-# HEOR Skills — Market Access & Health Economics for AI Agents
+# HEOR Skills
 
-Open-source Agent Skills pack for **HEOR (Health Economics and Outcomes Research)** and **medical device market access**, distilled from the [MedTech Access](https://www.medtechaccess.ch/) suite. Works with Claude Code (full plugin experience) and any [Agent Skills](https://agentskills.io)-compatible harness (Codex, Copilot, Cursor, Gemini CLI, Goose, …).
+Market-access and health-economics tooling for medical device companies.
+Nine skills covering the reimbursement journey from pathway selection to
+application drafting, backed by a deterministic economic modeling engine and
+six official reimbursement databases (Switzerland, Germany, France, USA).
 
-> **Status: pre-release extraction in progress.** Not yet published to any marketplace.
+Works with Claude Code and any Agent-Skills-compatible harness (Codex,
+Cursor, Gemini CLI).
 
-## What's inside
+> **Status: pre-release.** Not yet published to any marketplace.
 
-| Skill | Scope | What it does |
+## Pipeline
+
+```mermaid
+graph LR
+    A["dossier.yaml<br/>+ documents/"] --> B["regulation-navigator<br/>which pathway?"]
+    A --> C["tariff-scout<br/>existing code?"]
+    C --> B
+    B --> D["prisma-review<br/>literature search"]
+    D --> E["economic-modeling<br/>CEA, BIA, PSA"]
+    E --> F["ch-migel-application<br/>or eurhta-report"]
+    F --> G["hta-quality-check<br/>score + consistency"]
+```
+
+A dossier is a plain directory. Each skill reads from it, writes to it, and
+picks up where the previous one left off. Start with just a `dossier.yaml`
+describing your product, and work through the pipeline.
+
+## Skills
+
+| Skill | What it does |
+|---|---|
+| regulation-navigator | Maps a product to its reimbursement pathway across CH, DE, FR, US, UK with prerequisites and timelines |
+| tariff-scout | Searches official reimbursement lists for existing codes and comparable products |
+| prisma-review | Runs a PRISMA 2020 systematic literature review: PICO, search, screening, diagram, synthesis |
+| economic-modeling | Builds and runs cost-effectiveness and budget-impact models through a deterministic engine |
+| ch-migel-application | Drafts a Swiss MiGeL (device list) application form |
+| ch-analysenliste-application | Drafts a Swiss Analysenliste (laboratory test) application form |
+| ch-klv-forms | Drafts Swiss KLV forms: Meldung, Antrag, Umstrittenheit |
+| eurhta-report | Drafts a EUnetHTA Core Model HTA report chapter by chapter |
+| hta-quality-check | Scores a draft against BAG rubrics and checks cross-section consistency |
+
+## Economic engine
+
+The `@heor/engine` package is a pure-TypeScript economic modeling engine with
+zero runtime dependencies. Six model types (decision tree, Markov chain,
+budget impact, state transition, partitioned survival, discrete event
+simulation), Monte Carlo PSA with CEAC and tornado diagrams, batch scenario
+comparison, Excel export with live formulas, and structured run comparison.
+
+```bash
+npx tsx packages/heor-engine/src/cli/run-model.ts examples/markov-chain.json
+npx tsx packages/heor-engine/src/cli/run-psa.ts examples/psa-markov-chain.json
+npx tsx packages/heor-engine/src/cli/export-excel.ts models/runs/baseline.json
+```
+
+## Reimbursement data
+
+Six official reimbursement lists are normalized to versioned JSON and
+refreshed monthly by CI:
+
+| Country | List | Source |
 |---|---|---|
-| `prisma-review` | Global | Systematic literature review: PICO → search queries → screening → PRISMA 2020 diagram → narrative synthesis. Uses the official PubMed connector + ClinicalTrials.gov MCP. |
-| `eurhta-report` | EU | EUnetHTA Core Model dossier drafting, chapter by chapter, with rubrics. |
-| `economic-modeling` | Global | CEA/BIA: decision tree, Markov, partitioned survival, DES, state transition, budget impact — computed by the deterministic `heor-engine`, never by the LLM. Includes PSA and scenario comparison. |
-| `regulation-navigator` | CH · DE · FR · UK · US | Map device type × risk class × jurisdiction to a market-access pathway with prerequisites and timelines (`rules.json`). |
-| `tariff-scout` | CH · DE · FR · US | Search official reimbursement lists (MiGeL, Analysenliste, HMV, DiGA, LPP, HCPCS) for existing codes and analogs. |
-| `ch-migel-application` | CH | Draft a MiGeL (Mittel- und Gegenständeliste) application on the official form structure. |
-| `ch-analysenliste-application` | CH | Draft an Analysenliste application. |
-| `ch-klv-forms` | CH | Draft KLV forms: Meldung neue Leistung, Antrag neue Leistung, Umstrittenheit. |
-| `hta-quality-check` | CH/EU | Score a draft against the BAG rubric and run cross-chapter consistency checks. |
+| Switzerland | MiGeL (devices and aids) | BAG/FOPH |
+| Switzerland | Analysenliste (laboratory tests) | BAG/FOPH |
+| Germany | DiGA (digital health apps) | BfArM FHIR API |
+| Germany | HMV (assistive devices) | GKV-Spitzenverband API |
+| France | LPP (medical products and services) | CNAM / ameli |
+| USA | HCPCS Level II (procedure codes) | CMS |
 
-## Design principles
+## Getting started
 
-- **Country/region-first, never language-first.** Data, skills, and templates are organized by jurisdiction (ISO 3166 — `ch`, `de`, `fr`, `us`; region `eu`); languages are variants within a jurisdiction (e.g., MiGeL data ships in `de`/`fr`/`it`).
-- **Minimal maintenance, evergreen by automation.** Markdown + JSON + one dependency-free TypeScript engine. No server, database, or hosting. Official-source data refresh runs on a schedule in CI and opens a reviewable PR; merged updates ship as tagged data releases you can pin.
-- **The LLM never does arithmetic.** All economic modeling runs through `packages/heor-engine` — deterministic, unit-tested, auditable.
-- **Human-in-the-loop by design.** Output is a draft for expert review, not a submission.
+```bash
+git clone <this-repo>
+cd heor-skills
+pnpm install
 
-## Layout
+# Run the engine tests
+pnpm -r test
 
-```
-.claude-plugin/marketplace.json   # this repo is a Claude Code plugin marketplace
-plugins/heor/                     # the plugin: skills + MCP wiring + commands
-packages/heor-engine/             # pure-TS economic modeling engine (npm-publishable)
-data/{ch,de,fr,us}/               # normalized official reimbursement lists (JSON, versioned)
-tools/data-pipeline/              # fetch + normalize scripts (run by CI cron)
+# Explore the demo dossier
+ls examples/demo-dossier/
 ```
 
-## Install (once published)
+Install as a Claude Code plugin (once published):
 
 ```
 /plugin marketplace add <owner>/heor-skills
 /plugin install heor@heor-skills
 ```
 
-Bare skills (non-Claude harnesses): copy `plugins/heor/skills/<name>` into your harness's skills directory, or use `npx skills add`.
+## Layout
+
+```
+plugins/heor/skills/           9 skills, each with SKILL.md + references
+packages/heor-engine/          economic modeling engine (npm-publishable)
+data/{ch,de,fr,us}/            normalized reimbursement data (JSON, versioned)
+tools/data-pipeline/           fetch + normalize scripts (run by CI cron)
+examples/demo-dossier/         fully populated example dossier (SereniCBT)
+docs/cookbook/                 recipe guides for common workflows
+```
+
+## Principles
+
+- **Country first, language second.** Data and templates are organized by
+  jurisdiction. Language is a variant within a jurisdiction, not the other
+  way around.
+- **The engine does the math.** Economic model results come from
+  `@heor/engine` CLI runs, never from the LLM.
+- **Drafts, not submissions.** Every skill ends with a human-review
+  disclaimer. Output is a starting point for a qualified professional.
+- **No servers, no databases.** Markdown, JSON, and one TypeScript engine.
+  The data pipeline runs in CI and opens a PR when official sources change.
 
 ## License
 
-Apache-2.0. Drafts produced with these skills require review by qualified professionals; nothing here is regulatory, clinical, or reimbursement advice.
+Apache-2.0. Drafts produced with these skills require review by qualified
+professionals. Nothing here is regulatory, clinical, or reimbursement
+advice.

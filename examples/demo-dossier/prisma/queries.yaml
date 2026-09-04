@@ -1,0 +1,38 @@
+pubmed:
+  tiers:
+    narrow:
+      query: >-
+        ("digital cognitive behavioural therapy" OR "digital CBT" OR "internet-based CBT" OR "app-based CBT")
+        AND ("depression" OR "depressive disorder")
+        AND ("randomized controlled trial"[pt] OR "randomized"[tiab])
+        AND ("adult"[MeSH] OR "adult"[tiab])
+      rctHedge: true
+    balanced:
+      query: >-
+        ("digital therapy" OR "mobile health" OR "mHealth" OR "e-mental health" OR "digital intervention")
+        AND ("depression"[MeSH] OR "depressive disorder"[MeSH])
+        AND ("randomized controlled trial"[pt] OR "controlled clinical trial"[pt])
+    broad:
+      query: >-
+        ("digital" OR "mobile" OR "app" OR "internet" OR "smartphone")
+        AND ("CBT" OR "cognitive behavioural therapy" OR "psychotherapy")
+        AND "depression"
+        AND ("trial" OR "study" OR "evaluation")
+
+clinicaltrials:
+  tiers:
+    narrow:
+      query: >-
+        AREA[InterventionName]digital CBT AND AREA[Condition]depression AND AREA[StudyType]INTERVENTIONAL AND AREA[Phase]PHASE3
+    balanced:
+      query: >-
+        AREA[InterventionName]cognitive behavioural therapy AND AREA[Condition]depression AND AREA[StudyType]INTERVENTIONAL
+    broad:
+      query: >-
+        AREA[Condition]depression AND (AREA[InterventionName]digital OR AREA[InterventionName]mobile OR AREA[InterventionName]app)
+
+selectedTier: narrow
+notes: >-
+  Narrow tier chosen as default per precision-first strategy. Will escalate to
+  balanced if PubMed returns fewer than 5 results or ClinicalTrials.gov fewer
+  than 3.

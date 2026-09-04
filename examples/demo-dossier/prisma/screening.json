@@ -1,0 +1,14 @@
+[
+  { "id": "38123456", "decision": "include", "reason": "Directly relevant: RCT of a guided digital CBT app in adults with mild-to-moderate depression (PHQ-9 5-14), Swiss primary care setting. Matches PICO on population, intervention, and outcomes.", "screenedBy": "ai" },
+  { "id": "37901234", "decision": "include", "reason": "Meta-analysis of 42 RCTs comparing guided vs unguided iCBT for adult depression. Provides effect size estimates and cost-effectiveness ranges relevant to the PICO and the economic model.", "screenedBy": "ai" },
+  { "id": "37556789", "decision": "include", "reason": "Swiss payer-perspective cost-utility study of digital CBT for depression using a Markov model. Directly relevant to the economic evaluation and Swiss OKP setting.", "screenedBy": "ai" },
+  { "id": "37001122", "decision": "include", "reason": "Pragmatic RCT of a mobile CBT app in primary care with PHQ-9 and EQ-5D-5L outcomes. Matches PICO population and comparator.", "screenedBy": "ai" },
+  { "id": "36554433", "decision": "include", "reason": "12-month follow-up of digital CBT trial. Provides long-term effect durability and relapse rate data needed for the Markov model time horizon.", "screenedBy": "ai" },
+  { "id": "NCT04567890", "decision": "include", "reason": "Completed Phase 3 RCT of SereniCBT, the exact intervention in the dossier. Published as Mueller et al. 2024. Provides primary efficacy data.", "screenedBy": "ai" },
+  { "id": "NCT04890123", "decision": "maybe", "reason": "Ongoing Swiss trial of a different mobile CBT app, not yet published. May provide comparative data if results become available before submission.", "screenedBy": "ai" },
+  { "id": "NCT05123456", "decision": "exclude", "reason": "Observational study, not an RCT. Three-country design limits Swiss-specific transferability. Recruiting, no results available.", "screenedBy": "ai" },
+  { "id": "36009876", "decision": "exclude", "reason": "Population mismatch: focuses on adults aged 60+, while the PICO targets adults 18-65. Findings on age-adapted interfaces are tangential.", "screenedBy": "ai" },
+  { "id": "35901234", "decision": "include", "reason": "Adherence and engagement analysis across 4 RCTs of digital CBT. Provides parameter estimates for the economic model (adherence rate, module completion).", "screenedBy": "ai" },
+  { "id": "doi-10-1001-jamapsychiatry-2024-0123", "decision": "include", "reason": "Mandatory user-provided reference. Same as PMID 38123456 (Mueller et al. 2024).", "screenedBy": "ai", "isMandatory": true },
+  { "id": "doi-10-1007-s41669-024-00456-7", "decision": "include", "reason": "Mandatory user-provided reference. Same as PMID 37556789 (Huber et al. 2024 cost-effectiveness study).", "screenedBy": "ai", "isMandatory": true }
+]

@@ -1,0 +1,152 @@
+{
+  "engine": "@heor/engine",
+  "kind": "model-run",
+  "model": "markov-chain",
+  "modelType": "Markov Chain",
+  "generatedAt": "2026-09-04T11:43:27.471Z",
+  "inputs": {
+    "Prob Healthy to Healthy": 0.85,
+    "Prob Healthy to Disease": 0.1,
+    "Prob Healthy to Dead": 0.05,
+    "Prob Disease to Healthy": 0.2,
+    "Prob Disease to Disease": 0.7,
+    "Prob Disease to Dead": 0.1,
+    "Cost Healthy State": 500,
+    "Cost Disease State": 3000,
+    "Cost Dead State": 0,
+    "Utility Healthy State": 1,
+    "Utility Disease State": 0.7,
+    "Utility Dead State": 0,
+    "Number of Cycles": 20,
+    "Annual Discount Rate": 0.03,
+    "Initial Cohort % Healthy": 70,
+    "Initial Cohort % Disease": 30
+  },
+  "results": {
+    "totalDiscountedCost": 11573.63,
+    "totalDiscountedQALYs": 8.4481,
+    "stateTrace": [
+      {
+        "cycle": 1,
+        "healthy": 0.7,
+        "disease": 0.3,
+        "dead": 5.551115123125783e-17
+      },
+      {
+        "cycle": 2,
+        "healthy": 0.655,
+        "disease": 0.27999999999999997,
+        "dead": 0.06500000000000006
+      },
+      {
+        "cycle": 3,
+        "healthy": 0.6127499999999999,
+        "disease": 0.26149999999999995,
+        "dead": 0.12575000000000006
+      },
+      {
+        "cycle": 4,
+        "healthy": 0.5731375,
+        "disease": 0.24432499999999996,
+        "dead": 0.18253750000000007
+      },
+      {
+        "cycle": 5,
+        "healthy": 0.5360318749999999,
+        "disease": 0.22834124999999997,
+        "dead": 0.23562687500000007
+      },
+      {
+        "cycle": 6,
+        "healthy": 0.50129534375,
+        "disease": 0.21344206249999997,
+        "dead": 0.28526259375000007
+      },
+      {
+        "cycle": 7,
+        "healthy": 0.46878945468749994,
+        "disease": 0.199538978125,
+        "dead": 0.33167156718750007
+      },
+      {
+        "cycle": 8,
+        "healthy": 0.43837883210937495,
+        "disease": 0.18655623015624997,
+        "dead": 0.3750649377343751
+      },
+      {
+        "cycle": 9,
+        "healthy": 0.4099332533242187,
+        "disease": 0.17442724432031248,
+        "dead": 0.41563950235546887
+      },
+      {
+        "cycle": 10,
+        "healthy": 0.38332871418964837,
+        "disease": 0.1630923963566406,
+        "dead": 0.45357888945371105
+      },
+      {
+        "cycle": 11,
+        "healthy": 0.3584478863325292,
+        "disease": 0.15249754886861328,
+        "dead": 0.4890545647988575
+      },
+      {
+        "cycle": 12,
+        "healthy": 0.33518021315637253,
+        "disease": 0.1425930728412822,
+        "dead": 0.5222267140023453
+      },
+      {
+        "cycle": 13,
+        "healthy": 0.31342179575117307,
+        "disease": 0.13333317230453479,
+        "dead": 0.5532450319442921
+      },
+      {
+        "cycle": 14,
+        "healthy": 0.29307516084940405,
+        "disease": 0.12467540018829165,
+        "dead": 0.5822494389623042
+      },
+      {
+        "cycle": 15,
+        "healthy": 0.2740489667596518,
+        "disease": 0.11658029621674455,
+        "dead": 0.6093707370236036
+      },
+      {
+        "cycle": 16,
+        "healthy": 0.25625768098905294,
+        "disease": 0.10901110402768636,
+        "dead": 0.6347312149832607
+      },
+      {
+        "cycle": 17,
+        "healthy": 0.23962124964623227,
+        "disease": 0.10193354091828574,
+        "dead": 0.658445209435482
+      },
+      {
+        "cycle": 18,
+        "healthy": 0.22406477038295458,
+        "disease": 0.09531560360742325,
+        "dead": 0.6806196260096221
+      },
+      {
+        "cycle": 19,
+        "healthy": 0.20951817554699603,
+        "disease": 0.08912739956349172,
+        "dead": 0.7013544248895122
+      },
+      {
+        "cycle": 20,
+        "healthy": 0.19591592912764497,
+        "disease": 0.0833409972491438,
+        "dead": 0.7207430736232112
+      }
+    ],
+    "details": "Markov model run for 20 cycles with a 3% discount rate. Results are for a single arm."
+  }
+}

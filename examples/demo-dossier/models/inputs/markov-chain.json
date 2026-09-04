@@ -1,0 +1,103 @@
+{
+  "model": "markov-chain",
+  "inputs": {
+    "Prob Healthy to Healthy": 0.85,
+    "Prob Healthy to Disease": 0.10,
+    "Prob Healthy to Dead": 0.05,
+    "Prob Disease to Healthy": 0.20,
+    "Prob Disease to Disease": 0.70,
+    "Prob Disease to Dead": 0.10,
+    "Cost Healthy State": 500,
+    "Cost Disease State": 3000,
+    "Cost Dead State": 0,
+    "Utility Healthy State": 1.0,
+    "Utility Disease State": 0.70,
+    "Utility Dead State": 0.0,
+    "Number of Cycles": 20,
+    "Annual Discount Rate": 0.03,
+    "Initial Cohort % Healthy": 70,
+    "Initial Cohort % Disease": 30
+  },
+  "sources": {
+    "Prob Healthy to Healthy": {
+      "source": "Kolovos et al. 2023 (PMID 36554433), Table 3. 12-month remission rate 81% in intervention arm, adjusted for relapse.",
+      "confidence": "medium",
+      "method": "Derived from reported remission and relapse rates"
+    },
+    "Prob Healthy to Disease": {
+      "source": "Kolovos et al. 2023 (PMID 36554433). Relapse rate 19% per year in intervention arm.",
+      "confidence": "medium",
+      "method": "Annual relapse rate from 12-month follow-up"
+    },
+    "Prob Healthy to Dead": {
+      "source": "Swiss Federal Statistical Office, 2023 life table. All-cause mortality for adults 18-65.",
+      "confidence": "high",
+      "method": "Age-standardised mortality rate"
+    },
+    "Prob Disease to Healthy": {
+      "source": "Mueller et al. 2024 (PMID 38123456). Remission rate 44% at 12 weeks, annualised.",
+      "confidence": "high",
+      "method": "RCT primary outcome, annualised"
+    },
+    "Prob Disease to Disease": {
+      "source": "Mueller et al. 2024 (PMID 38123456). Non-remission rate 56% at 12 weeks, adjusted for dropout.",
+      "confidence": "high",
+      "method": "RCT primary outcome, annualised"
+    },
+    "Prob Disease to Dead": {
+      "source": "Swiss Federal Statistical Office, 2023. Depression-associated excess mortality ratio 1.4 applied to baseline.",
+      "confidence": "medium",
+      "method": "Standardised mortality ratio applied to life table"
+    },
+    "Cost Healthy State": {
+      "source": "Richards et al. 2023 (PMID 37001122). Mean GP visits per 6 months in remitted patients x CHF 85 per visit x 2.",
+      "confidence": "medium",
+      "method": "Healthcare utilisation from RCT, Swiss unit costs"
+    },
+    "Cost Disease State": {
+      "source": "Huber et al. 2024 (PMID 37556789). Annual cost of depression management including GP, medication, and specialist referral. CHF 3,000.",
+      "confidence": "high",
+      "method": "Swiss payer perspective cost analysis"
+    },
+    "Cost Dead State": {
+      "source": "Assumption. Terminal care cost assumed CHF 0 (absorbed by end-of-life care budgets outside OKP depression scope).",
+      "confidence": "low",
+      "method": "Assumption"
+    },
+    "Utility Healthy State": {
+      "source": "Mueller et al. 2024 (PMID 38123456). EQ-5D-5L utility for remitted patients at 12 weeks. 1.0 (full health).",
+      "confidence": "high",
+      "method": "RCT patient-reported outcome"
+    },
+    "Utility Disease State": {
+      "source": "Andersson et al. 2023 meta-analysis (PMID 37901234). Pooled EQ-5D utility for depressed adults in active episode.",
+      "confidence": "high",
+      "method": "Meta-analysis of 42 RCTs"
+    },
+    "Utility Dead State": {
+      "source": "Standard convention. Dead state utility = 0.",
+      "confidence": "high",
+      "method": "Convention"
+    },
+    "Number of Cycles": {
+      "source": "Assumption. 20-year horizon to capture long-term relapse and mortality.",
+      "confidence": "medium",
+      "method": "Modelling assumption"
+    },
+    "Annual Discount Rate": {
+      "source": "Swiss health economics convention. 3% per annum for both costs and outcomes.",
+      "confidence": "high",
+      "method": "Standard"
+    },
+    "Initial Cohort % Healthy": {
+      "source": "Assumption. 70% of the target population starts in remission (PHQ-9 < 5) at the point of model entry.",
+      "confidence": "medium",
+      "method": "Assumption based on care pathway"
+    },
+    "Initial Cohort % Disease": {
+      "source": "Assumption. 30% start in an active depressive episode.",
+      "confidence": "medium",
+      "method": "Assumption based on care pathway"
+    }
+  }
+}
