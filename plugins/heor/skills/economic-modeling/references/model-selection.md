@@ -52,7 +52,7 @@ substitute for the pathway/time-horizon justification.
 | `markov-chain` | full | yes |
 | `budget-impact` | full | yes |
 | `state-transition` | **stub** (vector × matrix propagation only) | no |
-| `partitioned-survival` | **stub** (50/50 pre/post split; survival-curve params accepted but unused) | no |
+| `partitioned-survival` | full (Weibull survival curve) | no |
 | `discrete-event-simulation` | **stub** (deterministic volume approximation) | no |
 
 When two models are scientifically defensible and one is fully implemented,

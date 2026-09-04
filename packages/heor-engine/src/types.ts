@@ -166,6 +166,7 @@ export interface PartitionedSurvivalModelResults {
   totalDiscountedQALYs: number;
   preProgressionCycles: number;
   postProgressionCycles: number;
+  stateTrace?: Array<{ cycle: number; preProgression: number; postProgression: number }>;
   details?: string;
   error?: string;
 }

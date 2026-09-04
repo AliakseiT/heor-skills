@@ -218,41 +218,90 @@ describe('calculateStateTransitionModel', () => {
 });
 
 describe('calculatePartitionedSurvivalModel', () => {
-  it('splits cycles 50/50 pre/post-progression and sums discounted cost/utility', () => {
+  it('partitions the cohort using a Weibull survival curve with half-cycle correction', () => {
     const r = calculatePartitionedSurvivalModel({
-      survivalCurveParam1: 1,
-      survivalCurveParam2: 1,
+      survivalCurveParam1: 10,  // scale
+      survivalCurveParam2: 1,   // shape (exponential)
       costPerCyclePre: 5000,
       costPerCyclePost: 2000,
       utilityPre: 0.75,
       utilityPost: 0.5,
-      numCycles: 4,
+      numCycles: 2,
       discountRate: 0,
     });
     expect(r.error).toBeUndefined();
-    expect(r.preProgressionCycles).toBe(2);
-    expect(r.postProgressionCycles).toBe(2);
-    // 2*5000 + 2*2000 = 14000; 2*0.75 + 2*0.5 = 2.5
-    expect(r.totalDiscountedCost).toBe(14000);
-    expect(r.totalDiscountedQALYs).toBeCloseTo(2.5, 4);
+
+    // Weibull with shape=1 is exponential: S(t) = exp(-t/scale) = exp(-t/10)
+    // Cycle 1 (t=1): S(1) = exp(-0.1) = 0.90484, S(2) = exp(-0.2) = 0.81873
+    //   Half-cycle avg: pre = (0.90484 + 0.81873)/2 = 0.86178, post = 0.13822
+    //   Cost = 0.86178*5000 + 0.13822*2000 = 4308.9 + 276.44 = 4585.34
+    //   QALY = 0.86178*0.75 + 0.13822*0.5 = 0.64633 + 0.06911 = 0.71544
+    //
+    // Cycle 2 (t=2): S(2) = 0.81873, S(3) = exp(-0.3) = 0.74082
+    //   Half-cycle avg: pre = (0.81873 + 0.74082)/2 = 0.77978, post = 0.22022
+    //   Cost = 0.77978*5000 + 0.22022*2000 = 3898.9 + 440.44 = 4339.34
+    //   QALY = 0.77978*0.75 + 0.22022*0.5 = 0.58484 + 0.11011 = 0.69495
+    //
+    // Total cost = 4585.34 + 4339.34 = 8924.68 → rounded 8924.68
+    // Total QALY = 0.71544 + 0.69495 = 1.41039
+    // Pre-progression cycles = 0.86178 + 0.77978 = 1.64156
+    // Post-progression cycles = 0.13822 + 0.22022 = 0.35844
+
+    expect(r.totalDiscountedCost).toBeCloseTo(8924.68, 2);
+    expect(r.totalDiscountedQALYs).toBeCloseTo(1.4104, 4);
+    expect(r.preProgressionCycles).toBeCloseTo(1.6416, 4);
+    expect(r.postProgressionCycles).toBeCloseTo(0.3584, 4);
+    expect(r.stateTrace).toHaveLength(2);
+    expect(r.stateTrace![0].cycle).toBe(1);
+    expect(r.stateTrace![0].preProgression).toBeCloseTo(0.8618, 4);
+    expect(r.stateTrace![0].postProgression).toBeCloseTo(0.1382, 4);
+    expect(r.stateTrace![1].cycle).toBe(2);
   });
 
-  it('discounts each cycle at 1/(1+r)^cycle', () => {
+  it('applies per-cycle discount factor 1/(1+r)^cycle', () => {
     const r = calculatePartitionedSurvivalModel({
-      survivalCurveParam1: 1,
+      survivalCurveParam1: 10,
       survivalCurveParam2: 1,
       costPerCyclePre: 1000,
       costPerCyclePost: 500,
       utilityPre: 0.8,
       utilityPost: 0.4,
-      numCycles: 3, // 1 pre-cycle, 2 post-cycles
+      numCycles: 3,
       discountRate: 0.05,
     });
-    // 1000 + 500/1.05 + 500/1.1025 = 1929.71; 0.8 + 0.4/1.05 + 0.4/1.1025 = 1.5438
-    expect(r.preProgressionCycles).toBe(1);
-    expect(r.postProgressionCycles).toBe(2);
-    expect(r.totalDiscountedCost).toBeCloseTo(1929.71, 2);
-    expect(r.totalDiscountedQALYs).toBeCloseTo(1.5438, 4);
+    expect(r.error).toBeUndefined();
+    // Cycle 0 discount = 1, cycle 1 = 1/1.05, cycle 2 = 1/1.1025
+    // Undiscounted cost:
+    //   t=1: pre=(exp(-0.1)+exp(-0.2))/2=0.86178, cost=861.78+69.11=930.89
+    //   t=2: pre=(exp(-0.2)+exp(-0.3))/2=0.77978, cost=779.78+110.11=889.89
+    //   t=3: pre=(exp(-0.3)+exp(-0.4))/2=0.70801, cost=708.01+145.99=854.00
+    // Discounted: 930.89 + 889.89/1.05 + 854.00/1.1025
+    //           = 930.89 + 847.51 + 774.60 = 2553.00
+    expect(r.totalDiscountedCost).toBeCloseTo(2551.9, 1);
+    expect(r.totalDiscountedQALYs).toBeGreaterThan(0);
+  });
+
+  it('handles a Weibull shape > 1 (accelerated progression)', () => {
+    const r = calculatePartitionedSurvivalModel({
+      survivalCurveParam1: 10,
+      survivalCurveParam2: 2,  // shape > 1: progression accelerates over time
+      costPerCyclePre: 5000,
+      costPerCyclePost: 2000,
+      utilityPre: 0.75,
+      utilityPost: 0.5,
+      numCycles: 10,
+      discountRate: 0.03,
+    });
+    expect(r.error).toBeUndefined();
+    // With shape=2, survival drops faster than exponential
+    // S(10) = exp(-(10/10)^2) = exp(-1) = 0.368
+    // Early cycles are mostly pre-progression, later cycles shift to post
+    expect(r.stateTrace).toHaveLength(10);
+    // First cycle should be mostly pre-progression
+    expect(r.stateTrace![0].preProgression).toBeGreaterThan(r.stateTrace![0].postProgression);
+    // By the last cycle, post-progression should dominate
+    const last = r.stateTrace![9];
+    expect(last.postProgression).toBeGreaterThan(last.preProgression);
   });
 
   it('reports invalid numeric inputs', () => {
@@ -267,6 +316,34 @@ describe('calculatePartitionedSurvivalModel', () => {
       discountRate: 0,
     });
     expect(r.error).toContain('costPerCyclePre');
+  });
+
+  it('rejects non-positive scale parameter', () => {
+    const r = calculatePartitionedSurvivalModel({
+      survivalCurveParam1: 0,
+      survivalCurveParam2: 1,
+      costPerCyclePre: 5000,
+      costPerCyclePost: 2000,
+      utilityPre: 0.75,
+      utilityPost: 0.5,
+      numCycles: 4,
+      discountRate: 0,
+    });
+    expect(r.error).toContain('scale');
+  });
+
+  it('rejects non-positive shape parameter', () => {
+    const r = calculatePartitionedSurvivalModel({
+      survivalCurveParam1: 10,
+      survivalCurveParam2: -1,
+      costPerCyclePre: 5000,
+      costPerCyclePost: 2000,
+      utilityPre: 0.75,
+      utilityPost: 0.5,
+      numCycles: 4,
+      discountRate: 0,
+    });
+    expect(r.error).toContain('shape');
   });
 });
 

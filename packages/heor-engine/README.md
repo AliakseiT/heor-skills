@@ -4,7 +4,7 @@ Pure-TypeScript health-economic modeling engine with **zero runtime dependencies
 
 Contents:
 
-- **Six model calculators** (`src/ce-models.ts`): Decision Tree, Markov Chain, Budget Impact Assessment, State Transition Model (stub), Partitioned Survival Model (stub), Discrete Event Simulation (stub).
+- **Six model calculators** (`src/ce-models.ts`): Decision Tree, Markov Chain, Budget Impact Assessment, State Transition Model, Partitioned Survival Model, Discrete Event Simulation (stub).
 - **Probabilistic sensitivity analysis** (`src/probabilistic-sensitivity-analysis.ts`): Monte Carlo simulation with summary statistics, CEAC curve, and tornado diagram. Supports Decision Tree, Markov Chain, and Budget Impact models. Deterministic via `seed` or an injectable `rng: () => number`.
 - **Batch scenario execution** (`src/batch-scenario-executor.ts`): baseline vs. alternative scenario comparison with device-class defaults, input merging, caching, and aggregated metrics.
 - **Device-class default parameter sets** (`src/economic-model-defaults.ts`) and **input merging/name mapping** utilities.
@@ -32,7 +32,7 @@ Model identifiers (accepted as kebab-case slug or display name):
 | `markov-chain` | Markov Chain | yes |
 | `budget-impact` | Budget Impact Assessment | yes |
 | `state-transition` | State Transition Model | no (stub calculator) |
-| `partitioned-survival` | Partitioned Survival Model | no (stub calculator) |
+| `partitioned-survival` | Partitioned Survival Model | no |
 | `discrete-event-simulation` | Discrete Event Simulation | no (stub calculator) |
 
 ## `run-model.ts` input format
@@ -145,9 +145,9 @@ Arbitrary n-state vector propagation (`stateVec × transitionMatrix` per cycle).
 }
 ```
 
-### Partitioned Survival Model (`partitioned-survival`) — stub
+### Partitioned Survival Model (`partitioned-survival`)
 
-Cycles are split 50/50 pre/post-progression; the survival-curve parameters are accepted but not yet used by the stub.
+Weibull survival curve partitions the cohort into pre-progression and post-progression states. `survivalCurveParam1` = scale (λ), `survivalCurveParam2` = shape (k). S(t) = exp(-(t/λ)^k). Half-cycle correction applied.
 
 ```json
 {
