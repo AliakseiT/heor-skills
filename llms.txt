@@ -1,0 +1,81 @@
+# HEOR Skills — LLM-Readable Project Summary
+
+> This file is a machine-readable summary for LLMs and agents discovering
+> this repository. It complements README.md (for humans) with structured
+> metadata optimized for retrieval.
+
+## What this is
+
+Open-source HEOR (Health Economics and Outcomes Research) and medical device
+market-access skills for AI agents. Nine skills, a deterministic economic
+modeling engine, and six jurisdictional reimbursement databases.
+
+## For which AI agents
+
+Claude Code, Codex, Cursor, Gemini CLI, and any Agent-Skills-compatible
+harness. Skills are harness-neutral (no Claude-specific dependencies in
+core workflows).
+
+## Skills (9)
+
+| Skill | Trigger phrases | What it does |
+|---|---|---|
+| regulation-navigator | "regulatory pathway", "reimbursement route", "market access" | Maps a product to its reimbursement pathway across CH, DE, FR, US |
+| tariff-scout | "reimbursement code", "tariff search", "existing code" | Searches official reimbursement lists for existing codes |
+| prisma-review | "literature review", "PRISMA", "systematic search", "PICO" | PRISMA 2020 systematic literature review |
+| economic-modeling | "cost-effectiveness", "CEA", "BIA", "Markov", "ICER", "PSA" | Builds and runs cost-effectiveness and budget-impact models |
+| ch-migel-application | "MiGeL", "Mittel- und Gegenständeliste", "Swiss device list" | Drafts Swiss MiGeL application form |
+| ch-analysenliste-application | "Analysenliste", "lab test reimbursement", "Swiss lab list" | Drafts Swiss Analysenliste application form |
+| ch-klv-forms | "KLV", "Antrag", "Meldung", "Umstrittenheit" | Drafts Swiss KLV forms |
+| eurhta-report | "HTA report", "EUnetHTA", "Core Model", "dossier chapter" | Drafts EUnetHTA Core Model HTA report |
+| hta-quality-check | "quality check", "score", "consistency check" | Scores drafts against rubrics, checks consistency |
+
+## Economic engine (@heor/engine)
+
+Six model calculators, all fully implemented (no stubs):
+
+1. **Decision Tree** — two-arm diagnostic test tree with ICER
+2. **Markov Chain** — three-state cohort model (Healthy/Disease/Dead)
+3. **Budget Impact** — multi-year market share displacement
+4. **State Transition** — n-state matrix propagation with half-cycle correction
+5. **Partitioned Survival** — Weibull survival curve (pre/post-progression)
+6. **Discrete Event Simulation** — M/M/c queueing model
+
+All support deterministic runs via CLI. Decision Tree, Markov Chain, and
+Budget Impact also support Monte Carlo PSA with CEAC and tornado diagrams.
+
+Zero runtime dependencies. Pure TypeScript. CLI-first.
+
+## Reimbursement databases (6)
+
+| Country | List | Entries | Source | Refresh |
+|---|---|---|---|---|
+| CH | MiGeL (devices) | ~3,400 | BAG/FOPH | manual (BAG link resolver TODO) |
+| CH | Analysenliste (lab tests) | ~1,400 | BAG/FOPH | manual (BAG link resolver TODO) |
+| DE | DiGA (digital health apps) | 79 | BfArM FHIR API | monthly CI |
+| DE | HMV (assistive devices) | 50,302 | GKV REST API | monthly CI |
+| FR | LPP (medical products) | 37,021 | CNAM DBF | monthly CI |
+| US | HCPCS Level II | 9,153 | CMS XLSX | quarterly CI |
+
+## Key files for agents
+
+| File | Purpose |
+|---|---|
+| `AGENTS.md` | Entry point for AI agents — skill trigger-phrase registry, CLI commands |
+| `README.md` | Human-readable overview with pipeline diagram |
+| `CONVENTIONS.md` | Binding rules for all contributions |
+| `plugins/heor/DOSSIER_FORMAT.md` | Dossier directory contract (what skills read/write) |
+| `packages/heor-engine/README.md` | Engine CLI docs (input formats, model types) |
+| `TESTING.md` | How to test the engine and skills |
+| `examples/demo-dossier/` | Fully populated example dossier (SereniCBT) |
+
+## Install (Claude Code)
+
+```bash
+/plugin marketplace add AliakseiT/heor-skills
+/plugin install heor@heor-skills
+```
+
+## License
+
+Apache-2.0. Drafts produced require review by qualified professionals.

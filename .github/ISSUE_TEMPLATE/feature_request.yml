@@ -1,0 +1,15 @@
+---
+name: Feature request
+about: Suggest a new skill, model, data source, or improvement
+title: "[feature] "
+labels: enhancement
+---
+
+**What problem does this solve?**
+<!-- e.g. "No skill covers UK NICE HTA submissions" -->
+
+**Proposed solution**
+<!-- What you'd like to see -->
+
+**Alternatives considered**
+<!-- Workarounds you've tried -->

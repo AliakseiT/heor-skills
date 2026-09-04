@@ -1,14 +1,22 @@
 # HEOR Skills
 
-Market-access and health-economics tooling for medical device companies.
-Nine skills covering the reimbursement journey from pathway selection to
-application drafting, backed by a deterministic economic modeling engine and
-six official reimbursement databases (Switzerland, Germany, France, USA).
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[![TypeScript](https://img.shields.io/badge/TypeScript-zero--dep-3178C6.svg)](packages/heor-engine/)
+[![Tests](https://img.shields.io/badge/Tests-71%20passing-22C55E.svg)](TESTING.md)
+[![CI](https://github.com/AliakseiT/heor-skills/actions/workflows/ci.yml/badge.svg)](https://github.com/AliakseiT/heor-skills/actions/workflows/ci.yml)
 
-Works with Claude Code and any Agent-Skills-compatible harness (Codex,
-Cursor, Gemini CLI).
+Open-source **HEOR (Health Economics and Outcomes Research)** and **medical
+device market-access** skills for AI agents. Nine skills covering the full
+reimbursement journey — from pathway selection to application drafting — backed
+by a deterministic economic modeling engine and six official reimbursement
+databases across Switzerland, Germany, France, and the USA.
 
-> **Status: pre-release.** Not yet published to any marketplace.
+Works with **Claude Code**, **Codex**, **Cursor**, **Gemini CLI**, and any
+Agent-Skills-compatible harness. Skills are harness-neutral: no reliance on
+Claude-specific tools in core workflows.
+
+> **Status: pre-release.** Not yet published to any marketplace. The engine
+> and data pipeline are production-ready; skill workflows are being refined.
 
 ## Pipeline
 
@@ -118,3 +126,24 @@ docs/cookbook/                 recipe guides for common workflows
 Apache-2.0. Drafts produced with these skills require review by qualified
 professionals. Nothing here is regulatory, clinical, or reimbursement
 advice.
+
+## Who is this for
+
+- **HEOR professionals** building market-access dossiers for medical devices
+  and digital health interventions across European and US markets
+- **AI agent developers** who need deterministic, auditable economic modeling
+  rather than LLM-generated arithmetic
+- **Regulatory affairs teams** navigating Swiss (MiGeL, Analysenliste, KLV),
+  German (DiGA, HMV), French (LPP), or US (HCPCS) reimbursement pathways
+- **Health technology assessment researchers** running PRISMA literature
+  reviews and cost-effectiveness analyses
+
+## Keywords
+
+HEOR, health economics, outcomes research, HTA, health technology assessment,
+market access, medical devices, digital health, reimbursement, cost-effectiveness
+analysis, CEA, budget impact analysis, BIA, Markov model, decision tree,
+partitioned survival, discrete event simulation, probabilistic sensitivity
+analysis, PSA, ICER, QALY, PRISMA, systematic literature review, PICO,
+EUnetHTA, MiGeL, Analysenliste, KLV, DiGA, HMV, LPP, HCPCS, Claude Code skills,
+AI agent skills, Switzerland, Germany, France, USA
