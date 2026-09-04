@@ -8,10 +8,10 @@ name: Data refresh
 # STATUS: ACTIVE for de/hmv (GKV REST API), de/diga (BfArM FHIR API with token
 # handshake), fr/lpp (latest LPP<nnn>.zip resolved from the CNAM index page), and
 # us/hcpcs (quarterly ZIP resolved from the CMS landing page) — all live-verified
-# 2026-07-15. The two CH lists (ch/migel, ch/analysenliste) remain manual: BAG
+# 2026-09-04. The two CH lists (ch/migel, ch/analysenliste) remain manual: BAG
 # Excel links are versioned per release with opaque tokens; refresh them with
 # `refresh.ts --list ch/<list> --local <xlsx>` (a landing-page link resolver is a
-# known TODO). Manual/unimplemented sources are reported as skipped, non-fatally.
+# known TODO). Manual sources are reported as skipped, non-fatally.
 
 on:
   schedule:
@@ -31,11 +31,11 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: pnpm/action-setup@v4
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
           cache: pnpm
