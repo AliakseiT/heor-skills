@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm --filter @heor/engine typecheck
+
+      - name: Engine tests
+        run: pnpm --filter @heor/engine test
+
+      - name: Skill script tests + data validation
+        run: npx vitest run --config vitest.config.ts
+
+      - name: Verify demo dossier model run is reproducible
+        run: |
+          npx tsx packages/heor-engine/src/cli/run-model.ts \
+            examples/demo-dossier/models/inputs/markov-chain.json 2>/dev/null > /tmp/demo-run.json
+          # The total discounted cost must match the committed run
+          EXPECTED=$(node -e "const r=require('./examples/demo-dossier/models/runs/2026-01-15-markov-chain.json'); console.log(r.results.totalDiscountedCost)")
+          ACTUAL=$(node -e "const r=require('/tmp/demo-run.json'); console.log(r.results.totalDiscountedCost)")
+          echo "Expected: $EXPECTED  Actual: $ACTUAL"
+          test "$EXPECTED" = "$ACTUAL"

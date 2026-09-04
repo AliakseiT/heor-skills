@@ -1,6 +1,6 @@
 ---
 name: tariff-scout
-description: Search official reimbursement lists (Swiss MiGeL & Analysenliste today; German HMV/DiGA, French LPP, US HCPCS as data lands) for existing codes and analogous listed products. Use when the user asks "is there already a reimbursement code / tariff position for X", "what do comparable products bill under", "is our device already listed", or needs to decide between billing an existing code vs filing a new application. Runs deterministic lexical (non-embedding) search via scripts/search.ts over the normalized data in data/.
+description: Search official reimbursement lists (Swiss MiGeL and Analysenliste, German HMV and DiGA, French LPP, US HCPCS) for existing codes and analogous listed products. Use when the user asks "is there already a reimbursement code / tariff position for X", "what do comparable products bill under", "is our device already listed", or needs to decide between billing an existing code vs filing a new application. Runs deterministic lexical (non-embedding) search via scripts/search.ts over the normalized data in data/.
 metadata:
   jurisdiction: [ch, de, fr, us]
   languages: [de, fr, it, en]
@@ -19,9 +19,12 @@ Search is **lexical** — normalized multi-language token matching with a simple
 |---|---|
 | `ch/migel` (Mittel- und Gegenständeliste) | available (de, fr, it) |
 | `ch/analysenliste` (List of Analyses) | available (de, fr, it) |
-| `de/hmv`, `de/diga`, `fr/lpp`, `us/hcpcs` | normalizers scaffolded; data not yet generated (see `tools/data-pipeline/sources.json`) |
+| `de/hmv` (Hilfsmittelverzeichnis) | available (de) |
+| `de/diga` (DiGA-Verzeichnis) | available (de) |
+| `fr/lpp` (Liste des Produits et Prestations) | available (fr) |
+| `us/hcpcs` (HCPCS Level II) | available (en) |
 
-If the user asks about a jurisdiction with no generated data, say so and offer to run the pipeline (`tools/data-pipeline/refresh.ts`) once the source file is available.
+Data is refreshed monthly by CI. If the user asks about a jurisdiction with no generated data, say so and offer to run the pipeline (`tools/data-pipeline/refresh.ts`).
 
 ## Workflow
 

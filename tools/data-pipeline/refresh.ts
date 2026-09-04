@@ -143,7 +143,7 @@ async function processList(
   let localPath = args.local;
   try {
     const normalizer = await loadNormalizer(key);
-    if (!localPath && args.download && source.status === 'download-verified') {
+    if (!localPath && args.download && source.status === 'download-verified' && source.downloadUrl) {
       localPath = await downloadSource(source);
       summary.push(`- downloaded ${source.downloadUrl}`);
     }

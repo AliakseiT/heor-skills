@@ -39,15 +39,17 @@ Flags: `--list <jur/list>` (repeatable), `--all`, `--local <file>`, `--version <
 
 ## Source status (`sources.json`)
 
-- `download-verified` — `downloadUrl` fetches the artifact directly; `--download` uses it.
-- `landing-verified` — landing page confirmed reachable, but the download link is versioned
-  per release; download manually and pass `--local`.
+- `download-verified` — the normalizer fetches data from the official source
+  (API or landing-page scrape). `--download` triggers it. Some sources have a
+  `downloadUrl` (direct fetch); others resolve their URL internally.
+- `landing-verified` — landing page confirmed reachable, but the download link
+  is versioned per release; download manually and pass `--local`.
 - `verify` — URL/API not yet confirmed.
 
-CH MiGeL and Analysenliste are `landing-verified` (BAG Excel links embed the release name and
-change each revision). `de/diga`, `de/hmv`, `fr/lpp`, `us/hcpcs` normalizers are scaffolded
-(see each `normalizers/*.ts` for the planned shape and the upstream format notes); their
-`refresh.ts` runs report "skipped (normalizer not implemented)" until built.
+CH MiGeL and Analysenliste are `landing-verified` (BAG Excel links embed the
+release name and change each revision). DE/DiGA (BfArM FHIR API), DE/HMV
+(GKV REST API), FR/LPP (CNAM DBF archive), and US/HCPCS (CMS quarterly ZIP)
+are all `download-verified` and run automatically in CI.
 
 ## CI
 

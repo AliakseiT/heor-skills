@@ -1,6 +1,6 @@
 {
   "$id": "heor-skills/data/fr/lpp",
-  "description": "Planned shape for the French LPP (normalizer not yet implemented — see normalizers/fr-lpp.ts).",
+  "description": "French Liste des Produits et Prestations (LPP) from CNAM / ameli. DBF tables parsed with the built-in pure-TS reader.",
   "$defs": {
     "index": {
       "type": "object",
