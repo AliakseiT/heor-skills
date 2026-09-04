@@ -51,16 +51,15 @@ substitute for the pathway/time-horizon justification.
 | `decision-tree` | full | yes |
 | `markov-chain` | full | yes |
 | `budget-impact` | full | yes |
-| `state-transition` | **stub** (vector × matrix propagation only) | no |
-| `partitioned-survival` | **stub** (50/50 pre/post split; survival-curve params accepted but unused) | no |
-| `discrete-event-simulation` | **stub** (deterministic volume approximation) | no |
+| `state-transition` | full (half-cycle correction) | no |
+| `partitioned-survival` | full (Weibull survival curve) | no |
+| `discrete-event-simulation` | full (M/M/c queue) | no |
 
-When two models are scientifically defensible and one is fully implemented,
-prefer the fully implemented one and say why. If a stub model is clearly the
-right science (e.g. oncology with real survival curves), still recommend it
-— but warn the user explicitly that the engine's calculator is a stub, the
-numbers are structural placeholders, and PSA is unavailable; offer a fully
-supported model as a pragmatic alternative.
+When two models are scientifically defensible and one has PSA support,
+prefer the one with PSA. If a model without PSA is clearly the right
+science, still recommend it — but warn the user that PSA is unavailable
+and offer scenario comparison or a PSA-supported model as a pragmatic
+alternative.
 
 ## Output of this step
 

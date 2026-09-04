@@ -181,7 +181,7 @@ describe('calculateBudgetImpactModel', () => {
 });
 
 describe('calculateStateTransitionModel', () => {
-  it('propagates the state vector and accumulates discounted cost/QALYs', () => {
+  it('propagates the state vector with half-cycle correction and accumulates discounted cost/QALYs', () => {
     const r = calculateStateTransitionModel({
       transitionMatrix: [
         [0.8, 0.2],
@@ -194,14 +194,41 @@ describe('calculateStateTransitionModel', () => {
       discountRate: 0,
     });
     expect(r.error).toBeUndefined();
-    // Cycle 1: cost = 0.7*100 + 0.3*200 = 130; QALY = 0.63 + 0.15 = 0.78
-    // Next state: [0.59, 0.41]; cycle 2: cost = 59 + 82 = 141; QALY = 0.531 + 0.205 = 0.736
-    expect(r.totalDiscountedCost).toBe(271);
-    expect(r.totalDiscountedQALYs).toBeCloseTo(1.516, 4);
+
+    // Cycle 0: start = [0.7, 0.3], next = [0.59, 0.41]
+    // Half-cycle avg = [0.645, 0.355]
+    // Cost = 0.645*100 + 0.355*200 = 135.5; QALY = 0.645*0.9 + 0.355*0.5 = 0.758
+    //
+    // Cycle 1: start = [0.59, 0.41], next = [0.513, 0.487]
+    // Half-cycle avg = [0.5515, 0.4485]
+    // Cost = 55.15 + 89.7 = 144.85; QALY = 0.49635 + 0.22425 = 0.7206
+    //
+    // Total: cost = 280.35, QALY = 1.4786
+    expect(r.totalDiscountedCost).toBe(280.35);
+    expect(r.totalDiscountedQALYs).toBeCloseTo(1.4786, 4);
     expect(r.stateTrace).toHaveLength(2);
     expect(r.stateTrace[0]).toEqual([0.7, 0.3]);
     expect(r.stateTrace[1][0]).toBeCloseTo(0.59, 10);
     expect(r.stateTrace[1][1]).toBeCloseTo(0.41, 10);
+  });
+
+  it('applies per-cycle discount factor 1/(1+r)^cycle', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [
+        [0.8, 0.2],
+        [0.1, 0.9],
+      ],
+      initialStateDistribution: [0.7, 0.3],
+      stateCosts: [100, 200],
+      stateUtilities: [0.9, 0.5],
+      numCycles: 2,
+      discountRate: 0.05,
+    });
+    // Cycle 0: discount 1 → cost 135.5, QALY 0.758
+    // Cycle 1: discount 1/1.05 → cost 144.85/1.05 = 137.95, QALY 0.7206/1.05 = 0.6863
+    // Total cost = 273.45, QALY = 1.4443
+    expect(r.totalDiscountedCost).toBeCloseTo(273.45, 2);
+    expect(r.totalDiscountedQALYs).toBeCloseTo(1.4443, 4);
   });
 
   it('rejects mismatched matrix/vector dimensions', () => {
@@ -215,44 +242,166 @@ describe('calculateStateTransitionModel', () => {
     });
     expect(r.error).toBe('Matrix/vector dimensions do not match number of states.');
   });
+
+  it('rejects transition probabilities out of [0, 1]', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [[1.5, -0.5], [0.1, 0.9]],
+      initialStateDistribution: [0.7, 0.3],
+      stateCosts: [100, 200],
+      stateUtilities: [0.9, 0.5],
+      numCycles: 2,
+      discountRate: 0,
+    });
+    expect(r.error).toContain('must be between 0 and 1');
+  });
+
+  it('rejects transition matrix rows that do not sum to 1', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [[0.7, 0.1], [0.1, 0.9]],
+      initialStateDistribution: [0.7, 0.3],
+      stateCosts: [100, 200],
+      stateUtilities: [0.9, 0.5],
+      numCycles: 2,
+      discountRate: 0,
+    });
+    expect(r.error).toContain('Row 0');
+    expect(r.error).toContain('must sum to 1');
+  });
+
+  it('rejects initial distribution that does not sum to 1', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [[0.8, 0.2], [0.1, 0.9]],
+      initialStateDistribution: [0.5, 0.3],
+      stateCosts: [100, 200],
+      stateUtilities: [0.9, 0.5],
+      numCycles: 2,
+      discountRate: 0,
+    });
+    expect(r.error).toBe('Initial state distribution must sum to 1.');
+  });
+
+  it('rejects non-positive numCycles', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [[0.8, 0.2], [0.1, 0.9]],
+      initialStateDistribution: [0.7, 0.3],
+      stateCosts: [100, 200],
+      stateUtilities: [0.9, 0.5],
+      numCycles: 0,
+      discountRate: 0,
+    });
+    expect(r.error).toBe('Number of cycles must be a positive integer.');
+  });
+
+  it('handles a 3-state model with an absorbing death state', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [
+        [0.7, 0.2, 0.1],
+        [0.0, 0.6, 0.4],
+        [0.0, 0.0, 1.0],
+      ],
+      initialStateDistribution: [1, 0, 0],
+      stateCosts: [500, 2000, 0],
+      stateUtilities: [0.9, 0.5, 0],
+      numCycles: 3,
+      discountRate: 0,
+    });
+    expect(r.error).toBeUndefined();
+    expect(r.stateTrace).toHaveLength(3);
+    expect(r.stateTrace[0]).toEqual([1, 0, 0]);
+    // After cycle 0 transition: [0.7, 0.2, 0.1]
+    expect(r.stateTrace[1][0]).toBeCloseTo(0.7, 10);
+    expect(r.stateTrace[1][1]).toBeCloseTo(0.2, 10);
+    expect(r.stateTrace[1][2]).toBeCloseTo(0.1, 10);
+    expect(r.totalDiscountedCost).toBeGreaterThan(0);
+    expect(r.totalDiscountedQALYs).toBeGreaterThan(0);
+  });
 });
 
 describe('calculatePartitionedSurvivalModel', () => {
-  it('splits cycles 50/50 pre/post-progression and sums discounted cost/utility', () => {
+  it('partitions the cohort using a Weibull survival curve with half-cycle correction', () => {
     const r = calculatePartitionedSurvivalModel({
-      survivalCurveParam1: 1,
-      survivalCurveParam2: 1,
+      survivalCurveParam1: 10,  // scale
+      survivalCurveParam2: 1,   // shape (exponential)
       costPerCyclePre: 5000,
       costPerCyclePost: 2000,
       utilityPre: 0.75,
       utilityPost: 0.5,
-      numCycles: 4,
+      numCycles: 2,
       discountRate: 0,
     });
     expect(r.error).toBeUndefined();
-    expect(r.preProgressionCycles).toBe(2);
-    expect(r.postProgressionCycles).toBe(2);
-    // 2*5000 + 2*2000 = 14000; 2*0.75 + 2*0.5 = 2.5
-    expect(r.totalDiscountedCost).toBe(14000);
-    expect(r.totalDiscountedQALYs).toBeCloseTo(2.5, 4);
+
+    // Weibull with shape=1 is exponential: S(t) = exp(-t/scale) = exp(-t/10)
+    // Cycle 1 (t=1): S(1) = exp(-0.1) = 0.90484, S(2) = exp(-0.2) = 0.81873
+    //   Half-cycle avg: pre = (0.90484 + 0.81873)/2 = 0.86178, post = 0.13822
+    //   Cost = 0.86178*5000 + 0.13822*2000 = 4308.9 + 276.44 = 4585.34
+    //   QALY = 0.86178*0.75 + 0.13822*0.5 = 0.64633 + 0.06911 = 0.71544
+    //
+    // Cycle 2 (t=2): S(2) = 0.81873, S(3) = exp(-0.3) = 0.74082
+    //   Half-cycle avg: pre = (0.81873 + 0.74082)/2 = 0.77978, post = 0.22022
+    //   Cost = 0.77978*5000 + 0.22022*2000 = 3898.9 + 440.44 = 4339.34
+    //   QALY = 0.77978*0.75 + 0.22022*0.5 = 0.58484 + 0.11011 = 0.69495
+    //
+    // Total cost = 4585.34 + 4339.34 = 8924.68 → rounded 8924.68
+    // Total QALY = 0.71544 + 0.69495 = 1.41039
+    // Pre-progression cycles = 0.86178 + 0.77978 = 1.64156
+    // Post-progression cycles = 0.13822 + 0.22022 = 0.35844
+
+    expect(r.totalDiscountedCost).toBeCloseTo(8924.68, 2);
+    expect(r.totalDiscountedQALYs).toBeCloseTo(1.4104, 4);
+    expect(r.preProgressionCycles).toBeCloseTo(1.6416, 4);
+    expect(r.postProgressionCycles).toBeCloseTo(0.3584, 4);
+    expect(r.stateTrace).toHaveLength(2);
+    expect(r.stateTrace![0].cycle).toBe(1);
+    expect(r.stateTrace![0].preProgression).toBeCloseTo(0.8618, 4);
+    expect(r.stateTrace![0].postProgression).toBeCloseTo(0.1382, 4);
+    expect(r.stateTrace![1].cycle).toBe(2);
   });
 
-  it('discounts each cycle at 1/(1+r)^cycle', () => {
+  it('applies per-cycle discount factor 1/(1+r)^cycle', () => {
     const r = calculatePartitionedSurvivalModel({
-      survivalCurveParam1: 1,
+      survivalCurveParam1: 10,
       survivalCurveParam2: 1,
       costPerCyclePre: 1000,
       costPerCyclePost: 500,
       utilityPre: 0.8,
       utilityPost: 0.4,
-      numCycles: 3, // 1 pre-cycle, 2 post-cycles
+      numCycles: 3,
       discountRate: 0.05,
     });
-    // 1000 + 500/1.05 + 500/1.1025 = 1929.71; 0.8 + 0.4/1.05 + 0.4/1.1025 = 1.5438
-    expect(r.preProgressionCycles).toBe(1);
-    expect(r.postProgressionCycles).toBe(2);
-    expect(r.totalDiscountedCost).toBeCloseTo(1929.71, 2);
-    expect(r.totalDiscountedQALYs).toBeCloseTo(1.5438, 4);
+    expect(r.error).toBeUndefined();
+    // Cycle 0 discount = 1, cycle 1 = 1/1.05, cycle 2 = 1/1.1025
+    // Undiscounted cost:
+    //   t=1: pre=(exp(-0.1)+exp(-0.2))/2=0.86178, cost=861.78+69.11=930.89
+    //   t=2: pre=(exp(-0.2)+exp(-0.3))/2=0.77978, cost=779.78+110.11=889.89
+    //   t=3: pre=(exp(-0.3)+exp(-0.4))/2=0.70801, cost=708.01+145.99=854.00
+    // Discounted: 930.89 + 889.89/1.05 + 854.00/1.1025
+    //           = 930.89 + 847.51 + 774.60 = 2553.00
+    expect(r.totalDiscountedCost).toBeCloseTo(2551.9, 1);
+    expect(r.totalDiscountedQALYs).toBeGreaterThan(0);
+  });
+
+  it('handles a Weibull shape > 1 (accelerated progression)', () => {
+    const r = calculatePartitionedSurvivalModel({
+      survivalCurveParam1: 10,
+      survivalCurveParam2: 2,  // shape > 1: progression accelerates over time
+      costPerCyclePre: 5000,
+      costPerCyclePost: 2000,
+      utilityPre: 0.75,
+      utilityPost: 0.5,
+      numCycles: 10,
+      discountRate: 0.03,
+    });
+    expect(r.error).toBeUndefined();
+    // With shape=2, survival drops faster than exponential
+    // S(10) = exp(-(10/10)^2) = exp(-1) = 0.368
+    // Early cycles are mostly pre-progression, later cycles shift to post
+    expect(r.stateTrace).toHaveLength(10);
+    // First cycle should be mostly pre-progression
+    expect(r.stateTrace![0].preProgression).toBeGreaterThan(r.stateTrace![0].postProgression);
+    // By the last cycle, post-progression should dominate
+    const last = r.stateTrace![9];
+    expect(last.postProgression).toBeGreaterThan(last.preProgression);
   });
 
   it('reports invalid numeric inputs', () => {
@@ -268,22 +417,78 @@ describe('calculatePartitionedSurvivalModel', () => {
     });
     expect(r.error).toContain('costPerCyclePre');
   });
+
+  it('rejects non-positive scale parameter', () => {
+    const r = calculatePartitionedSurvivalModel({
+      survivalCurveParam1: 0,
+      survivalCurveParam2: 1,
+      costPerCyclePre: 5000,
+      costPerCyclePost: 2000,
+      utilityPre: 0.75,
+      utilityPost: 0.5,
+      numCycles: 4,
+      discountRate: 0,
+    });
+    expect(r.error).toContain('scale');
+  });
+
+  it('rejects non-positive shape parameter', () => {
+    const r = calculatePartitionedSurvivalModel({
+      survivalCurveParam1: 10,
+      survivalCurveParam2: -1,
+      costPerCyclePre: 5000,
+      costPerCyclePost: 2000,
+      utilityPre: 0.75,
+      utilityPost: 0.5,
+      numCycles: 4,
+      discountRate: 0,
+    });
+    expect(r.error).toContain('shape');
+  });
 });
 
 describe('calculateDiscreteEventSimulationModel', () => {
-  it('computes patient volume, cost, QALYs and average wait deterministically', () => {
+  it('simulates an M/M/c queue with no waiting when capacity exceeds demand', () => {
     const r = calculateDiscreteEventSimulationModel({
-      eventRateAlpha: 5,
+      eventRateAlpha: 5,     // service time = 1/5 = 0.2 time units
       resourceCostBeta: 250,
-      patientArrivalRate: 2,
-      queueCapacity: 10,
+      patientArrivalRate: 2,  // inter-arrival = 0.5 time units
+      queueCapacity: 10,     // 10 slots — far more than needed
       simulationDuration: 30,
     });
     expect(r.error).toBeUndefined();
-    expect(r.numSimulatedPatients).toBe(60); // floor(2 * 30)
-    expect(r.totalCost).toBe(15000); // 60 * 250
-    expect(r.totalQALYs).toBe(3); // 60 * (5 / 100)
-    expect(r.averageWaitTime).toBe(6); // 60 / 10
+    expect(r.numSimulatedPatients).toBe(60);  // floor(2 * 30)
+    expect(r.totalCost).toBe(15000);           // 60 * 250
+    // With 10 slots and 0.2 service time, no patient ever waits
+    expect(r.averageWaitTime).toBe(0);
+    // QALYs = 60 * 0.2 * (1 - 0/30) = 12
+    expect(r.totalQALYs).toBeCloseTo(12, 4);
+  });
+
+  it('produces non-zero wait times when capacity is constrained', () => {
+    const r = calculateDiscreteEventSimulationModel({
+      eventRateAlpha: 1,     // service time = 1.0
+      resourceCostBeta: 100,
+      patientArrivalRate: 2, // inter-arrival = 0.5
+      queueCapacity: 1,      // only 1 slot — patients must queue
+      simulationDuration: 10,
+    });
+    expect(r.error).toBeUndefined();
+    expect(r.numSimulatedPatients).toBe(20);  // floor(2 * 10)
+    // With 1 slot and service time 1.0, inter-arrival 0.5:
+    // Patient 0: arrives 0, served 0-1, wait=0
+    // Patient 1: arrives 0.5, waits until 1.0, served 1.0-2.0, wait=0.5
+    // Patient 2: arrives 1.0, waits until 2.0, served 2.0-3.0, wait=1.0
+    // Pattern: patient i arrives at i*0.5, waits max(0, (i)*1.0 - i*0.5) = max(0, i*0.5)
+    // Wait times: 0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5
+    // Total wait = sum(0, 0.5, 1.0, ..., 9.5) = 0.5 * (0+1+2+...+19) = 0.5 * 190 = 95
+    // Average wait = 95 / 20 = 4.75
+    expect(r.averageWaitTime).toBe(4.75);
+    expect(r.totalCost).toBe(2000);  // 20 * 100
+    // QALYs: each patient gets 1.0 * (1 - waitTime/10)
+    // Patient i: QALY = 1 - (i*0.5)/10 = 1 - i/20
+    // Total QALY = sum(1 - i/20 for i in 0..19) = 20 - (0+1+...+19)/20 = 20 - 190/20 = 20 - 9.5 = 10.5
+    expect(r.totalQALYs).toBeCloseTo(10.5, 4);
   });
 
   it('reports invalid numeric inputs', () => {
@@ -295,5 +500,38 @@ describe('calculateDiscreteEventSimulationModel', () => {
       simulationDuration: 30,
     });
     expect(r.error).toContain('patientArrivalRate');
+  });
+
+  it('rejects non-positive patient arrival rate', () => {
+    const r = calculateDiscreteEventSimulationModel({
+      eventRateAlpha: 5,
+      resourceCostBeta: 250,
+      patientArrivalRate: 0,
+      queueCapacity: 10,
+      simulationDuration: 30,
+    });
+    expect(r.error).toContain('arrival rate');
+  });
+
+  it('rejects non-integer queue capacity', () => {
+    const r = calculateDiscreteEventSimulationModel({
+      eventRateAlpha: 5,
+      resourceCostBeta: 250,
+      patientArrivalRate: 2,
+      queueCapacity: 2.5,
+      simulationDuration: 30,
+    });
+    expect(r.error).toContain('Queue capacity');
+  });
+
+  it('rejects negative resource cost', () => {
+    const r = calculateDiscreteEventSimulationModel({
+      eventRateAlpha: 5,
+      resourceCostBeta: -100,
+      patientArrivalRate: 2,
+      queueCapacity: 10,
+      simulationDuration: 30,
+    });
+    expect(r.error).toContain('Resource cost');
   });
 });

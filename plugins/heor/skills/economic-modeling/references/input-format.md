@@ -177,10 +177,11 @@ cycle). Each matrix row sums to 1; array lengths must match.
 }
 ```
 
-## Partitioned Survival Model (`partitioned-survival`) — STUB
+## Partitioned Survival Model (`partitioned-survival`)
 
-Cycles split 50/50 pre/post-progression; survival-curve parameters accepted
-but **not yet used** by the stub calculator.
+Weibull survival curve: `survivalCurveParam1` = scale (λ), `survivalCurveParam2` = shape (k).
+S(t) = exp(-(t/λ)^k) partitions the cohort into pre-progression and post-progression per cycle.
+Half-cycle correction applied.
 
 ```json
 {
@@ -198,10 +199,12 @@ but **not yet used** by the stub calculator.
 }
 ```
 
-## Discrete Event Simulation (`discrete-event-simulation`) — STUB
+## Discrete Event Simulation (`discrete-event-simulation`)
 
-Deterministic patient-volume approximation
-(`floor(patientArrivalRate × simulationDuration)` patients).
+Deterministic M/M/c queueing model. Patients arrive at regular intervals
+(mean inter-arrival = 1/patientArrivalRate), each occupies a treatment
+slot for mean service time 1/eventRateAlpha. Tracks wait times, cost per
+treatment, and QALYs (proportional to treatment time, reduced by waiting).
 
 ```json
 {

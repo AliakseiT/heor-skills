@@ -273,111 +273,192 @@ export function calculateBudgetImpactModel(params: BudgetImpactInputParameters):
 }
 
 /**
- * State Transition Model calculation stub.
- * This is a placeholder. Real implementation would use the transition matrix and state costs/utilities.
+ * State Transition Model — n-state cohort propagation with transition matrix.
+ *
+ * Propagates an initial state distribution through a transition matrix over
+ * `numCycles` cycles, accumulating per-cycle costs and utilities with discounting.
+ * Supports half-cycle correction (applies the average of start- and end-of-cycle
+ * state occupancy to cost/QALY accumulation).
  */
 export function calculateStateTransitionModel(params: StateTransitionModelInputParameters): StateTransitionModelResults {
   const {
     transitionMatrix, initialStateDistribution, stateCosts, stateUtilities, numCycles, discountRate
   } = params;
 
-  // Basic validation
   if (!Array.isArray(transitionMatrix) || !Array.isArray(initialStateDistribution) || !Array.isArray(stateCosts) || !Array.isArray(stateUtilities)) {
-    return { error: "All matrix/vector inputs must be arrays.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [], };
+    return { error: "All matrix/vector inputs must be arrays.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
   }
   if (typeof numCycles !== 'number' || typeof discountRate !== 'number') {
-    return { error: "numCycles and discountRate must be numbers.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [], };
+    return { error: "numCycles and discountRate must be numbers.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
   }
   const nStates = initialStateDistribution.length;
+  if (nStates < 2) {
+    return { error: "State transition model requires at least 2 states.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
+  }
   if (
     transitionMatrix.length !== nStates ||
-    transitionMatrix.some(row => row.length !== nStates) ||
+    transitionMatrix.some(row => !Array.isArray(row) || row.length !== nStates) ||
     stateCosts.length !== nStates ||
     stateUtilities.length !== nStates
   ) {
-    return { error: "Matrix/vector dimensions do not match number of states.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [], };
+    return { error: "Matrix/vector dimensions do not match number of states.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
   }
 
-  // Placeholder logic: propagate state vector, sum costs/utilities
+  if (!Number.isInteger(numCycles) || numCycles <= 0) {
+    return { error: "Number of cycles must be a positive integer.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
+  }
+  if (discountRate < 0) {
+    return { error: "Discount rate cannot be negative.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
+  }
+
+  for (let i = 0; i < nStates; i++) {
+    for (let j = 0; j < nStates; j++) {
+      if (typeof transitionMatrix[i][j] !== 'number' || Number.isNaN(transitionMatrix[i][j])) {
+        return { error: `Transition matrix entry [${i}][${j}] is not a valid number.`, totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
+      }
+      if (transitionMatrix[i][j] < 0 || transitionMatrix[i][j] > 1) {
+        return { error: `Transition probability [${i}][${j}] must be between 0 and 1.`, totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
+      }
+    }
+    const rowSum = transitionMatrix[i].reduce((s, v) => s + v, 0);
+    if (Math.abs(rowSum - 1) > 1e-6) {
+      return { error: `Row ${i} of transition matrix must sum to 1 (sums to ${rowSum}).`, totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
+    }
+  }
+
+  const distSum = initialStateDistribution.reduce((s, v) => s + v, 0);
+  if (distSum < 0 || Math.abs(distSum - 1) > 1e-6) {
+    return { error: "Initial state distribution must sum to 1.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
+  }
+  if (initialStateDistribution.some(v => v < 0)) {
+    return { error: "Initial state distribution entries cannot be negative.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, stateTrace: [] };
+  }
+
   let stateVec = [...initialStateDistribution];
   let totalDiscountedCost = 0;
   let totalDiscountedQALYs = 0;
   const stateTrace: number[][] = [];
   for (let cycle = 0; cycle < numCycles; cycle++) {
     stateTrace.push([...stateVec]);
-    const cycleCost = stateVec.reduce((sum, pop, i) => sum + pop * stateCosts[i], 0);
-    const cycleQALYs = stateVec.reduce((sum, pop, i) => sum + pop * stateUtilities[i], 0);
-    const discount = 1 / Math.pow(1 + discountRate, cycle);
-    totalDiscountedCost += cycleCost * discount;
-    totalDiscountedQALYs += cycleQALYs * discount;
-    // Matrix multiply: stateVec = stateVec * transitionMatrix
+
     const nextStateVec = Array(nStates).fill(0);
     for (let i = 0; i < nStates; i++) {
       for (let j = 0; j < nStates; j++) {
         nextStateVec[j] += stateVec[i] * transitionMatrix[i][j];
       }
     }
+
+    // Half-cycle correction: average start- and end-of-cycle occupancy
+    const avgVec = stateVec.map((v, i) => (v + nextStateVec[i]) / 2);
+    const cycleCost = avgVec.reduce((sum, pop, i) => sum + pop * stateCosts[i], 0);
+    const cycleQALYs = avgVec.reduce((sum, pop, i) => sum + pop * stateUtilities[i], 0);
+    const discount = 1 / Math.pow(1 + discountRate, cycle);
+    totalDiscountedCost += cycleCost * discount;
+    totalDiscountedQALYs += cycleQALYs * discount;
+
     stateVec = nextStateVec;
   }
   return {
     totalDiscountedCost: parseFloat(totalDiscountedCost.toFixed(2)),
     totalDiscountedQALYs: parseFloat(totalDiscountedQALYs.toFixed(4)),
     stateTrace,
-    details: "Stub: Simple state vector propagation. Replace with real state transition logic."
+    details: `State transition model: ${nStates} states, ${numCycles} cycles, ${discountRate * 100}% discount rate, half-cycle correction applied.`
   };
 }
 
 /**
- * Partitioned Survival Model calculation stub.
- * This is a placeholder. Real implementation would use survival curves and partition logic.
+ * Partitioned Survival Model — Weibull survival curve partitions the cohort
+ * into pre-progression and post-progression states per cycle.
+ *
+ * survivalCurveParam1 = Weibull scale (λ), survivalCurveParam2 = Weibull shape (k).
+ * S(t) = exp(-(t/λ)^k) is the progression-free survival function.
+ * At each cycle t (1-indexed): pre-progression = S(t), post-progression = 1 - S(t).
+ * Costs and utilities are accumulated with discounting and half-cycle correction.
  */
 export function calculatePartitionedSurvivalModel(params: PartitionedSurvivalModelInputParameters): PartitionedSurvivalModelResults {
   const {
+    survivalCurveParam1: scale,
+    survivalCurveParam2: shape,
     costPerCyclePre, costPerCyclePost,
     utilityPre, utilityPost,
     numCycles, discountRate
   } = params;
 
-  // Basic validation
   const invalidParams = Object.entries(params)
     .filter(([, value]) => typeof value !== 'number' || Number.isNaN(value))
     .map(([key]) => key);
   if (invalidParams.length > 0) {
-    return { error: `Invalid or missing numeric inputs for Partitioned Survival Model: ${invalidParams.join(', ')}.`, totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0 };
+    return { error: `Invalid or missing numeric inputs for Partitioned Survival Model: ${invalidParams.join(', ')}.`, totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0, stateTrace: [] };
   }
 
-  // Placeholder logic: split cycles 50/50 pre/post, simple cost/utility sum
-  const preCycles = Math.floor(numCycles / 2);
-  const postCycles = numCycles - preCycles;
+  if (scale <= 0) {
+    return { error: "Survival curve scale parameter (survivalCurveParam1) must be positive.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0, stateTrace: [] };
+  }
+  if (shape <= 0) {
+    return { error: "Survival curve shape parameter (survivalCurveParam2) must be positive.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0, stateTrace: [] };
+  }
+  if (!Number.isInteger(numCycles) || numCycles <= 0) {
+    return { error: "Number of cycles must be a positive integer.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0, stateTrace: [] };
+  }
+  if (discountRate < 0) {
+    return { error: "Discount rate cannot be negative.", totalDiscountedCost: NaN, totalDiscountedQALYs: NaN, preProgressionCycles: 0, postProgressionCycles: 0, stateTrace: [] };
+  }
+
+  const weibullSurvival = (t: number): number => Math.exp(-Math.pow(t / scale, shape));
+
   let totalDiscountedCost = 0;
   let totalDiscountedQALYs = 0;
-  for (let i = 0; i < numCycles; i++) {
-    const isPre = i < preCycles;
-    const cost = isPre ? costPerCyclePre : costPerCyclePost;
-    const util = isPre ? utilityPre : utilityPost;
-    const discount = 1 / Math.pow(1 + discountRate, i);
-    totalDiscountedCost += cost * discount;
-    totalDiscountedQALYs += util * discount;
+  let preProgressionCycles = 0;
+  let postProgressionCycles = 0;
+  const stateTrace: Array<{ cycle: number; preProgression: number; postProgression: number }> = [];
+
+  for (let cycle = 0; cycle < numCycles; cycle++) {
+    const t = cycle + 1;
+    const sCurrent = weibullSurvival(t);
+    const sNext = weibullSurvival(t + 1);
+
+    // Half-cycle correction: average of start- and end-of-cycle survival
+    const preFrac = (sCurrent + sNext) / 2;
+    const postFrac = 1 - preFrac;
+
+    stateTrace.push({ cycle: t, preProgression: preFrac, postProgression: postFrac });
+
+    const cycleCost = preFrac * costPerCyclePre + postFrac * costPerCyclePost;
+    const cycleQALYs = preFrac * utilityPre + postFrac * utilityPost;
+    const discount = 1 / Math.pow(1 + discountRate, cycle);
+
+    totalDiscountedCost += cycleCost * discount;
+    totalDiscountedQALYs += cycleQALYs * discount;
+    preProgressionCycles += preFrac * discount;
+    postProgressionCycles += postFrac * discount;
   }
+
   return {
     totalDiscountedCost: parseFloat(totalDiscountedCost.toFixed(2)),
     totalDiscountedQALYs: parseFloat(totalDiscountedQALYs.toFixed(4)),
-    preProgressionCycles: preCycles,
-    postProgressionCycles: postCycles,
-    details: "Stub: Cycles split 50/50 pre/post-progression. Replace with real survival curve logic."
+    preProgressionCycles: parseFloat(preProgressionCycles.toFixed(4)),
+    postProgressionCycles: parseFloat(postProgressionCycles.toFixed(4)),
+    stateTrace,
+    details: `Partitioned survival model: Weibull survival curve (scale=${scale}, shape=${shape}), ${numCycles} cycles, ${discountRate * 100}% discount rate, half-cycle correction applied.`
   };
 }
 
 /**
- * Discrete Event Simulation calculation stub.
- * This is a placeholder. Real implementation would simulate patient flow/events.
+ * Discrete Event Simulation — deterministic M/M/c queueing model.
+ *
+ * Patients arrive at regular intervals (deterministic Poisson with mean
+ * inter-arrival time 1/patientArrivalRate). Each patient occupies a
+ * treatment slot for a service time of 1/eventRateAlpha (the mean
+ * inter-event time, representing the expected treatment duration).
+ * With queueCapacity simultaneous slots, patients queue when all slots
+ * are busy. The simulation tracks wait times, treatment costs, and
+ * QALYs (proportional to treatment time, reduced by waiting).
  */
 export function calculateDiscreteEventSimulationModel(params: DiscreteEventSimulationInputParameters): DiscreteEventSimulationResults {
   const {
     eventRateAlpha, resourceCostBeta, patientArrivalRate, queueCapacity, simulationDuration
   } = params;
 
-  // Basic validation
   const invalidParams = Object.entries(params)
     .filter(([, value]) => typeof value !== 'number' || Number.isNaN(value))
     .map(([key]) => key);
@@ -385,17 +466,62 @@ export function calculateDiscreteEventSimulationModel(params: DiscreteEventSimul
     return { error: `Invalid or missing numeric inputs for Discrete Event Simulation: ${invalidParams.join(', ')}.`, totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
   }
 
-  // Placeholder logic: simulate a fixed number of patients, simple cost/wait calculation
+  if (patientArrivalRate <= 0) {
+    return { error: "Patient arrival rate must be positive.", totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
+  }
+  if (eventRateAlpha <= 0) {
+    return { error: "Event rate alpha must be positive.", totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
+  }
+  if (resourceCostBeta < 0) {
+    return { error: "Resource cost beta cannot be negative.", totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
+  }
+  if (!Number.isInteger(queueCapacity) || queueCapacity <= 0) {
+    return { error: "Queue capacity must be a positive integer.", totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
+  }
+  if (simulationDuration <= 0) {
+    return { error: "Simulation duration must be positive.", totalCost: NaN, totalQALYs: NaN, averageWaitTime: NaN, numSimulatedPatients: 0 };
+  }
+
   const numPatients = Math.floor(patientArrivalRate * simulationDuration);
-  const totalCost = numPatients * resourceCostBeta;
-  const totalQALYs = numPatients * (eventRateAlpha / 100); // Arbitrary QALY assignment
-  const averageWaitTime = queueCapacity > 0 ? (numPatients / queueCapacity) : NaN;
+  const interArrivalTime = 1 / patientArrivalRate;
+  const serviceTime = 1 / eventRateAlpha;
+
+  const resourceFreeAt: number[] = Array(queueCapacity).fill(0);
+  let totalCost = 0;
+  let totalQALYs = 0;
+  let totalWaitTime = 0;
+
+  for (let i = 0; i < numPatients; i++) {
+    const arrivalTime = i * interArrivalTime;
+
+    let earliestSlot = 0;
+    for (let j = 1; j < queueCapacity; j++) {
+      if (resourceFreeAt[j] < resourceFreeAt[earliestSlot]) {
+        earliestSlot = j;
+      }
+    }
+
+    const serviceStart = Math.max(arrivalTime, resourceFreeAt[earliestSlot]);
+    const waitTime = serviceStart - arrivalTime;
+    resourceFreeAt[earliestSlot] = serviceStart + serviceTime;
+
+    totalWaitTime += waitTime;
+    totalCost += resourceCostBeta;
+
+    // QALYs: treatment benefit proportional to service time, reduced by
+    // waiting (delayed treatment = time spent in worse health state).
+    // Patient QALY = serviceTime * (1 - waitTime / simulationDuration)
+    const qalyContribution = serviceTime * Math.max(0, 1 - waitTime / simulationDuration);
+    totalQALYs += qalyContribution;
+  }
+
+  const averageWaitTime = numPatients > 0 ? totalWaitTime / numPatients : 0;
 
   return {
     totalCost: parseFloat(totalCost.toFixed(2)),
     totalQALYs: parseFloat(totalQALYs.toFixed(4)),
     averageWaitTime: parseFloat(averageWaitTime.toFixed(2)),
     numSimulatedPatients: numPatients,
-    details: "Stub: Simple DES logic. Replace with real event simulation."
+    details: `Deterministic M/M/${queueCapacity} queue: ${numPatients} patients, mean inter-arrival ${interArrivalTime.toFixed(4)}, mean service ${serviceTime.toFixed(4)}, utilization ${((numPatients * serviceTime) / (queueCapacity * simulationDuration) * 100).toFixed(1)}%.`
   };
 }

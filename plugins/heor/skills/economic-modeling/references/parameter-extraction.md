@@ -167,8 +167,9 @@ data in trials; state-specific costs and resource use; utilities by
 progression state. Forbidden: BIA parameters, test characteristics, simple
 three-state Markov parameters.
 
-**Stub warning:** the engine accepts but does not yet use the survival-curve
-parameters; disclose this whenever populating a PSM.
+The engine uses a Weibull survival curve: `survivalCurveParam1` = scale (λ),
+`survivalCurveParam2` = shape (k). Extract these from Kaplan–Meier data
+(e.g. via Weibull regression or parametric fitting).
 
 ### State Transition Model (from populate-state-transition-model-inputs-flow)
 

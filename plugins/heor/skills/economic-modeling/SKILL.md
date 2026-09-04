@@ -85,8 +85,8 @@ Decision Tree, Markov Chain, Partitioned Survival Model, Discrete Event
 Simulation, State Transition Model — plus, when payer budget questions are in
 scope, a **separate, complementary** Budget Impact Assessment. Give a 2–3
 sentence justification tied to the intervention's care pathway and time
-horizon, and state the engine's support tier (full calculator vs. stub;
-PSA availability). Present the recommendation and wait for the user to
+horizon, and state the engine's support tier (full calculator vs. partial
+support; PSA availability). Present the recommendation and wait for the user to
 confirm or override before populating parameters.
 
 ### 2. Parameter population → `models/inputs/<model>.json`
@@ -187,8 +187,8 @@ required before use in any submission or decision-making."*
   problem in the inputs file, re-run. Do not hand-write a "results" file.
 - Run file contains an `error` field → treat the run as failed; diagnose
   from the inputs (e.g. Markov transition rows not summing to 1) and re-run.
-- PSA requested for a stub model (state-transition, partitioned-survival,
-  discrete-event-simulation) → explain it is unsupported and offer scenario
-  comparison or a supported model instead.
+- PSA requested for a model without PSA support (state-transition,
+  partitioned-survival, discrete-event-simulation) → explain it is
+  unsupported and offer scenario comparison or a PSA-supported model instead.
 - A required parameter has no defensible value and the user is unavailable →
   stop after step 2 and report the gap; do not run on invented numbers.
