@@ -1,0 +1,66 @@
+population:
+  description: >-
+    Adults (18-65 years) with mild to moderate depressive episodes
+    (ICD-10 F32.0/F32.1 or PHQ-9 score 5-14) receiving outpatient care.
+  ageRange: "18-65"
+  condition: "Mild to moderate depression"
+  setting: "Outpatient / primary care"
+  additionalCriteria:
+    - "Access to a smartphone and basic digital literacy"
+    - "No severe comorbid psychiatric conditions"
+    - "No acute suicidal ideation requiring crisis intervention"
+
+intervention:
+  name: "SereniCBT"
+  description: >-
+    Prescription digital therapeutic delivering guided cognitive behavioural
+    therapy over 12 weeks. Weekly modules include psychoeducation, behavioural
+    activation, cognitive restructuring, and relapse prevention. Mood tracking
+    with PHQ-9 at baseline, week 6, and week 12. Therapist dashboard for
+    remote monitoring.
+  duration: "12 weeks"
+  deliveryFormat: "Smartphone app (iOS/Android), clinician-guided"
+  components:
+    - "6 weekly CBT modules (psychoeducation, behavioural activation, cognitive restructuring, problem-solving, sleep hygiene, relapse prevention)"
+    - "Daily mood and activity logging"
+    - "Therapist dashboard with asynchronous messaging"
+
+comparison:
+  name: "Standard outpatient care"
+  description: >-
+    General practitioner follow-up with optional referral to a psychotherapy
+    waiting list. No structured digital intervention. May include brief
+    counselling, medication management, or watchful waiting.
+
+outcomes:
+  primary:
+    - name: "Depression severity (PHQ-9)"
+      timeframe: "12 weeks"
+      measure: "Mean change in PHQ-9 score from baseline"
+    - name: "Treatment response"
+      timeframe: "12 weeks"
+      measure: ">=50% reduction in PHQ-9 score"
+  secondary:
+    - name: "Remission rate"
+      timeframe: "12 weeks"
+      measure: "PHQ-9 score < 5"
+    - name: "Quality of life (EQ-5D-5L)"
+      timeframe: "12 weeks"
+      measure: "Mean change in EQ-5D-5L index from baseline"
+    - name: "Healthcare utilisation"
+      timeframe: "6 months"
+      measure: "Number of GP visits and referrals to specialist care"
+    - name: "Adherence"
+      timeframe: "12 weeks"
+      measure: "Proportion of modules completed"
+
+rationale: |-
+  The PICO targets the Swiss dGA (digitale Gesundheitsanwendungen) fast-track
+  pathway, which assesses digital health apps against the WZW criteria
+  (Wirksamkeit, Zweckmaessigkeit, Wirtschaftlichkeit). The population and
+  comparator reflect standard Swiss outpatient depression care. The primary
+  outcomes align with EUnetHTA Core Model effectiveness endpoints for digital
+  therapeutics. The modelling focus is on cost-utility (cost per QALY) from
+  the OKP (obligatorische Krankenpflegeversicherung) perspective.
+
+modellingFocus: true

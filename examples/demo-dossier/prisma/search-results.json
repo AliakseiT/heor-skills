@@ -1,0 +1,176 @@
+{
+  "searches": [
+    {
+      "database": "pubmed",
+      "tier": "narrow",
+      "query": "(\"digital cognitive behavioural therapy\" OR \"digital CBT\" OR \"internet-based CBT\" OR \"app-based CBT\") AND (\"depression\" OR \"depressive disorder\") AND (\"randomized controlled trial\"[pt] OR \"randomized\"[tiab]) AND (\"adult\"[MeSH] OR \"adult\"[tiab])",
+      "totalAvailable": 47,
+      "retrieved": 47,
+      "used": true,
+      "timestamp": "2026-01-15T09:00:00Z",
+      "error": null
+    },
+    {
+      "database": "clinicaltrials",
+      "tier": "narrow",
+      "query": "AREA[InterventionName]digital CBT AND AREA[Condition]depression AND AREA[StudyType]INTERVENTIONAL AND AREA[Phase]PHASE3",
+      "totalAvailable": 12,
+      "retrieved": 12,
+      "used": true,
+      "timestamp": "2026-01-15T09:05:00Z",
+      "error": null
+    },
+    {
+      "database": "mandatory",
+      "query": "user-provided list",
+      "totalAvailable": 2,
+      "retrieved": 2,
+      "used": true,
+      "timestamp": "2026-01-15T09:10:00Z"
+    }
+  ],
+  "duplicatesRemoved": 5,
+  "records": [
+    {
+      "id": "38123456",
+      "source": "pubmed",
+      "title": "Efficacy of a smartphone-based cognitive behavioural therapy app for adults with mild to moderate depression: a randomized controlled trial",
+      "abstract": "BACKGROUND: Digital cognitive behavioural therapy (dCBT) delivered via smartphone apps offers a scalable approach to treating depression. We evaluated the efficacy of a 12-week guided dCBT app (SereniCBT) compared to standard outpatient care. METHODS: Multicentre RCT across 8 Swiss primary care sites. 312 adults with PHQ-9 scores 5-14 were randomised 1:1 to SereniCBT plus standard care (n=156) or standard care alone (n=156). Primary outcome: mean PHQ-9 change at 12 weeks. RESULTS: SereniCBT showed significantly greater PHQ-9 reduction (mean difference -3.2, 95% CI -4.1 to -2.3, p<0.001). Response rate (>=50% PHQ-9 reduction) was 61% vs 38% (OR 2.5, 95% CI 1.6-3.9). Remission (PHQ-9<5) was 44% vs 23%. No serious adverse events. CONCLUSION: Guided dCBT is effective for mild-to-moderate depression in primary care.",
+      "year": 2024,
+      "authors": "Mueller R, Keller S, Baumgartner A, Tanaka M, Fischer L",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38123456/",
+      "journal": "JAMA Psychiatry",
+      "doi": "10.1001/jamapsychiatry.2024.0123",
+      "pmid": "38123456",
+      "citationCount": 28
+    },
+    {
+      "id": "37901234",
+      "source": "pubmed",
+      "title": "Internet-based cognitive behavioural therapy for depression: a systematic review and meta-analysis of guided vs unguided interventions",
+      "abstract": "OBJECTIVE: To compare efficacy of guided vs unguided internet-based CBT (iCBT) for adult depression. METHODS: Systematic review and meta-analysis of 42 RCTs (n=6,891). RESULTS: Guided iCBT showed larger effect sizes (Cohen's d=0.78, 95% CI 0.65-0.91) than unguided (d=0.42, 95% CI 0.31-0.53). Guided interventions had lower dropout (18% vs 47%). Cost-effectiveness data from 8 trials showed guided iCBT cost per QALY ranged from EUR 2,400 to EUR 8,900. CONCLUSION: Guided iCBT is effective and cost-effective for depression in primary care.",
+      "year": 2023,
+      "authors": "Andersson G, Cuijpers P, Carlbring P, Riper H, Hedman E",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37901234/",
+      "journal": "Psychological Medicine",
+      "doi": "10.1017/S0033291723000456",
+      "pmid": "37901234",
+      "citationCount": 112
+    },
+    {
+      "id": "37556789",
+      "source": "pubmed",
+      "title": "Cost-effectiveness of digital mental health interventions for depression: a health economic evaluation from a Swiss payer perspective",
+      "abstract": "OBJECTIVE: To evaluate the cost-utility of digital CBT for depression from the Swiss OKP perspective. METHODS: Markov cohort model (Healthy, Depressed, Dead) over 20 annual cycles, 3% discount. Data from 3 Swiss RCTs (n=892). RESULTS: Digital CBT cost CHF 340 per participant. Incremental cost-effectiveness ratio CHF 8,200 per QALY (95% CI 3,100-15,400). Probability of cost-effectiveness at CHF 50,000 WTP threshold was 0.92. Sensitivity analysis showed cost of intervention and baseline utility as key drivers. CONCLUSION: Digital CBT is highly cost-effective for depression in the Swiss OKP setting.",
+      "year": 2024,
+      "authors": "Huber M, Schmid S, Wagner B, Berger T",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37556789/",
+      "journal": "PharmacoEconomics - Open",
+      "doi": "10.1007/s41669-024-00456-7",
+      "pmid": "37556789",
+      "citationCount": 9
+    },
+    {
+      "id": "37001122",
+      "source": "pubmed",
+      "title": "Mobile app-based cognitive behavioural therapy for depression in primary care: a pragmatic randomized controlled trial",
+      "abstract": "BACKGROUND: Pragmatic trial of a mobile CBT app in UK primary care. METHODS: 634 adults with PHQ-9 5-14 randomised to app plus usual care (n=317) or usual care (n=317). 12-week intervention. RESULTS: PHQ-9 reduction -2.8 (app) vs -1.6 (usual care), adjusted difference -1.2 (95% CI -1.9 to -0.5, p=0.001). EQ-5D-5L improvement 0.045 (95% CI 0.012-0.078). Healthcare utilisation reduced: GP visits -1.4 per 6 months (95% CI -2.1 to -0.7). Dropout 22%. CONCLUSION: App-based CBT provides meaningful benefit in primary care depression.",
+      "year": 2023,
+      "authors": "Richards D, Enriquez M, Gupta R, Vally Z",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37001122/",
+      "journal": "British Journal of Psychiatry",
+      "doi": "10.1192/bjp.2023.34",
+      "pmid": "37001122",
+      "citationCount": 34
+    },
+    {
+      "id": "36554433",
+      "source": "pubmed",
+      "title": "Long-term effects of digital cognitive behavioural therapy for depression: 12-month follow-up results",
+      "abstract": "OBJECTIVE: To assess durability of digital CBT effects at 12 months. METHODS: 48-week follow-up of 278 participants from a previous RCT. Primary outcome: PHQ-9 maintenance. RESULTS: Effect size at 12 months remained significant (d=0.52, 95% CI 0.28-0.76). Relapse rate 19% in intervention vs 34% in control (HR 0.51, 95% CI 0.32-0.82). Cost per relapse prevented: EUR 890. CONCLUSION: Digital CBT shows durable effects with reduced relapse rates.",
+      "year": 2023,
+      "authors": "Kolovos S, Kleiboer A, Bosmans J, Riper H",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36554433/",
+      "journal": "Journal of Medical Internet Research",
+      "doi": "10.2196/45678",
+      "pmid": "36554433",
+      "citationCount": 18
+    },
+    {
+      "id": "NCT04567890",
+      "source": "clinicaltrials",
+      "title": "Efficacy of SereniCBT for Mild-to-Moderate Depression: A Randomized Controlled Trial",
+      "abstract": "Phase 3, parallel-group RCT evaluating SereniCBT vs standard care in 312 adults with PHQ-9 5-14 across 8 Swiss sites. Primary endpoint: PHQ-9 change at 12 weeks. Status: Completed. Results published as Mueller et al. 2024 (PMID 38123456).",
+      "year": 2024,
+      "url": "https://clinicaltrials.gov/study/NCT04567890",
+      "nctId": "NCT04567890",
+      "status": "COMPLETED",
+      "conditions": ["Depression", "Depressive Disorder"],
+      "interventions": ["SereniCBT app", "Standard care"]
+    },
+    {
+      "id": "NCT04890123",
+      "source": "clinicaltrials",
+      "title": "Digital CBT for Depression in Swiss Primary Care (DigiDep Trial)",
+      "abstract": "Phase 3 RCT, 450 adults, 24-week follow-up. Comparing guided mobile CBT app vs waitlist control in Swiss primary care. Primary endpoint: PHQ-9 at 24 weeks. Status: Active, not recruiting.",
+      "year": 2023,
+      "url": "https://clinicaltrials.gov/study/NCT04890123",
+      "nctId": "NCT04890123",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "conditions": ["Depression"],
+      "interventions": ["Mobile CBT app"]
+    },
+    {
+      "id": "NCT05123456",
+      "source": "clinicaltrials",
+      "title": "Cost-Effectiveness of Digital Therapeutics for Depression: A Pragmatic Trial",
+      "abstract": "Observational study evaluating real-world cost-effectiveness of digital CBT for depression in 1,200 adults across 3 European countries. 18-month follow-up. Status: Recruiting.",
+      "year": 2024,
+      "url": "https://clinicaltrials.gov/study/NCT05123456",
+      "nctId": "NCT05123456",
+      "status": "RECRUITING",
+      "conditions": ["Depression", "Major Depressive Disorder"],
+      "interventions": ["Digital CBT"]
+    },
+    {
+      "id": "36009876",
+      "source": "pubmed",
+      "title": "Digital health interventions for depression in older adults: a systematic review",
+      "abstract": "Systematic review of 18 studies on digital mental health interventions for adults aged 60+. Digital CBT showed moderate effects (d=0.45). Acceptability was high but adherence lower than in younger adults. Authors recommend age-adapted interfaces and additional support.",
+      "year": 2023,
+      "authors": "Bragg R, Tan J, Liu X",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36009876/",
+      "journal": "Aging and Mental Health",
+      "doi": "10.1080/13607863.2023.1234567",
+      "pmid": "36009876",
+      "citationCount": 6
+    },
+    {
+      "id": "35901234",
+      "source": "pubmed",
+      "title": "Adherence and engagement in digital cognitive behavioural therapy: predictors and outcomes",
+      "abstract": "Analysis of adherence data from 4 RCTs of digital CBT (n=1,205). Mean module completion 64%. Predictors of adherence: therapist contact, baseline motivation, app usability. Higher adherence associated with better outcomes (r=0.31, p<0.001).",
+      "year": 2023,
+      "authors": "Fischer L, Steiner M, Haeussler K",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35901234/",
+      "journal": "Digital Health",
+      "doi": "10.1177/20552076231101234",
+      "pmid": "35901234",
+      "citationCount": 14
+    },
+    {
+      "id": "doi-10-1001-jamapsychiatry-2024-0123",
+      "source": "mandatory",
+      "title": "Efficacy of a smartphone-based cognitive behavioural therapy app for adults with mild to moderate depression: a randomized controlled trial",
+      "isMandatory": true,
+      "doi": "10.1001/jamapsychiatry.2024.0123"
+    },
+    {
+      "id": "doi-10-1007-s41669-024-00456-7",
+      "source": "mandatory",
+      "title": "Cost-effectiveness of digital mental health interventions for depression: a health economic evaluation from a Swiss payer perspective",
+      "isMandatory": true,
+      "doi": "10.1007/s41669-024-00456-7"
+    }
+  ]
+}
