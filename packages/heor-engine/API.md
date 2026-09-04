@@ -21,7 +21,7 @@ calculateDiscreteEventSimulationModel(inputs: DiscreteEventSimulationInputParame
 | Decision Tree | `decision-tree` | yes | full |
 | Markov Chain | `markov-chain` | yes | full |
 | Budget Impact | `budget-impact` | yes | full |
-| State Transition | `state-transition` | no | stub |
+| State Transition | `state-transition` | no | full |
 | Partitioned Survival | `partitioned-survival` | no | stub |
 | Discrete Event Simulation | `discrete-event-simulation` | no | stub |
 

@@ -4,7 +4,7 @@ Pure-TypeScript health-economic modeling engine with **zero runtime dependencies
 
 Contents:
 
-- **Six model calculators** (`src/ce-models.ts`): Decision Tree, Markov Chain, Budget Impact Assessment, State Transition Model (stub), Partitioned Survival Model (stub), Discrete Event Simulation (stub).
+- **Six model calculators** (`src/ce-models.ts`): Decision Tree, Markov Chain, Budget Impact Assessment, State Transition Model, Partitioned Survival Model (stub), Discrete Event Simulation (stub).
 - **Probabilistic sensitivity analysis** (`src/probabilistic-sensitivity-analysis.ts`): Monte Carlo simulation with summary statistics, CEAC curve, and tornado diagram. Supports Decision Tree, Markov Chain, and Budget Impact models. Deterministic via `seed` or an injectable `rng: () => number`.
 - **Batch scenario execution** (`src/batch-scenario-executor.ts`): baseline vs. alternative scenario comparison with device-class defaults, input merging, caching, and aggregated metrics.
 - **Device-class default parameter sets** (`src/economic-model-defaults.ts`) and **input merging/name mapping** utilities.
@@ -31,7 +31,7 @@ Model identifiers (accepted as kebab-case slug or display name):
 | `decision-tree` | Decision Tree | yes |
 | `markov-chain` | Markov Chain | yes |
 | `budget-impact` | Budget Impact Assessment | yes |
-| `state-transition` | State Transition Model | no (stub calculator) |
+| `state-transition` | State Transition Model | no |
 | `partitioned-survival` | Partitioned Survival Model | no (stub calculator) |
 | `discrete-event-simulation` | Discrete Event Simulation | no (stub calculator) |
 
@@ -127,9 +127,9 @@ Market shares are percentages (0–100); assessment horizon is 1–5 years (year
 
 Results: `netBudgetImpactPerYear` (impact + patient counts per year), `totalNetBudgetImpact`.
 
-### State Transition Model (`state-transition`) — stub
+### State Transition Model (`state-transition`)
 
-Arbitrary n-state vector propagation (`stateVec × transitionMatrix` per cycle).
+Arbitrary n-state cohort propagation with transition matrix. Applies half-cycle correction (averages start- and end-of-cycle occupancy for cost/QALY accumulation).
 
 ```json
 {
