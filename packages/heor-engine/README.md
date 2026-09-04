@@ -31,7 +31,7 @@ Model identifiers (accepted as kebab-case slug or display name):
 | `decision-tree` | Decision Tree | yes |
 | `markov-chain` | Markov Chain | yes |
 | `budget-impact` | Budget Impact Assessment | yes |
-| `state-transition` | State Transition Model | no (stub calculator) |
+| `state-transition` | State Transition Model | no |
 | `partitioned-survival` | Partitioned Survival Model | no |
 | `discrete-event-simulation` | Discrete Event Simulation | no (stub calculator) |
 
@@ -127,9 +127,9 @@ Market shares are percentages (0–100); assessment horizon is 1–5 years (year
 
 Results: `netBudgetImpactPerYear` (impact + patient counts per year), `totalNetBudgetImpact`.
 
-### State Transition Model (`state-transition`) — stub
+### State Transition Model (`state-transition`)
 
-Arbitrary n-state vector propagation (`stateVec × transitionMatrix` per cycle).
+Arbitrary n-state cohort propagation with transition matrix. Applies half-cycle correction (averages start- and end-of-cycle occupancy for cost/QALY accumulation).
 
 ```json
 {

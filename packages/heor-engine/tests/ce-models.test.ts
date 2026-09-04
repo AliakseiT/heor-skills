@@ -181,7 +181,7 @@ describe('calculateBudgetImpactModel', () => {
 });
 
 describe('calculateStateTransitionModel', () => {
-  it('propagates the state vector and accumulates discounted cost/QALYs', () => {
+  it('propagates the state vector with half-cycle correction and accumulates discounted cost/QALYs', () => {
     const r = calculateStateTransitionModel({
       transitionMatrix: [
         [0.8, 0.2],
@@ -194,14 +194,41 @@ describe('calculateStateTransitionModel', () => {
       discountRate: 0,
     });
     expect(r.error).toBeUndefined();
-    // Cycle 1: cost = 0.7*100 + 0.3*200 = 130; QALY = 0.63 + 0.15 = 0.78
-    // Next state: [0.59, 0.41]; cycle 2: cost = 59 + 82 = 141; QALY = 0.531 + 0.205 = 0.736
-    expect(r.totalDiscountedCost).toBe(271);
-    expect(r.totalDiscountedQALYs).toBeCloseTo(1.516, 4);
+
+    // Cycle 0: start = [0.7, 0.3], next = [0.59, 0.41]
+    // Half-cycle avg = [0.645, 0.355]
+    // Cost = 0.645*100 + 0.355*200 = 135.5; QALY = 0.645*0.9 + 0.355*0.5 = 0.758
+    //
+    // Cycle 1: start = [0.59, 0.41], next = [0.513, 0.487]
+    // Half-cycle avg = [0.5515, 0.4485]
+    // Cost = 55.15 + 89.7 = 144.85; QALY = 0.49635 + 0.22425 = 0.7206
+    //
+    // Total: cost = 280.35, QALY = 1.4786
+    expect(r.totalDiscountedCost).toBe(280.35);
+    expect(r.totalDiscountedQALYs).toBeCloseTo(1.4786, 4);
     expect(r.stateTrace).toHaveLength(2);
     expect(r.stateTrace[0]).toEqual([0.7, 0.3]);
     expect(r.stateTrace[1][0]).toBeCloseTo(0.59, 10);
     expect(r.stateTrace[1][1]).toBeCloseTo(0.41, 10);
+  });
+
+  it('applies per-cycle discount factor 1/(1+r)^cycle', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [
+        [0.8, 0.2],
+        [0.1, 0.9],
+      ],
+      initialStateDistribution: [0.7, 0.3],
+      stateCosts: [100, 200],
+      stateUtilities: [0.9, 0.5],
+      numCycles: 2,
+      discountRate: 0.05,
+    });
+    // Cycle 0: discount 1 → cost 135.5, QALY 0.758
+    // Cycle 1: discount 1/1.05 → cost 144.85/1.05 = 137.95, QALY 0.7206/1.05 = 0.6863
+    // Total cost = 273.45, QALY = 1.4443
+    expect(r.totalDiscountedCost).toBeCloseTo(273.45, 2);
+    expect(r.totalDiscountedQALYs).toBeCloseTo(1.4443, 4);
   });
 
   it('rejects mismatched matrix/vector dimensions', () => {
@@ -214,6 +241,79 @@ describe('calculateStateTransitionModel', () => {
       discountRate: 0,
     });
     expect(r.error).toBe('Matrix/vector dimensions do not match number of states.');
+  });
+
+  it('rejects transition probabilities out of [0, 1]', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [[1.5, -0.5], [0.1, 0.9]],
+      initialStateDistribution: [0.7, 0.3],
+      stateCosts: [100, 200],
+      stateUtilities: [0.9, 0.5],
+      numCycles: 2,
+      discountRate: 0,
+    });
+    expect(r.error).toContain('must be between 0 and 1');
+  });
+
+  it('rejects transition matrix rows that do not sum to 1', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [[0.7, 0.1], [0.1, 0.9]],
+      initialStateDistribution: [0.7, 0.3],
+      stateCosts: [100, 200],
+      stateUtilities: [0.9, 0.5],
+      numCycles: 2,
+      discountRate: 0,
+    });
+    expect(r.error).toContain('Row 0');
+    expect(r.error).toContain('must sum to 1');
+  });
+
+  it('rejects initial distribution that does not sum to 1', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [[0.8, 0.2], [0.1, 0.9]],
+      initialStateDistribution: [0.5, 0.3],
+      stateCosts: [100, 200],
+      stateUtilities: [0.9, 0.5],
+      numCycles: 2,
+      discountRate: 0,
+    });
+    expect(r.error).toBe('Initial state distribution must sum to 1.');
+  });
+
+  it('rejects non-positive numCycles', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [[0.8, 0.2], [0.1, 0.9]],
+      initialStateDistribution: [0.7, 0.3],
+      stateCosts: [100, 200],
+      stateUtilities: [0.9, 0.5],
+      numCycles: 0,
+      discountRate: 0,
+    });
+    expect(r.error).toBe('Number of cycles must be a positive integer.');
+  });
+
+  it('handles a 3-state model with an absorbing death state', () => {
+    const r = calculateStateTransitionModel({
+      transitionMatrix: [
+        [0.7, 0.2, 0.1],
+        [0.0, 0.6, 0.4],
+        [0.0, 0.0, 1.0],
+      ],
+      initialStateDistribution: [1, 0, 0],
+      stateCosts: [500, 2000, 0],
+      stateUtilities: [0.9, 0.5, 0],
+      numCycles: 3,
+      discountRate: 0,
+    });
+    expect(r.error).toBeUndefined();
+    expect(r.stateTrace).toHaveLength(3);
+    expect(r.stateTrace[0]).toEqual([1, 0, 0]);
+    // After cycle 0 transition: [0.7, 0.2, 0.1]
+    expect(r.stateTrace[1][0]).toBeCloseTo(0.7, 10);
+    expect(r.stateTrace[1][1]).toBeCloseTo(0.2, 10);
+    expect(r.stateTrace[1][2]).toBeCloseTo(0.1, 10);
+    expect(r.totalDiscountedCost).toBeGreaterThan(0);
+    expect(r.totalDiscountedQALYs).toBeGreaterThan(0);
   });
 });
 

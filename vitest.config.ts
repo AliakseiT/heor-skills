@@ -7,5 +7,7 @@ export default defineConfig({
       'packages/heor-engine/tests/**/*.test.ts',
       'tests/**/*.test.ts',
     ],
+    reporters: ['default', 'junit'],
+    outputFile: 'test-results.xml',
   },
 });
