@@ -13,6 +13,7 @@ a complete scenario with prompts, commands, and expected outputs.
 | [04: Literature review to HTA report](04-literature-review-to-report.md) | PRISMA review then EUnetHTA report chapter by chapter |
 | [05: Tariff search and gap analysis](05-tariff-search-and-gap-analysis.md) | Search reimbursement lists, classify hits, decide bill vs. file |
 | [06: Scenario comparison](06-scenario-comparison.md) | Run multiple model scenarios, compare results, export analysis |
+| [07: Early-stage strategy when no code exists](07-no-existing-code-strategy.md) | How SaMD and novel devices evaluate market access options, build economic models, and prepare new code petitions |
 
 ## How to use these recipes
 
