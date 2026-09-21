@@ -112,3 +112,27 @@ describe('tariff-scout search.ts', () => {
     expect(Array.isArray(output.results)).toBe(true);
   });
 });
+
+describe('jev-screen.ts (offline paths)', () => {
+  const script = 'plugins/heor/skills/jev-screen/scripts/jev-screen.ts';
+  const demoDossier = 'examples/demo-dossier';
+
+  it('passes its offline self-test (parser, decide matrix, mapping)', () => {
+    const result = run(`${tsx} ${script} --self-test`);
+    expect(result.status).toBe(0);
+    const output = JSON.parse(result.stdout);
+    expect(output.fail).toHaveLength(0);
+    expect(output.pass).toBeGreaterThan(5);
+  });
+
+  it('dry-runs the battery on the demo dossier without network', () => {
+    const result = run(`${tsx} ${script} --dossier ${demoDossier} --dry-run --json`);
+    expect(result.status).toBe(0);
+    const output = JSON.parse(result.stdout);
+    expect(output.dims).toContain('population');
+    expect(output.dims).toContain('investigated');
+    expect(output.dims).toContain('comparison');
+    expect(output.recordCount).toBeGreaterThan(0);
+    expect(Object.keys(output.questions)).toContain('no_primary_data');
+  });
+});

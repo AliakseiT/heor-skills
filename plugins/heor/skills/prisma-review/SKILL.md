@@ -81,6 +81,13 @@ rules: sensitivity over specificity, include protocols/pilots, restrict
 `include` / `exclude` / `maybe` with a 1–2 sentence PICO-referencing reason
 and `screenedBy: ai`.
 
+**Deterministic engine option:** the `jev-screen` skill runs this same step
+through Jev (one atomic judgment per PICO dimension, composed in code),
+writing `screening.json` in this exact schema plus a
+`screening-probs.json` sidecar. Prefer it for >50 records or when the user
+wants calibrated per-dimension probabilities; the checkpoint below applies
+either way.
+
 **Mandatory user-review checkpoint:** present the screening summary (counts,
 all `maybe` records, a sample of excludes) and wait for the user to resolve
 `maybe` decisions and confirm before finalizing. Human overrides get
