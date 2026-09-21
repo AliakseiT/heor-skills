@@ -109,6 +109,18 @@ examples/demo-dossier/         fully populated example dossier (SereniCBT)
 docs/cookbook/                 recipe guides for common workflows
 ```
 
+## Cookbook & Guides
+
+Step-by-step recipes for common market-access and modeling workflows in [`docs/cookbook/`](docs/cookbook/):
+
+- [01: MiGeL application from scratch](docs/cookbook/01-migel-from-scratch.md) — Full Swiss device listing end to end
+- [02: Cross-jurisdiction comparison](docs/cookbook/02-cross-jurisdiction-comparison.md) — Compare CH, DE, FR, US pathways and tariffs
+- [03: Economic modeling with PSA](docs/cookbook/03-economic-modeling-with-psa.md) — Markov models, Monte Carlo PSA, and Excel export
+- [04: Literature review to HTA report](docs/cookbook/04-literature-review-to-report.md) — PRISMA review to EUnetHTA Core Model report
+- [05: Tariff search and gap analysis](docs/cookbook/05-tariff-search-and-gap-analysis.md) — Classify hits: bill under existing code vs. file
+- [06: Scenario comparison](docs/cookbook/06-scenario-comparison.md) — Batch scenario execution and comparison
+- [07: Early-stage strategy when no code exists](docs/cookbook/07-no-existing-code-strategy.md) — Essential playbook for novel SaMD and breakthrough devices
+
 ## Principles
 
 - **Country first, language second.** Data and templates are organized by

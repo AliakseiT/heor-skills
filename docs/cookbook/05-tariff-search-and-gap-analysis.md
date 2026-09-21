@@ -65,3 +65,10 @@ If a new application is needed:
 - MiGeL (devices and aids): trigger `ch-migel-application`
 - Analysenliste (laboratory tests): trigger `ch-analysenliste-application`
 - KLV (new service): trigger `ch-klv-forms`
+
+### 6. What to do if no code exists
+
+If search reveals a total gap (common for novel Software as a Medical Device / SaMD):
+See **[Recipe 07: Early-stage strategy when no code exists](07-no-existing-code-strategy.md)**
+for the complete step-by-step guide to choosing between digital health fast-tracks,
+hospital DRG bundling, or petitioning for a new tariff code with health economic justification.
