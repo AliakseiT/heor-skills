@@ -6,7 +6,7 @@
     "en"
   ],
   "source": {
-    "file": "HCPC2026_OCT_ANWEB.xlsx",
+    "file": "HCPC2026_OCT_ANWEB_09232026.xlsx",
     "landingUrl": "https://www.cms.gov/medicare/coding-billing/healthcare-common-procedure-system/quarterly-update"
   },
   "entries": [
@@ -11510,7 +11510,8 @@
       "code": "C9046",
       "category": "C",
       "addedDate": "2019-04-01",
-      "effectiveDate": "2023-01-01",
+      "effectiveDate": "2026-10-01",
+      "terminationDate": "2026-09-30",
       "coverageCode": "D"
     },
     {
@@ -33948,6 +33949,13 @@
       "addedDate": "2026-01-01",
       "effectiveDate": "2026-01-01",
       "coverageCode": "I"
+    },
+    {
+      "code": "J0014",
+      "category": "J",
+      "addedDate": "2026-10-01",
+      "effectiveDate": "2026-10-01",
+      "coverageCode": "C"
     },
     {
       "code": "J0120",

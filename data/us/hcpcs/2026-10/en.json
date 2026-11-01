@@ -18828,6 +18828,10 @@
       "name": "Esketamine, nasal spray, 1 mg",
       "shortName": "Esketamine, nasal spray"
     },
+    "J0014": {
+      "name": "Cocaine hydrochloride nasal solution (goprelto), 1 mg",
+      "shortName": "Cocaine hcl nasal (goprelto)"
+    },
     "J0120": {
       "name": "Injection, tetracycline, up to 250 mg",
       "shortName": "Tetracyclin injection"
@@ -24997,7 +25001,7 @@
       "shortName": "Pectus carinatum ortho cust"
     },
     "L1330": {
-      "name": "Thoracic orthosis, sternal and/or sternocostal compression, may include anterior and/or posterior pads, panels, with or without frame, prefabricated, includes fitting and adjustment",
+      "name": "Thoracic orthosis, sternal and/or sternocostal compression, may include anterior and/or posterior pads, panels, with or without frame, prefabricated, off the shelf",
       "shortName": "Sternocostal orthosis prefab"
     },
     "L1499": {
