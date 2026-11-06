@@ -244,3 +244,75 @@ describe('runProbabilisticSensitivityAnalysis (Decision Tree, injected LCG rng)'
     expect(it0.results.incrementalCost).toBeCloseTo(sampledCost - 50 - 69, 1);
   });
 });
+
+describe('CEAC (decision tree): net monetary benefit on unrounded arm values', () => {
+  beforeEach(() => {
+    vi.spyOn(console, 'log').mockImplementation(() => {});
+    vi.spyOn(console, 'warn').mockImplementation(() => {});
+    vi.spyOn(console, 'error').mockImplementation(() => {});
+  });
+
+  // Same tree in both arms except test cost and sensitivity, so
+  // ΔU = prevalence × ΔSe × (uTP − uFN) and ΔC = Δ test cost exactly.
+  const tree = (overrides: Record<string, number>) => ({
+    'Cost of Intervention Test': 60,
+    'Sensitivity of Intervention Test': 0.85,
+    'Specificity of Intervention Test': 0.9,
+    'Cost of Comparator Test': 50,
+    'Sensitivity of Comparator Test': 0.81,
+    'Specificity of Comparator Test': 0.9,
+    'Prevalence of Disease/Condition': 0.01,
+    'Cost of Treatment (Correct Positive)': 0,
+    'Utility of Treatment (Correct Positive)': 1,
+    'Cost of False Positive Management': 0,
+    'Utility of False Positive State': 1,
+    'Cost of False Negative Consequence': 0,
+    'Utility of False Negative State': 0,
+    'Cost of Correct Negative Management': 0,
+    'Utility of Correct Negative State': 1,
+    ...overrides,
+  });
+  const run = (baselineInputs: Record<string, number>) => runProbabilisticSensitivityAnalysis({
+    modelType: 'Decision Tree',
+    baselineInputs,
+    // A negligible range so every iteration equals the baseline.
+    parameterRanges: { 'Cost of Comparator Test': { min: baselineInputs['Cost of Comparator Test'] - 1e-6, max: baselineInputs['Cost of Comparator Test'] + 1e-6, distribution: 'uniform' } },
+    numIterations: 20,
+    rng: makeLcg(3),
+  });
+  const probabilities = (curve: { threshold: number; probability: number }[]) => Object.fromEntries(curve.map((p) => [p.threshold, p.probability]));
+
+  it('uses the unrounded effect: ΔU = 0.0004 rounds to 0 in the model but gives ICER 25,000', async () => {
+    const result = await run(tree({}));
+    expect(result.baselineResult.incrementalUtility).toBe(0); // rounded to 3 decimals by the model
+    const p = probabilities(result.ceacCurve);
+    expect([p[0], p[10000], p[20000]]).toEqual([0, 0, 0]);
+    expect([p[30000], p[50000], p[200000]]).toEqual([1, 1, 1]);
+  });
+
+  it('south-west quadrant: cheaper but less effective is cost-effective only below the saving per unit lost', async () => {
+    // ΔU = 0.1 × (0.81 − 0.85) = −0.004, ΔC = 0 − 100 = −100 → 25,000 saved per unit lost
+    const result = await run(tree({
+      'Prevalence of Disease/Condition': 0.1,
+      'Sensitivity of Intervention Test': 0.81,
+      'Sensitivity of Comparator Test': 0.85,
+      'Cost of Intervention Test': 0,
+      'Cost of Comparator Test': 100,
+    }));
+    const p = probabilities(result.ceacCurve);
+    expect([p[0], p[10000], p[20000]]).toEqual([1, 1, 1]);
+    expect([p[30000], p[100000], p[200000]]).toEqual([0, 0, 0]);
+  });
+
+  it('at threshold 0 the curve is the probability of being cost-saving', async () => {
+    const result = await runProbabilisticSensitivityAnalysis({
+      modelType: 'Decision Tree',
+      baselineInputs: tree({ 'Prevalence of Disease/Condition': 0.1 }),
+      parameterRanges: { 'Cost of Intervention Test': { min: 0, max: 100, distribution: 'uniform' } },
+      numIterations: 400,
+      rng: makeLcg(11),
+    });
+    const saving = result.iterations.filter((it) => it.results.interventionArm.expectedCost < it.results.comparatorArm.expectedCost).length / result.iterations.length;
+    expect(result.ceacCurve[0].probability).toBeCloseTo(saving, 10);
+  });
+});

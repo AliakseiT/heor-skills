@@ -788,8 +788,19 @@ function generateCEACCurve(iterations: PSAIteration[], modelType: string): CEACP
       let incrementalUtility = 0;
 
       if (modelType === 'Decision Tree') {
-        incrementalCost = results.incrementalCost || 0;
-        incrementalUtility = results.incrementalUtility || 0;
+        // Prefer the unrounded arm values: the model rounds incrementalUtility
+        // to 3 decimals, which quantises small effects (e.g. live births per
+        // person) and distorts the curve.
+        const intervention = results.interventionArm;
+        const comparator = results.comparatorArm;
+        if (intervention && comparator && Number.isFinite(intervention.expectedCost) && Number.isFinite(comparator.expectedCost)
+          && Number.isFinite(intervention.expectedUtility) && Number.isFinite(comparator.expectedUtility)) {
+          incrementalCost = intervention.expectedCost - comparator.expectedCost;
+          incrementalUtility = intervention.expectedUtility - comparator.expectedUtility;
+        } else {
+          incrementalCost = results.incrementalCost || 0;
+          incrementalUtility = results.incrementalUtility || 0;
+        }
       } else if (modelType === 'Markov Chain') {
         incrementalCost = results.totalDiscountedCost || 0;
         incrementalUtility = results.totalDiscountedQALYs || 0;
@@ -798,36 +809,13 @@ function generateCEACCurve(iterations: PSAIteration[], modelType: string): CEACP
         incrementalUtility = 0; // BIA doesn't have utility/QALYs
       }
 
-      // Intervention is cost-effective if ICER < threshold
-      if (incrementalUtility > 0) {
-        // Positive utility: standard ICER comparison
-        const icer = incrementalCost / incrementalUtility;
-        if (icer < threshold) {
-          costEffectiveCount++;
-        }
-      } else if (incrementalUtility < 0) {
-        // Negative utility: intervention reduces health
-        // Only cost-effective if it's cheaper AND the absolute ICER is below threshold
-        // (i.e., the cost savings justify the health loss)
-        if (incrementalCost < 0) {
-          // Cheaper but less effective (south-west quadrant)
-          // Check if absolute ICER justifies the health loss
-          const absoluteICER = Math.abs(incrementalCost) / Math.abs(incrementalUtility);
-          if (absoluteICER < threshold) {
-            costEffectiveCount++;
-          }
-        } else if (incrementalCost > 0) {
-          // Costs more and reduces utility: never cost-effective
-          // (dominated by comparator)
-        }
-        // If incrementalCost == 0, intervention is neutral cost but reduces utility: not cost-effective
-      } else {
-        // incrementalUtility == 0: no health difference
-        if (incrementalCost < 0) {
-          // Cheaper with no health difference: cost-effective
-          costEffectiveCount++;
-        }
-        // If incrementalCost >= 0: same or higher cost with no health benefit: not cost-effective
+      // Cost-effective when the incremental net monetary benefit is positive:
+      // threshold × ΔU − ΔC > 0. This covers every quadrant, including the
+      // south-west one (cheaper but less effective), where the intervention is
+      // cost-effective only if the saving per unit of effect lost exceeds the
+      // threshold. At threshold 0 it is the probability of being cost-saving.
+      if (threshold * incrementalUtility - incrementalCost > 0) {
+        costEffectiveCount++;
       }
     });
 
